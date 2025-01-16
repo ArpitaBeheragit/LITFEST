@@ -1,0 +1,5 @@
+font-family: 'Dancing Script', cursive;
+font-family: 'DM Serif Display', serif;
+font-family: 'Marcellus', serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Sevillana', cursive;

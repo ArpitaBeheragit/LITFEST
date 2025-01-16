@@ -1,0 +1,285 @@
+.container{
+    background-color: black;
+    display :flex;
+    flex-direction: column;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 62px;
+    /* margin: -20px;  */
+}
+
+.head2 img{
+    height: 100vh;
+    width:100%;
+    object-fit: cover;
+    /* opacity: 0.5; */
+}
+.meet{
+    font-size: 65px;
+    font-weight: 800;
+    text-align: center;
+    /* color:#FFFFFF; */
+    margin:-300px 0px 257px 0px;
+    
+}
+
+.heading h1{
+  /* color: #16621f ; */
+  font-size:clamp(2.5rem, 10vw, 5rem);
+  margin: -36px auto 21px;
+  text-align: center;
+  /* font-family: ; */
+}
+.card{
+  flex-basis: calc(33.33% - 40px);
+    border-radius: 24px;
+    height: 400px;
+    object-fit: cover;
+    margin: 20px;
+    overflow: hidden;
+    width: 300px;
+  border-bottom:5px solid #0d3913!important;
+}
+
+.team{
+    /* color:#16621f; */
+}
+
+.cardbody{
+  padding:1rem ;
+  background-color: #000;
+}
+.cardbody p{
+  color:black;
+  text-align: center;
+}
+.cardbody{
+    text-align: center;
+}
+.cardshape img{
+    /* padding: 5px; */
+    /* border-radius: 26px; */
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.cardshape{
+  position:relative;
+  width:100%;
+  height:100%;
+  background-color: transparent;
+}
+.divider {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.divider svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+.divider .shapefill {
+    fill: #000;
+}
+.card {
+  position: relative;
+  backface-visibility: hidden;
+
+  .Name {
+    position: absolute;
+    top: 86%;
+    left: -100%;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 20px;
+    z-index: 8;
+    transition: all 0.6s ease;
+  }
+  .desig{
+    position: absolute;
+    top: 92%;
+    left: -100%;
+    text-transform: capitalize;
+    color: #cbcbcb;
+    font-size: 15px;
+    z-index: 8;
+    transition: all 0.6s ease;
+  }
+
+  &:hover {
+    p {
+      left: 5%;
+    }
+
+    img {
+      transform: translateY(-15px);
+    }
+
+    .cardbody .__rect {
+      top: 75%;
+
+      &:before {
+        transform: translateY(15px);
+      }
+    }
+  }
+
+  img {
+    transition: all 0.2s ease;
+  }
+
+  .cardbody .__rect {
+    width: 696px;
+    height: 200px;
+    /* background: #fff; */
+    display: block;
+    position: absolute;
+    top: 179%;
+    left: -78%;
+    transform: rotate(-12deg);
+    z-index: 5;
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      position: relative;
+      height: 100%;
+      background: rgb(4, 41, 4); 
+      transform: translateY(200px);
+      z-index: 2;
+      transition: all 0.3s ease-in-out;
+      transition-delay: 0.1s;
+    }
+  }
+}
+.row {
+  flex: 0 0 calc(33.33% - 126px); 
+  box-sizing: border-box;
+  /* margin: 20px;  */
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex: 0 0 calc(50% - 40px); 
+  }
+}
+@media (max-width:425px){
+  .meet{
+    font-size: 65px;
+    font-weight: 800;
+    text-align: center;
+    /* color:#FFFFFF; */
+    margin:-400px 0px 257px 0px;
+    
+}
+
+  .card{
+    height: 279px;
+    width: 235px;
+  }
+  .card {
+    position: relative;
+    backface-visibility: hidden;
+  
+    .Name {
+      position: absolute;
+      top: 83%;
+      left: -100%;
+      text-transform: capitalize;
+      color: #fff;
+      font-size: 17px;
+      z-index: 8;
+      transition: all 0.6s ease;
+    }
+    .desig{
+      position: absolute;
+      top: 90%;
+      left: -100%;
+      text-transform: capitalize;
+      color: #fff;
+      font-size: 17px;
+      z-index: 8;
+      transition: all 0.6s ease;
+    }
+  
+    &:hover {
+      p {
+        left: 5%;
+      }
+  
+      img {
+        transform: translateY(-15px);
+      }
+  
+      .cardbody .__rect {
+        top: 75%;
+  
+        &:before {
+          transform: translateY(15px);
+        }
+      }
+    }
+  
+    img {
+      transition: all 0.2s ease;
+    }
+  
+    .cardbody .__rect {
+      width: 500px;
+      height: 200px;
+      /* background: #fff; */
+      display: block;
+      position: absolute;
+      top: 179%;
+      left: -78%;
+      transform: rotate(-12deg);
+      z-index: 5;
+      opacity: 0.9;
+      transition: all 0.3s ease-in-out;
+  
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        position: relative;
+        height: 100%;
+        background: rgb(4, 41, 4); 
+        transform: translateY(200px);
+        z-index: 2;
+        transition: all 0.3s ease-in-out;
+        transition-delay: 0.1s;
+      }
+    }
+  }
+}
+@media screen and (max-width:500px) {
+  .meet{
+    font-size: 65px;
+    font-weight: 800;
+    text-align: center;
+    /* color:#FFFFFF; */
+    margin:-200px 0px 207px 0px;
+    
+}
+}

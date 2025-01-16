@@ -1,0 +1,46 @@
+/* body{
+  background-color: #166d3b;
+background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+} */
+@import "http://localhost:5173/node_modules/slick-carousel/slick/fonts/slick.woff";
+.slider {
+    height: 240px;
+    margin: 0 auto;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    /* z-index: -1; */
+    /* border: 2px solid green; */
+    overflow: hidden;
+  }
+  .slider1 {
+    height: 240px;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    /* z-index: -1; */
+    overflow: hidden;
+    /* border: 2px solid green; */
+  }
+  .bgclr{
+    background-color: aliceblue;
+  }
+  .sliderimg {
+    height: 240px;
+    width: 100%; 
+    object-fit: cover;
+  }
+
+.sliderItem {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.main {
+  padding-bottom: 10vh;
+  background: #000;
+}
