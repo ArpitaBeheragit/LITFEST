@@ -1,0 +1,25 @@
+@media (max-width: 320px){
+    .Mobile-view{
+      padding: 10px;
+    }
+  }
+  .attributes{
+    border: 2px solid rgb(246, 243, 243);
+    height: 415px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .card-content{
+    padding: 4px 10px 5px 10px;
+  }
+  .nav-buttons{
+    padding-top:15px
+  }
+  html, body, #root {
+    height: 100%;
+    overflow: auto;
+  }
+  .MuiTabPanel-root {
+    max-height: calc(100vh - 150px); /* Adjust to fit within the screen */
+    overflow-y: auto; /* Scroll only inside the tab panel */
+  }
