@@ -1,0 +1,140 @@
+.faq {
+  background-color: #191A19;
+  padding: 10vh 10vw;
+  /* margin: 20px auto; */
+  font-family:"comfortaa,cursive";
+}
+.faq h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #4E9F3D;
+  text-align: center;
+  padding: 30px 0 10px;
+}
+.question {
+  padding: 6px 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  cursor: pointer;
+  box-shadow: 0px 0px 8px #191919;
+}
+.question h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.question p {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+.faq .answer {
+  background-color: #313131;
+  color: #fff;
+}
+.answer {
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px #191919;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.answer p {
+  font-size: 16px;
+  margin-bottom: 0;
+  text-align: justify;
+
+}
+.faq .active {
+  animation: faq-active 0.5s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+.faq .inactive {
+  animation: faq-inactive 0.3s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+.faq-link {
+  color: #4e9f3d !important;
+  text-decoration: none;
+}
+.faq-link:hover {
+  text-decoration: underline;
+}
+
+@keyframes faq-active {
+  0% {
+    opacity: 0;
+    max-height: 0;
+  }
+  100% {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+@keyframes faq-inactive {
+  0% {
+    max-height: 500px;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+.q-dark {
+  border: 2px solid #4E9F3D;
+  color: #fff;
+}
+.q-dark p {
+  transition: all ease-out 0.3s;
+  transform: rotate(-180deg);
+}
+.q-light {
+  background-color: #313131;
+  border: 2px solid #313131;
+  color: #fff;
+}
+.q-light p {
+  transition: all ease-out 0.3s;
+  transform: rotate(0deg);
+}
+.q-light-start {
+  margin-bottom: 16px;
+}
+
+.q-light-start:hover, .q-light:hover {
+  background: #105f00;
+  color: #fff;
+}
+
+/*  MEDIA QUERRIES  */
+@media (max-width: 760px) {
+  .faq h2 {
+    font-size: 24px;
+  }
+  .question {
+    padding: 10px 12px;
+  }
+  .question h3 {
+    font-size: 14px;
+    margin: auto 10px auto 0;
+  }
+  .question p {
+    font-size: 22px;
+  }
+  .answer p {
+    font-size: 14px;
+  }
+}
