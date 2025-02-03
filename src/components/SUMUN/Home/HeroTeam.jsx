@@ -1,107 +1,175 @@
-import React, { useEffect, useState } from "react";
-import { Box, Stack, Typography, Button } from "@mui/material";
-import { NavLink } from "react-router-dom";
-import { heroComm } from "../../../data/heroComm";
-import Heading from "../../shared/Heading";
-import styles from "../../../styles/SUMUN/Team.module.css";
-import { heroTeam } from "../../../data/heroTeam";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import InputLabel from "@mui/material/InputLabel";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import MenuItem from "@mui/material/MenuItem";
+import React, { useState } from 'react';
+import { 
+  Box, 
+  VStack, 
+  Text, 
+  Flex, 
+  ChakraProvider, 
+  extendTheme,
+  Heading,
+  IconButton,
+  Slide
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
-//css file
-import "../../../styles/SUMUN/sideBar.css";
-
-const theme = createTheme({
-  palette: {
-    mode: "dark",
+const theme = extendTheme({
+  colors: {
+    primary: {
+      light: "#0648A4",
+      mid: "#61C7D9", 
+      dark: "#031D40"
+    },
+    secondary: {
+      cyan: "#7DEFF1"
+    }
   },
+  fonts: {
+    heading: "'Montserrat', sans-serif",
+    body: "'Inter', sans-serif"
+  }
 });
 
-const HeroTeam = ({ heading, order, setOrder, selectList }) => {
-  const [imgUrlIdx, setImgUrlIdx] = useState(0);
+const teamMembers = [
+  {
+    name: "Aditya Sharma",
+    role: "Festival Director",
+    image: "/path/to/aditya.jpg",
+    description: "A visionary leader passionate about literature and storytelling, Aditya brings creativity and strategic thinking to LITFEST 25."
+  },
+  {
+    name: "Priya Nair",
+    role: "Artistic Curator",
+    image: "/path/to/priya.jpg",
+    description: "With her keen eye for literary aesthetics, Priya crafts immersive experiences that breathe life into words and imagination."
+  },
+  {
+    name: "Rohan Mishra",
+    role: "Event Coordinator",
+    image: "/path/to/rohan.jpg",
+    description: "A master of logistics and coordination, Rohan ensures every event at LITFEST 25 runs smoothly and seamlessly."
+  }
+];
 
-  useEffect(() => {
-    const changeImgUrl = () => {
-      setImgUrlIdx((idx) => (idx == heroComm.length - 1 ? 0 : idx + 1));
-    };
-    const intrval = setInterval(changeImgUrl, 2000);
-    return () => {
-      clearInterval(intrval);
-    };
-  }, []);
+const TeamCarousel = () => {
+  const [currentMember, setCurrentMember] = useState(0);
+
+  const nextMember = () => {
+    setCurrentMember((prev) => (prev + 1) % teamMembers.length);
+  };
+
+  const prevMember = () => {
+    setCurrentMember((prev) => (prev - 1 + teamMembers.length) % teamMembers.length);
+  };
 
   return (
-    <div className={styles.head}>
-      <div className={styles.head2}>
-        <Box
-          sx={{
-            height: "70vh",
-            width: "100%",
-            // background: `url(${HeroImg}),linear-gradient(#4e9f3d, #4E9F3D)`,
-            backgroundImage: `linear-gradient(120deg, rgba(25,26,25,0.9) 71%, rgba(30,81,40,0.8) 97%),url(${heroTeam[imgUrlIdx]})`,
+    <ChakraProvider theme={theme}>
+      <Box 
+        bg="primary.dark" 
+        color="white" 
+        py={16} 
+        px={8}
+        position="relative"
+        overflow="hidden"
+      >
+        <VStack spacing={8} maxW="container.xl" mx="auto" position="relative">
+          <Heading 
+            color="primary.mid" 
+            size="2xl" 
+            textAlign="center"
+            mb={8}
+          >
+            Meet Our Team
+          </Heading>
 
-            backgroundSize: "cover",
-            objectFit: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+          <Flex 
+            width="full" 
+            alignItems="center" 
+            justifyContent="center"
+            position="relative"
+          >
+            <IconButton
+              icon={<ChevronLeftIcon />}
+              onClick={prevMember}
+              position="absolute"
+              left="0"
+              variant="outline"
+              color="secondary.cyan"
+              borderColor="secondary.cyan"
+            />
 
-            transition: "backgroundImage ease-in",
-          }}
-        >
-          <h1>
-            <Heading heading={heading || "Committees"} />
-          </h1>
-        </Box>
-        {selectList && <ThemeProvider theme={theme}>
-            <FormControl
-              sx={{
-                m: 1,
-                minWidth: 120,
-                color: "#fff",
-                display: { xs: "flex", md: "none" },
-                // backgroundColor: 'red',
-                alignSelf: 'right'
-              }}
-              size="small"
+            <motion.div
+              key={currentMember}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
             >
-              <Box></Box>
-              <Box sx={{display: "inline-block", marginLeft: 'auto'}}>
-              <Select
-                native
-                value={order}
-                onChange={(e) => setOrder(e.target.value)}
-                input={
-                  <OutlinedInput />
-                }
-                sx={{ color: "#fff" }}
+              <VStack 
+                bg="primary.light" 
+                p={8} 
+                borderRadius="xl" 
+                maxW="600px" 
+                spacing={6}
+                textAlign="center"
               >
-                <option value={"Core Secretariat"}>Core Secretariat</option>
-                <option value={"Delegate Affairs"}>Delegate Affairs</option>
-                <option value={"Public Relations"}>Public Relations</option>
-                <option value={"Web Development"}>Web Development</option>
-                <option value={"Hospitality"}>Hospitality</option>
-                <option value={"Finance"}>Finance</option>
-                <option value={"Sponsorship"}>Sponsorship</option>
-                <option value={"Video Editing"}>Video Editing</option>
-                <option value={"Creativity & Designing"}>
-                  Creativity & Designing
-                </option>
-                <option value={"Logistics"}>Logistics</option>
-                <option value={"EB Affairs"}>EB Affairs</option>
-              </Select>
-              </Box>
-            </FormControl>
-          </ThemeProvider>}
-      </div>
-    </div>
+                <Box 
+                  width="200px" 
+                  height="200px" 
+                  borderRadius="full" 
+                  overflow="hidden"
+                  border="4px solid"
+                  borderColor="secondary.cyan"
+                >
+                  <img 
+                    src={teamMembers[currentMember].image} 
+                    alt={teamMembers[currentMember].name}
+                    style={{ 
+                      width: '100%', 
+                      height: '100%', 
+                      objectFit: 'cover' 
+                    }}
+                  />
+                </Box>
+
+                <VStack spacing={2}>
+                  <Heading 
+                    color="secondary.cyan" 
+                    size="lg"
+                  >
+                    {teamMembers[currentMember].name}
+                  </Heading>
+                  <Text 
+                    color="primary.mid" 
+                    fontWeight="bold"
+                  >
+                    {teamMembers[currentMember].role}
+                  </Text>
+                </VStack>
+
+                <Text 
+                  color="white" 
+                  textAlign="center"
+                >
+                  {teamMembers[currentMember].description}
+                </Text>
+              </VStack>
+            </motion.div>
+
+            <IconButton
+              icon={<ChevronRightIcon />}
+              onClick={nextMember}
+              position="absolute"
+              right="0"
+              variant="outline"
+              color="secondary.cyan"
+              borderColor="secondary.cyan"
+            />
+          </Flex>
+        </VStack>
+      </Box>
+    </ChakraProvider>
   );
 };
 
-export default HeroTeam;
+export default TeamCarousel;

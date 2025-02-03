@@ -1,26 +1,41 @@
 import React, { useState, useEffect } from "react";
-import { zeroPad } from "react-countdown";
-import styles from "../../../styles/SUMUN/Countdown.module.css";
-import Heading from "../../shared/Heading";
+import { 
+  Box, 
+  VStack, 
+  Text, 
+  Flex, 
+  ChakraProvider, 
+  extendTheme 
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
+
+const theme = extendTheme({
+  colors: {
+    primary: {
+      light: "#0648A4",
+      mid: "#61C7D9", 
+      dark: "#031D40"
+    }
+  }
+});
+
+const MotionBox = motion(Box);
+
 const CalcTimeDelta = () => {
-  const targetDate = "2024-03-27T11:59:59";
-  // const targetDate = "2024-02-17T14:26:59";
+  const targetDate = "2025-03-27T11:59:59";
 
   const calculateTimeDelta = () => {
     const now = new Date().getTime();
     const target = new Date(targetDate).getTime();
     let delta = target - now;
-    if (delta < 0) {
-      delta = 0; 
-    }
-    const days = Math.floor(delta / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((delta % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((delta % (1000 * 60)) / 1000);
+    if (delta < 0) delta = 0;
 
-    return { days, hours, minutes, seconds };
+    return {
+      days: Math.floor(delta / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      minutes: Math.floor((delta % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((delta % (1000 * 60)) / 1000)
+    };
   };
 
   const [timeDelta, setTimeDelta] = useState(calculateTimeDelta());
@@ -33,33 +48,51 @@ const CalcTimeDelta = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return (
-    <div className={styles.main}>
-      <div className={styles.box}>
-        <Heading 
-          heading={"Live In"}
-        />
+  const TimeUnit = ({ value, label }) => (
+    <MotionBox
+      bg="primary.light"
+      color="white"
+      p={4}
+      borderRadius="xl"
+      textAlign="center"
+      width="100px"
+      whileHover={{ scale: 1.05 }}
+    >
+      <Text fontSize="3xl" fontWeight="bold">
+        {value.toString().padStart(2, '0')}
+      </Text>
+      <Text fontSize="sm">{label}</Text>
+    </MotionBox>
+  );
 
-        <div className={styles.cont}>
-          <div className={styles.day}>
-            <h1>{zeroPad(timeDelta.days)} </h1>
-            <h5>days </h5>
-          </div>
-          <div className={styles.hour}>
-            <h1>{zeroPad (timeDelta.hours)} </h1>
-            <h5>hours </h5>
-          </div>
-          <div className={styles.min}>
-            <h1> {zeroPad(timeDelta.minutes)} </h1>
-            <h5>minutes </h5>
-          </div>
-          <div className={styles.sec}>
-            <h1> {zeroPad(timeDelta.seconds)} </h1>
-            <h5>seconds </h5>
-          </div>
-        </div>
-      </div>
-    </div>
+  return (
+    <ChakraProvider theme={theme}>
+      <Box 
+        bg="primary.dark" 
+        color="white" 
+        py={16} 
+        textAlign="center"
+      >
+        <Text 
+          fontSize="4xl" 
+          mb={8} 
+          fontWeight="bold" 
+          color="primary.mid"
+        >
+          Event Countdown
+        </Text>
+        <Flex 
+          justifyContent="center" 
+          alignItems="center" 
+          gap={4}
+        >
+          <TimeUnit value={timeDelta.days} label="Days" />
+          <TimeUnit value={timeDelta.hours} label="Hours" />
+          <TimeUnit value={timeDelta.minutes} label="Minutes" />
+          <TimeUnit value={timeDelta.seconds} label="Seconds" />
+        </Flex>
+      </Box>
+    </ChakraProvider>
   );
 };
 

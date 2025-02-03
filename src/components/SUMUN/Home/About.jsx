@@ -1,66 +1,116 @@
-import React, { useEffect } from "react";
-import { Typography, Box, Stack } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-// import SwiperCore, { EffectCards, Mousewheel } from "swiper";
-import Heading from "../../shared/Heading";
+import React from "react";
+import { 
+  Box, 
+  VStack, 
+  Text, 
+  Flex, 
+  ChakraProvider, 
+  extendTheme,
+  Heading,
+  SimpleGrid
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
-// import Swiper and modules styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+const theme = extendTheme({
+  colors: {
+    primary: {
+      light: "#0648A4",
+      mid: "#61C7D9", 
+      dark: "#031D40"
+    },
+    secondary: {
+      cyan: "#7DEFF1"
+    }
+  },
+  fonts: {
+    heading: "'Montserrat', sans-serif",
+    body: "'Inter', sans-serif"
+  }
+});
 
-import "../../../styles/SUMUN/about.css";
-
-// SwiperCore.use([EffectCards, Mousewheel]);
+const MotionBox = motion(Box);
 
 const About = () => {
   return (
-    <section id="about">
-      <Stack
-        className="content"
-        flexDirection={{ md: "row", xs: "column-reverse" }}
+    <ChakraProvider theme={theme}>
+      <Box 
+        bg="primary.dark" 
+        color="white" 
+        py={16} 
+        px={8}
       >
-        <Box className="info">
-          <Heading heading={"About us"} />
-          <Typography variant="body1" fontFamily="comfortaa,cursive" >
-            <span className="movie-night">Model United Nations</span> is a
-            simulation that imitates the procedures of the United Nations
-            finding solutions for real-world problems, done through an academic
-            simulation of the United Nations procedure. The MUN simulation
-            consists of negotiation, discussion, and lively debates, which is
-            the cornerstone of UN activity. Model UN aims to educate students
-            about current events, international relations, diplomacy, and the
-            United Nations agenda. Along with knowledge of the world we live in,
-            participants develop skills including public speaking, presentation,
-            persuasion, situation analysis, research, and critical thinking.
-            SITMUN is an inter-collegiate conference conducted every year.
-            Students from SiliconTech and other institutes across Odisha,
-            participate as delegates in different committees. From each
-            committee the best speakers are awarded.
-          </Typography>
-          {/* <button className="btn">Join</button> */}
-        </Box>
-        <Swiper className="swiper">
-          <div className="swiper-wrapper">
-            <SwiperSlide className="swiper-slide" style={{height:"100%"}}></SwiperSlide>
-          </div>
-        </Swiper>
-      </Stack>
+        <VStack spacing={8} maxW="container.xl" mx="auto">
+          <Heading 
+            color="primary.mid" 
+            size="2xl" 
+            textAlign="center"
+            mb={8}
+          >
+            Silicon University Invites You
+          </Heading>
 
-      {/* <ul className="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul> */}
-    </section>
+          <Text 
+            textAlign="center" 
+            color="secondary.cyan" 
+            fontSize="xl" 
+            maxW="800px" 
+            mx="auto"
+          >
+            Experience the perfect blend of creativity and diplomacy at our grand celebration 
+            of intellect and expression. This year, under the magical theme of snow, 
+            we present extraordinary events designed to inspire and engage.
+          </Text>
+
+          <SimpleGrid columns={[1, null, 2]} spacing={8} width="full">
+            <MotionBox
+              bg="primary.light"
+              p={6}
+              borderRadius="xl"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Heading 
+                color="secondary.cyan" 
+                size="lg" 
+                mb={4}
+              >
+                Sabda Tattva
+              </Heading>
+              <Text color="white">
+                Immerse yourself in the beauty of words carved like snowflakes, 
+                unique and timeless. Sabda Tattva, our literary fest, embraces 
+                the theme of winter as a metaphor for reflection, storytelling, 
+                and introspection. Let the chill of the season ignite your creativity 
+                as we celebrate the art of writing, reading, and expression.
+              </Text>
+            </MotionBox>
+
+            <MotionBox
+              bg="primary.light"
+              p={6}
+              borderRadius="xl"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Heading 
+                color="secondary.cyan" 
+                size="lg" 
+                mb={4}
+              >
+                SUMUN Society
+              </Heading>
+              <Text color="white">
+                Amidst the icy backdrop of this season, diplomacy burns bright. 
+                SUMUN brings together thinkers, leaders, and diplomats to tackle 
+                pressing global issues. Through enriching workshops and engaging 
+                simulations, participants will step into the shoes of diplomats 
+                and shape the future.
+              </Text>
+            </MotionBox>
+          </SimpleGrid>
+        </VStack>
+      </Box>
+    </ChakraProvider>
   );
 };
 

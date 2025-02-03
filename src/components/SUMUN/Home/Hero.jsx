@@ -1,265 +1,161 @@
-import React, { useEffect, useState } from "react";
-import { Box, Stack, Typography, Button } from "@mui/material";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { NavLink } from "react-router-dom";
-import { heroImgs } from "../../../data/hero";
+import React from "react";
+import { 
+  Box, 
+  VStack, 
+  Text, 
+  Button, 
+  ChakraProvider, 
+  extendTheme 
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
-//css file
-import "../../../styles/SUMUN/sideBar.css";
+const theme = extendTheme({
+  fonts: {
+    heading: "'Montserrat', sans-serif",
+    body: "'Inter', sans-serif",
+  },
+  colors: {
+    primary: {
+      light: "#0648A4",
+      mid: "#61C7D9", 
+      dark: "#031D40"
+    },
+    secondary: {
+      cyan: "#7DEFF1",
+      pink: "#E991CB"
+    }
+  }
+});
 
+const MotionText = motion(Text);
 
-const Hero = () => {
-  const [imgUrlIdx, setImgUrlIdx] = useState(0);
+const Hero = ({ onScrollToNext }) => {
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const changeImgUrl = () => {
-      setImgUrlIdx((idx) => (idx == heroImgs.length - 1 ? 0 : idx + 1));
-    };
-    const intrval = setInterval(changeImgUrl, 2000);
-    return () => {
-      clearInterval(intrval);
-    };
-  }, []);
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
+  const scrollToNextSection = () => {
+    if (typeof onScrollToNext === 'function') {
+      onScrollToNext();
+    }
+  };
 
   return (
-    <Box
-      sx={{
-        height: "100vh",
-        width: "100%",
-        // background: `url(${HeroImg}),linear-gradient(#4e9f3d, #4E9F3D)`,
-        backgroundImage: `linear-gradient(120deg, rgba(25,26,25,0.9) 71%, rgba(30,81,40,0.8) 97%), url(${heroImgs[imgUrlIdx]})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        boxShadow:
-          "rgba(0, 0, 0, 0.3) 0px 30px 50px, rgba(0, 0, 0, 0.22) 0px 20px 15px",
-        transition: "backgroundImage ease-in",
-      }}
-    >
-      <Stack
-        direction={"row"}
-        justifyContent={"space-between"}
-        width={"100%"}
-        height={"100%"}
+    <ChakraProvider theme={theme}>
+      <Box 
+        height="100vh" 
+        width="100%" 
+        bg="primary.dark" 
+        color="white" 
+        position="relative"
+        overflow="hidden"
       >
-        {/* <SideBar /> */}
-        <Stack
-          spacing={5}
-          justifyContent={"end"}
-          backgroundColor="#4d9f3d78"
-          width={{ md: "4rem", xs: "2rem" }}
-          display={{ md: "flex", xs: "none" }}
-          overflow={"hidden"}
-          sx={{
-            backdropFilter: 'blur(30px)',
-            color: '#fafafa'
-          }}
-        >
-          <Box sx={{ transform: "rotate(-90deg)" }}>
-            <Typography
-              fontFamily={"Anton"}
-              textTransform={"capitalize"}
-              fontSize={{ md: "42px", xs: "24px" }}
-              sx={{
-                width: "100vh",
-                color: "#37be52",
-                fontWeight: "900",
-                textWrap: "nowrap",
-                letterSpacing: "2px",
-                animation: `hashtag-move 10s linear infinite`,
-              }}
-            >
-              &nbsp;REVOLUTION THROUGH RESOLUTION
-            </Typography>
-          </Box>
-        </Stack>
         <Box
-          sx={{
-            height: "100%",
-            width: "100%",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          position="absolute"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
+          background={`
+            linear-gradient(
+              135deg, 
+              rgba(6, 72, 164, 0.8), 
+              rgba(97, 199, 217, 0.6)
+            )
+          `}
+        />
+
+        <VStack 
+          spacing={8} 
+          height="full" 
+          justifyContent="center" 
+          textAlign="center" 
+          position="relative"
+          zIndex={10}
         >
-          <Stack justifyContent={"center"}>
-            {/* <Stack
-              spacing={5}
-              justifyContent={"end"}
-              backgroundColor="#4E9F3D"
-              width={{ md: "4rem", xs: "100vw" }}
-              display={{ md: "none", xs: "block" }}
-              margin={"2rem 0"}
-              overflow={"hidden"}
+          <VStack spacing={4}>
+            <MotionText
+              fontSize={["4xl", "6xl"]} 
+              fontWeight="bold" 
+              color="secondary.cyan"
+              whileHover={{ 
+                y: -10,
+                transition: { duration: 0.3 }
+              }}
+              onClick={() => handleNavigation("../../pages/LITFEST/Home.jsx")}
+              cursor="pointer"
             >
-              <Box>
-                <Typography
-                  fontFamily={"Anton"}
-                  textTransform={"capitalize"}
-                  fontSize={{ md: "42px", xs: "24px" }}
-                  sx={{
-                    color: "#1E5128",
-                    fontWeight: "900",
-                    textWrap: "nowrap",
-                    letterSpacing: "2px",
-                    animation: `hashtag-move 10s linear infinite`,
-                    animationDelay: "5s"
-                  }}
-                >
-                  #REVOLUTIONTHROUGHRESOLUTION
-                </Typography>
-              </Box>
-            </Stack> */}
+              SUMUN 2025
+            </MotionText>
 
-            <Typography
-              variant="h1"
-              
-              fontWeight={900}
-              textAlign={"center"}
-              color={"#D8E9A8"}
-              sx={{ letterSpacing: "4px" }}
-              className="sit"
-              data-aos="zoom-in"
-              
+            <Text 
+              fontSize={["4xl", "6xl"]} 
+              fontWeight="bold" 
+              color="secondary.cyan"
             >
-              <span style={{ color: "#4E9F3D" }} className="sit">
-                SIT
-              </span>
-              MUN
-            </Typography>
-            <Typography
-              variant="h1"
-              // fontFamily={"comfortaa,cursive"}
-              className="sit"
-              fontWeight={600}
-              textAlign={"center"}
-              color={"#D8E9A8"}
-              data-aos="zoom-in"
-            >
-              2024
-            </Typography>
+              X
+            </Text>
 
-            <Stack
-              spacing={5}
-              justifyContent={"end"}
-              backgroundColor="#4E9F3D"
-              width={{ md: "4rem", xs: "100vw" }}
-              display={{ md: "none", xs: "block" }}
-              margin={"4rem 0"}
-              overflow={"hidden"}
+            <MotionText 
+              fontSize={["4xl", "6xl"]} 
+              fontWeight="bold" 
+              color="secondary.cyan"
+              whileHover={{ 
+                y: -10,
+                transition: { duration: 0.3 }
+              }}
+              onClick={() => handleNavigation("../../pages/SABDATATVA/Home.jsx")}
+              cursor="pointer"
             >
-              <Box>
-                <Typography
-                  fontFamily={"Anton"}
-                  textTransform={"capitalize"}
-                  fontSize={{ md: "42px", xs: "24px" }}
-                  sx={{
-                    color: "#1E5128",
-                    fontWeight: "900",
-                    textWrap: "nowrap",
-                    letterSpacing: "2px",
-                    animation: `hashtag-move 10s linear infinite`,
-                  }}
-                >
-                  REVOLUTION THROUGH RESOLUTION
-                </Typography>
-              </Box>
-            </Stack>
-            <Stack
-              marginTop={{xs:4, md: 6}}
-              direction={"row"}
-              spacing={4}
-              justifyContent={"space-around"}
-              // maxWidth={{ md: "100%", sm: "450px", xs: "280px" }}
-              margin={"auto"}
-            >
-              <Button
-                variant="contained"
-                sx={{
-                  padding: "12px 18px",
-                  borderRadius: "28px",
-                  fontSize: 16,
-                  fontWeight: "600",
-                  fontFamily:"comfortaa,cursive"
-                }}
-                className="herbtn"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSc1RWEL-wyxqGATGtESWUhJFOZ3xCQ89nWzZLWG7Bhow337Bg/viewform"
-                target="_blank"
-              >
-                Register Now
-              </Button>
-              
-                <Button
-                  variant="contained"
-                 
-                  sx={{
-                    padding: "12px 18px",
-                    borderRadius: "28px",
-                    fontSize: 16,
-                    fontWeight: "600",
-                    fontFamily:"comfortaa,cursive"
-                  }}
-                  // color="success"
-                  className="herbtn"
-                  href="#about"
-                >
-                  Know More
-                </Button>
-              
-            </Stack>
-          </Stack>
+              SABDATATVA
+            </MotionText>
+          </VStack>
+
+        </VStack>
+
+        <Box 
+          position="absolute" 
+          left="0" 
+          top="0" 
+          bottom="0" 
+          width="4rem" 
+          bg="primary.light"
+          display={["none", "block"]}
+          overflow="hidden"
+        >
+          <Text
+            transform="rotate(-90deg) translateX(-50%)"
+            transformOrigin="left center"
+            whiteSpace="nowrap"
+            fontSize="2xl"
+            fontWeight="bold"
+            color="secondary.cyan"
+            position="absolute"
+            left="50%"
+            top="50%"
+          >
+            LITFEST - THE LITERARY CARNIVAL
+          </Text>
         </Box>
-        <Box width={"4rem"} display={{ md: "block", xs: "none" }}></Box>
-      </Stack>
-    </Box>
+
+        <Box
+          position="absolute"
+          bottom="8"
+          left="50%"
+          transform="translateX(-50%)"
+          cursor="pointer"
+          onClick={scrollToNextSection}
+          fontSize="2xl"
+          color="secondary.cyan"
+        >
+          ↓
+        </Box>
+      </Box>
+    </ChakraProvider>
   );
 };
 
 export default Hero;
-
-export const SideBar = () => {
-  return (
-    <Stack
-      direction={"column-reverse"}
-      height={"100%"}
-      justifyContent={"space-around"}
-      fontFamily={"comfortaa,cursive"}
-      sx={{ display: { md: "flex", sm: "none", xs: "none" } }}
-    >
-      <NavLink to={"/"}>
-        <Typography
-          variant="h6"
-          fontFamily={"comfortaa,cursive"}
-          className="navLink"
-        >
-          Home
-        </Typography>
-      </NavLink>
-
-      <NavLink to={"/teams"}>
-        <Typography
-          variant="h6"
-          fontFamily={"comfortaa,cursive"}
-          className="navLink"
-        >
-          Teams
-        </Typography>
-      </NavLink>
-
-      <NavLink to={"/committee"}>
-        <Typography
-          variant="h6"
-          fontFamily={"comfortaa,cursive"}
-          className="navLink"
-        >
-          Committee
-        </Typography>
-      </NavLink>
-    </Stack>
-  );
-};

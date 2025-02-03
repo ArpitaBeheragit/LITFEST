@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 const Navbar = React.lazy(() => import("../../components/SUMUN/Navbar"));
 const Hero = React.lazy(() => import("../../components/SUMUN/Home/Hero"));
 const Footer = React.lazy(() => import("../../components/SUMUN/Footer"));
@@ -10,21 +10,18 @@ import Faq from "../../components/SUMUN/Home/Faq";
 import Gallery from "../../components/SUMUN/Home/Gallery";
 import Feedback from "../../components/SUMUN/Home/Feedback";
 
-import "../../styles/SUMUN/circles.css"
-
+import "../../styles/SUMUN/circles.css";
+import TeamCarousel from "../../components/SUMUN/Home/HeroTeam";
 
 const Home = () => {
+
   return (
     <div>
       <Navbar />
-      <Hero />
-      <CalcTimeDelta />
-      <About />
-      <Gallery />
-      <TimelineView />
-      <Feedback />
-      <Message />
-      <Faq />
+          <Hero/>
+          <CalcTimeDelta />
+          <About />
+          <TeamCarousel />
       <Footer />
     </div>
   );

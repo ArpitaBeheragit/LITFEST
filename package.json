@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ap.cx/react-fullpage": "^0.3.0",
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
@@ -18,7 +19,8 @@
     "@mui/lab": "^5.0.0-alpha.162",
     "aos": "^2.3.4",
     "framer-motion": "^11.0.3",
-    "fullpage.js": "^4.0.20",
+    "fullpage.js": "^4.0.9",
+    "gsap": "^3.12.7",
     "react": "^18.2.0",
     "react-countdown": "^2.3.5",
     "react-dom": "^18.2.0",
