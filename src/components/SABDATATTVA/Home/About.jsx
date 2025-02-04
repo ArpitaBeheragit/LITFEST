@@ -22,7 +22,17 @@ const About = () => {
         <Box className="info">
           <Heading heading={"About us"} />
           <Typography variant="body1" fontFamily="comfortaa,cursive" >
-            <span className="movie-night">SABDATATTVA</span> immerses your in the beauty of words carved like snowflakes, unique and timeless. Sabda Tattva, our literary fest, embraces the theme of winter as a metaphor for reflection, storytelling, and introspection. Let the chill of the season ignite your creativity as we celebrate the art of writing, reading, and expression. Be ready to walk through a frosted trail of retro literature on the, where every story glows like the warmth of a winter fire.
+          <span className="movie-night">Sabdattatva2.0</span>
+          {' '}under the magical theme of snow, presents 
+            extraordinary events designed to inspire and engage.Immerse 
+            yourself in the beauty of words carved like snowflakes, 
+            unique and timeless. Sabda Tattva, our literary fest, 
+            embraces the theme of winter as a metaphor for reflection,
+            storytelling, and introspection. Let the chill of the 
+            season ignite your creativity as we celebrate the art of 
+            writing, reading, and expression. Be ready to walk through 
+            a frosted trail of retro literature on the, where every 
+            story glows like the warmth of a winter fire.
           </Typography>
           {/* <button className="btn">Join</button> */}
         </Box>
