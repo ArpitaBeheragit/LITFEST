@@ -9,9 +9,7 @@ import Heading from "../../shared/Heading";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-import "../../../styles/SABDATATTVA/about.css";
-
+import "../../../styles/SABDATATTVA/about.css"
 // SwiperCore.use([EffectCards, Mousewheel]);
 
 const About = () => {
@@ -44,19 +42,6 @@ const About = () => {
           </div>
         </Swiper>
       </Stack>
-
-      {/* <ul className="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul> */}
     </section>
   );
 };
