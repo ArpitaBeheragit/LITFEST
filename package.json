@@ -1,5 +1,5 @@
 {
-  "name": "sitmun",
+  "name": "litfest",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -44,12 +44,12 @@
   "main": "vite.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/partha6686/SITMUN-2024.git"
+    "url": "git+https://github.com/ArpitaBeheragit/LITFEST.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/partha6686/SITMUN-2024/issues"
+    "url": "https://github.com/ArpitaBeheragit/LITFEST.git"
   },
-  "homepage": "https://github.com/partha6686/SITMUN-2024#readme"
+  "homepage": "https://github.com/ArpitaBeheragit/LITFEST.git#readme"
 }

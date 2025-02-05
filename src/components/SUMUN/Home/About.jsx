@@ -24,20 +24,7 @@ const About = () => {
         <Box className="info">
           <Heading heading={"About us"} />
           <Typography variant="body1" fontFamily="comfortaa,cursive" >
-            <span className="movie-night">Model United Nations</span> is a
-            simulation that imitates the procedures of the United Nations
-            finding solutions for real-world problems, done through an academic
-            simulation of the United Nations procedure. The MUN simulation
-            consists of negotiation, discussion, and lively debates, which is
-            the cornerstone of UN activity. Model UN aims to educate students
-            about current events, international relations, diplomacy, and the
-            United Nations agenda. Along with knowledge of the world we live in,
-            participants develop skills including public speaking, presentation,
-            persuasion, situation analysis, research, and critical thinking.
-            SITMUN is an inter-collegiate conference conducted every year.
-            Students from SiliconTech and other institutes across Odisha,
-            participate as delegates in different committees. From each
-            committee the best speakers are awarded.
+          <span className="movie-night">Model United Nations</span> is a dynamic simulation of the United Nations, designed to find solutions to real-world problems through academic discussions that mirror UN procedures. It revolves around negotiation, discussion, and vibrant debates, fostering a deep understanding of current events, international relations, diplomacy, and the United Nations agenda. Participants develop essential skills such as public speaking, presentation, persuasion, research, situation analysis, and critical thinking. SUMUN 2025 is an inter-collegiate conference held annually, attracting students from Silicon University and other institutes across Odisha who participate as delegates in various committees, with the best speakers recognized and awarded. SUMUN invites you on an unparalleled journey into the world of diplomacy, debate, and global change. Whether you're a seasoned delegate or a first-time participant, SUMUN offers the perfect stage to explore negotiation, leadership, and collaboration.
           </Typography>
           {/* <button className="btn">Join</button> */}
         </Box>

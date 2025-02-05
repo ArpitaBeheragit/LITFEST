@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../Guidelines.css"
+import "../../../styles/SABDATATTVA/Guideline.css"
 import InfoIcon from '@mui/icons-material/Info';
 import {
   Card,

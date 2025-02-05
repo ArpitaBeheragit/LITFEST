@@ -11,21 +11,21 @@ const Loading = () => {
           width="30"
           height="30"
           className="loading_img"
-          alt="SITMUN logo"
+          alt="LIFEST logo"
         />
         <img
           src={logo}
           width="30"
           height="30"
           className="loading_img"
-          alt="SITMUN logo"
+          alt="LIFEST logo"
         />
         <img
           src={logo}
           width="30"
           height="30"
           className="loading_img"
-          alt="SITMUN logo"
+          alt="LIFEST logo"
         />
       </div>
     </div>

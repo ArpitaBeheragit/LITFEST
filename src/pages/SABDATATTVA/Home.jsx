@@ -10,19 +10,20 @@ import Gallery from "../../components/SABDATATTVA/Home/Gallery";
 import Faq from "../../components/SABDATATTVA/Home/Faq";
 
 import "../../styles/SABDATATTVA/circles.css"
+import EventGuidelines from "../../components/SABDATATTVA/Home/Guideline";
 
 
-const Home = () => {
+const Sabdatattva = () => {
   return (
     <div>
       <Navbar />
       <Hero />
       <About />
-      <Gallery />
+      <EventGuidelines/>
       <Faq />
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default Sabdatattva;

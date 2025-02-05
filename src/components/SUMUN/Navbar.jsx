@@ -28,9 +28,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const pages = [
-  { name: "Home", location: "/" },
-  { name: "Teams", location: "/teams" },
-  { name: "Committee", location: "/committee" },
+  { name: "Home", location: "/sumun" },
+  // { name: "Teams", location: "/teams" },
+  { name: "Committee", location: "/sumun/committee" },
   { name: "Register", location: "https://docs.google.com/forms/d/e/1FAIpQLSc1RWEL-wyxqGATGtESWUhJFOZ3xCQ89nWzZLWG7Bhow337Bg/viewform" },
 ];
 
@@ -115,7 +115,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
         position="fixed"
         sx={{
           background:
-            scrollPosition < 100 ? "transparent" : "rgb(20, 225, 0, 0.15)",
+            scrollPosition < 100 ? "transparent" : "#03a9f436",
           boxShadow: "none",
           color: "black",
           backdropFilter: scrollPosition > 100 ? "blur(20px)" : "none",
@@ -317,7 +317,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
                 border: "2px solid ff3cac !important",
                 borderRadius: ".75rem !important",
                 background: "rgb(0,6,1)",
-          backgroundImage: "linear-gradient(90deg, rgba(0,6,1,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgba(5,37,8,1) 100%);",
+          backgroundImage: "linear-gradient(90deg, rgba(0,6,1,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgb(5, 28, 37) 100%);",
               },
             }}
           >

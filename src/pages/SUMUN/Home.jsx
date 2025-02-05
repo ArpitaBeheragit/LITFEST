@@ -13,15 +13,15 @@ import Feedback from "../../components/SUMUN/Home/Feedback";
 import "../../styles/SUMUN/circles.css"
 
 
-const Home = () => {
+const Sumun = () => {
   return (
     <div>
       <Navbar />
       <Hero />
-      <CalcTimeDelta />
+      {/* <CalcTimeDelta /> */}
       <About />
       <Gallery />
-      <TimelineView />
+      {/* <TimelineView /> */}
       <Feedback />
       <Message />
       <Faq />
@@ -30,4 +30,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Sumun;
