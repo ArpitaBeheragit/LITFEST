@@ -55,9 +55,18 @@ const HeroTeam = ({ heading, order, setOrder, selectList }) => {
             transition: "backgroundImage ease-in",
           }}
         >
-          <h1>
-            <Heading heading={heading || "Committees"} />
-          </h1>
+          <Typography
+              variant="h1"
+              fontWeight={900}
+              textAlign={"center"}
+              color={" rgb(65 161 166)"}
+              sx={{ letterSpacing: "4px" }}
+              className="sit"
+              data-aos="zoom-in"
+              
+            >
+              COMMITTEE
+            </Typography>
         </Box>
         {selectList && <ThemeProvider theme={theme}>
             <FormControl

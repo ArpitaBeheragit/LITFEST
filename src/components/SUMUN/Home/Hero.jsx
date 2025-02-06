@@ -53,7 +53,7 @@ const Hero = () => {
           backgroundColor="#031D40 "
           width={{ md: "4rem", xs: "2rem" }}
           display={{ md: "flex", xs: "none" }}
-          overflow={"hidden"}
+          // overflow={"hidden"}
           sx={{
             backdropFilter: 'blur(30px)',
             color: '#fafafa'
@@ -70,7 +70,7 @@ const Hero = () => {
                 fontWeight: "900",
                 textWrap: "nowrap",
                 letterSpacing: "2px",
-                animation: `hashtag-move 10s linear infinite`,
+                animation: "hashtag-move 10s linear infinite",
               }}
             >
               &nbsp;REVOLUTION THROUGH RESOLUTION
@@ -150,7 +150,7 @@ const Hero = () => {
               width={{ md: "4rem", xs: "100vw" }}
               display={{ md: "none", xs: "block" }}
               margin={"4rem 0"}
-              overflow={"hidden"}
+              // overflow={"hidden"}
             >
               <Box>
                 <Typography
@@ -250,7 +250,7 @@ export const SideBar = () => {
         </Typography>
       </NavLink> */}
 
-      <NavLink to={"committee"}>
+      <NavLink to={"/sumun/committee"}>
         <Typography
           variant="h6"
           fontFamily={"comfortaa,cursive"}

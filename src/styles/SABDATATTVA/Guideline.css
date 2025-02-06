@@ -11,6 +11,8 @@
   }
   .card-content{
     padding: 4px 10px 5px 10px;
+    font-family: "comfortaa,cursive";
+    font-weight: 300;
   }
   .nav-buttons{
     padding-top:15px
@@ -22,4 +24,7 @@
   .MuiTabPanel-root {
     max-height: calc(100vh - 150px); /* Adjust to fit within the screen */
     overflow-y: auto; /* Scroll only inside the tab panel */
+  }
+  body{
+    background-color: black;
   }

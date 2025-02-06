@@ -1,6 +1,4 @@
 import React from "react";
-import styles from "../../../styles/SUMUN/message.module.css"; // Import your CSS file
-import SgImage from "../../../assets/sg.jpg";
 import Heading from "../../shared/Heading";
 import { Grid, Box, Container, Typography, Stack } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,7 +14,6 @@ const Message = () => {
       sx={{
         display: "flex",
         justifyContent: "center",
-        
         alignItems: "center",
         background: "#000",
         padding: "10vh 5vw",

@@ -18,7 +18,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-
+import { useEffect } from "react";
 import Logo from "../../assets/logo.png";
 
 import { Button } from "@mui/material";
@@ -28,9 +28,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const pages = [
-  { name: "Home", location: "/" },
-  { name: "Teams", location: "/teams" },
-  { name: "Committee", location: "/committee" },
+  { name: "Home", location: "/sabdatattva" },
+  { name: "Events", location: "/sabdatattva/events" },
   { name: "Register", location: "https://docs.google.com/forms/d/e/1FAIpQLSc1RWEL-wyxqGATGtESWUhJFOZ3xCQ89nWzZLWG7Bhow337Bg/viewform" },
 ];
 
@@ -45,6 +44,8 @@ export default function Navbar({ order, setOrder, selectList = false }) {
       window.open(location, "_blank");
     } else {
       // Internal link
+      console.log(location);
+      
       navigate(location);
     }
   };
@@ -81,14 +82,14 @@ export default function Navbar({ order, setOrder, selectList = false }) {
     }
   };
 
-  const handleScroll = () => {
-    const position = window.scrollY;
-    setScrollPosition(position);
-    // console.log(position);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = document.documentElement.scrollTop || window.scrollY;
+      setScrollPosition(position);
+      console.log("Scroll Position:", position); // Debug log
+    };
 
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -114,8 +115,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
       <AppBar
         position="fixed"
         sx={{
-          background:
-            scrollPosition < 100 ? "transparent" : "rgb(20, 225, 0, 0.15)",
+          background:scrollPosition < 100 ? "transparent" : "rgb(20, 225, 0, 0.15)",
           boxShadow: "none",
           color: "black",
           backdropFilter: scrollPosition > 100 ? "blur(20px)" : "none",
@@ -138,146 +138,6 @@ export default function Navbar({ order, setOrder, selectList = false }) {
             alignItems={"center"}
             spacing={2}
           >
-            <Box display={selectList ? "block" : "none"}>
-              <ThemeProvider theme={theme}>
-                <FormControl
-                  sx={{
-                    m: 1,
-                    minWidth: 120,
-                    color: "#fff",
-                    display: { xs: "none", md: "block" },
-                    fontFamily:"comfortaa,cursive"
-                  }}
-                  size="small"
-                >
-                  <InputLabel
-                    htmlFor="demo-dialog-native"
-                    sx={{ color: "#fff" ,fontFamily:"comfortaa,cursive"}}
-                    
-                  >
-                    Department
-                  </InputLabel>
-                  <Select
-                    native
-                    value={order}
-                    onChange={(e) => setOrder(e.target.value)}
-                    input={
-                      <OutlinedInput label="Position" id="demo-dialog-native" />
-                    }
-                    sx={{ color: "#fff" }}
-                    fontFamily={"comfortaa,cursive"}
-                  >
-                    <option value={"Core Secretariat"}>Core Secretariat</option>
-                    <option value={"Delegate Affairs"}>Delegate Affairs</option>
-                    <option value={"Public Relations"}>Public Relations</option>
-                    <option value={"Web Development"}>Web Development</option>
-                    <option value={"Hospitality"}>Hospitality</option>
-                    <option value={"Finance"}>Finance</option>
-                    <option value={"Sponsorship"}>Sponsorship</option>
-                    <option value={"Video Editing"}>Video Editing</option>
-                    <option value={"Creativity & Designing"}>
-                      Creativity & Designing
-                    </option>
-                    <option value={"Logistics"}>Logistics</option>
-                    <option value={"EB Affairs"}>EB Affairs</option>
-                  </Select>
-                </FormControl>
-              </ThemeProvider>
-              {/* <Button
-                onClick={handleClickOpen}
-                sx={{
-                  color: "#fff",
-                  background: "rgb(20, 225, 0, 0.40)",
-                  backdropFilter: "blur(30px)",
-                  fontWeight: "bold",
-                  padding: "1vh 2vw",
-
-                  "&:hover": {
-                    backdropFilter: "blur(0px)",
-                    border: "1px solid #fff",
-                    background: "rgb(20, 225, 0, 0.40)",
-                  },
-                }}
-              >
-                Select Team
-              </Button>
-              <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
-                <DialogContent
-                  sx={{
-                    background: "#4d9f3d",
-                    backdropFilter: "blur(30px)",
-                  }}
-                >
-                  <Box
-                    component="form"
-                    sx={{ display: "flex", flexWrap: "wrap" }}
-                  >
-                    <FormControl sx={{ m: 1, minWidth: 120 }}>
-                      <InputLabel htmlFor="demo-dialog-native">
-                        Department
-                      </InputLabel>
-                      <Select
-                        native
-                        value={order}
-                        onChange={(e) => setOrder(e.target.value)}
-                        input={
-                          <OutlinedInput
-                            label="Position"
-                            id="demo-dialog-native"
-                          />
-                        }
-                      >
-                        <option value={"Core Secretariat"}>
-                          Core Secretariat
-                        </option>
-                        <option value={"Delegate Affairs"}>
-                          Delegate Affairs
-                        </option>
-                        <option value={"Public Relations"}>
-                          Public Relations
-                        </option>
-                        <option value={"Web Development"}>
-                          Web Development
-                        </option>
-                        <option value={"Hospitality"}>Hospitality</option>
-                        <option value={"Finance"}>Finance</option>
-                        <option value={"Sponsorship"}>Sponsorship</option>
-                        <option value={"Video Editing"}>Video Editing</option>
-                        <option value={"Creativity & Designing"}>
-                          Creativity & Designing
-                        </option>
-                        <option value={"Logistics"}>Logistics</option>
-                        <option value={"EB Affairs"}>EB Affairs</option>
-                      </Select>
-                    </FormControl>
-                  </Box>
-                </DialogContent>
-                <DialogActions
-                  sx={{
-                    background: "#4d9f3d",
-                    backdropFilter: "blur(30px)",
-                  }}
-                >
-                  <Button
-                    onClick={handleClose}
-                    sx={{
-                      color: "#fff",
-                      // border: '1px solid #000',
-                      background: "rgb(20, 225, 0, 0.70)",
-                      backdropFilter: "blur(30px)",
-                      fontWeight: "bold",
-
-                      "&:hover": {
-                        backdropFilter: "blur(0px)",
-                        border: "1px solid #fff",
-                      },
-                    }}
-                  >
-                    Ok
-                  </Button>
-                </DialogActions>
-              </Dialog> */}
-            </Box>
             <IconButton
               size="large"
               edge="end"
@@ -316,8 +176,8 @@ export default function Navbar({ order, setOrder, selectList = false }) {
               "& .MuiPaper-root": {
                 border: "2px solid ff3cac !important",
                 borderRadius: ".75rem !important",
-                background: "rgb(0,6,1)",
-          backgroundImage: "linear-gradient(90deg, rgba(0,6,1,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgba(5,37,8,1) 100%);",
+                background: "rgb(0, 6, 6)",
+                backgroundImage: "linear-gradient(90deg, rgb(0, 6, 5) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgb(5, 37, 37) 100%);",
               },
             }}
           >
@@ -333,7 +193,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
                 "& li:hover": {
                   p: ".5rem",
                   "& > h6": {
-                    color: "#014017",
+                    color: " rgb(65 161 166)",
                     fontWeight: "bolder",
                   },
                   borderRadius: ".5rem",

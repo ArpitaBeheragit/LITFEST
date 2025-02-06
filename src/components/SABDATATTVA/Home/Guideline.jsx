@@ -14,7 +14,8 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Button
+  Button,
+  Divider
 } from '@mui/material';
 import {
   CalendarToday,
@@ -24,7 +25,7 @@ import {
   ArrowBack,
   ArrowForward
 } from '@mui/icons-material';
-import { blue } from '@mui/material/colors';
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -36,7 +37,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ py: 3 }}>
+        <Box sx={{ py: 3 }} style={{padding:"13px 13px 37px 35px"}}>
           {children}
         </Box>
       )}
@@ -72,19 +73,11 @@ const EventGuidelines = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: '100%', margin: '0 auto', p: 1}}>
-      <Paper 
-        elevation={6} 
-        sx={{ mb: 4, background: 'linear-gradient(to right, rgb(30, 82, 6), rgb(100, 116, 128))', p: 3 }}
-      >
-        <Typography variant="h4" component="h1" align="center" gutterBottom>
-          Sabdatattva 2025
-        </Typography>
-      </Paper>
-
+    <Box sx={{ maxWidth: '80%', margin: '0px auto 50px', padding:"34px"}}>
       {/* Tabs */}
       <Box elevation={1} className='attributes'>
-        <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
+        <Box sx={{ borderBottom: 2, borderColor: 'divider',display: "flex",
+        justifyContent: "center" }}>
           <Tabs 
             value={value} 
             onChange={handleChange} 
@@ -93,37 +86,42 @@ const EventGuidelines = () => {
             allowScrollButtonsMobile
             sx={{
               '& .MuiTab-root': {
-                color: 'black',
+                color:"white",
                 whiteSpace: 'nowrap', // Prevents text wrapping
                 minWidth: 'auto', // Adjust width dynamically
                 padding: '6px 12px', // Ensures proper spacing
-                '&:hover': { color: 'rgb(30, 82, 6)' },
-                '&.Mui-selected': { color: 'rgb(30, 82, 6)' },
+                '&:hover': { color: 'rgb(6, 72, 82)' },
+                '&.Mui-selected': { color: 'rgb(6, 82, 78)' },
               },
-              '& .MuiTabs-indicator': { backgroundColor: 'rgb(30, 82, 6)' },
+              width: "100%",
+          "& .MuiTabs-flexContainer": {
+            display: "flex",
+            justifyContent: "space-between",
+          },
+              '& .MuiTabs-indicator': { backgroundColor: 'rgb(6, 82, 80)' },
             }}
           >
-            <Tab label="Overview" />
-            <Tab label="Registration Fees" />
-            <Tab label="Rules & Guidelines" />
+            <Tab label="Overview" style={{fontFamily:"comfortaa,cursive",fontSize:"16px"}}/>
+            <Tab label="Registration Fees" style={{fontFamily:"comfortaa,cursive",fontSize:"16px"}}/>
+            <Tab label="Rules & Guidelines" style={{fontFamily:"comfortaa,cursive",fontSize:"16px"}}/>
           </Tabs>
         </Box>
-
+        <Divider style={{color:"white"}}/>
         {/* Overview Tab */}
         <TabPanel value={value} index={0}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 ,}}>
             {guidelines.overview.map((item, index) => (
-              <Card key={index}>
-                <CardContent>
+              <Card key={index} style={{width:"98%"}}>
+                <CardContent >
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                    <Box sx={{ p: 2, bgcolor: 'rgb(157, 181, 147)', borderRadius: 1 }}>
+                    <Box sx={{ p: 2, bgcolor: 'rgb(147, 175, 181)', borderRadius: 1 }}>
                       {item.icon}
                     </Box>
                     <Box>
-                      <Typography variant="h6" gutterBottom>
+                      <Typography variant="h6" gutterBottom fontFamily={"comfortaa,cursive"} fontSize={"14px"}>
                         {item.title}
                       </Typography>
-                      <Typography color="text.secondary">
+                      <Typography color="text.secondary" fontFamily={"comfortaa,cursive"} fontSize={"15px"}>
                         {item.content}
                       </Typography>
                     </Box>
@@ -136,7 +134,7 @@ const EventGuidelines = () => {
 
         {/* Fees Tab */}
         <TabPanel value={value} index={1}>
-          <Card>
+          <Card style={{width:"98%",backgroundColor:"black"}}>
             <CardContent>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.4 }}>
                 {guidelines.fees.map((fee, index) => (
@@ -154,17 +152,17 @@ const EventGuidelines = () => {
                     <Typography variant="subtitle1">
                       {fee.category}
                     </Typography>
-                    <Typography variant="h6" color="rgb(90, 125, 75)" fontWeight="bold">
+                    <Typography variant="h6" color="rgb(6, 82, 78)" fontWeight="bold">
                       {fee.amount}
                     </Typography>
                   </Paper>
                 ))}
                 <Alert 
                   severity="info"
-                  icon={<InfoIcon style={{ color: 'rgb(30, 82, 6)' }} />}
+                  icon={<InfoIcon style={{ color: 'white' }} />}
                   sx={{
-                    color: 'rgb(30, 82, 6)',
-                    backgroundColor: 'rgba(30, 82, 6, 0.1)',
+                    color: 'white',
+                    backgroundColor: 'rgba(6, 82, 81, 0.1)',
                   }}
                 >
                   Registration fees are non-refundable. Multiple event participation is allowed.
@@ -176,7 +174,7 @@ const EventGuidelines = () => {
 
         {/* Rules Tab */}
         <TabPanel value={value} index={2}>
-          <Card>
+          <Card style={{width:"98%",backgroundColor:"black"}}>
             <CardContent>
               <List>
                 {guidelines.rules.map((rule, index) => (
@@ -186,7 +184,7 @@ const EventGuidelines = () => {
                         sx={{ 
                           width:24, 
                           height: 24, 
-                          bgcolor: 'rgb(144, 179, 129)',
+                          bgcolor: 'white',
                           borderRadius: '50%',
                           display: 'flex',
                           alignItems: 'center',
@@ -261,10 +259,10 @@ const EventGuidelines = () => {
                 whiteSpace: 'nowrap', // Prevents text wrapping
                 minWidth: 'auto', // Adjust width dynamically
                 padding: '6px 12px', // Ensures proper spacing
-                '&:hover': { color: 'rgb(30, 82, 6)' },
-                '&.Mui-selected': { color: 'rgb(30, 82, 6)' },
+                '&:hover': { color: 'rgb(6, 72, 82)' },
+                '&.Mui-selected': { color: 'rgb(6, 82, 78)' },
               },
-              '& .MuiTabs-indicator': { backgroundColor: 'rgb(30, 82, 6)' },
+              '& .MuiTabs-indicator': { backgroundColor: 'rgb(6, 82, 80)' },
             }}
         >
         </Tabs>

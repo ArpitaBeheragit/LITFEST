@@ -28,7 +28,7 @@ const Hero = () => {
         height: "100vh",
         width: "100%",
         // background: `url(${HeroImg}),linear-gradient(#4e9f3d, #4E9F3D)`,
-        backgroundImage: `linear-gradient(120deg, rgba(25,26,25,0.9) 71%, rgba(30,81,40,0.8) 97%), url(${heroImgs[imgUrlIdx]})`,
+        backgroundImage: `linear-gradient(120deg, rgba(31, 31, 31, 0.9) 71%, rgba(25, 67, 80, 0.8) 97%), url(${heroImgs[imgUrlIdx]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -50,10 +50,10 @@ const Hero = () => {
         <Stack
           spacing={5}
           justifyContent={"end"}
-          backgroundColor="#4d9f3d78"
+          backgroundColor="#031D40 "
           width={{ md: "4rem", xs: "2rem" }}
           display={{ md: "flex", xs: "none" }}
-          overflow={"hidden"}
+          // overflow={"hidden"}
           sx={{
             backdropFilter: 'blur(30px)',
             color: '#fafafa'
@@ -66,11 +66,11 @@ const Hero = () => {
               fontSize={{ md: "42px", xs: "24px" }}
               sx={{
                 width: "100vh",
-                color: "#37be52",
+                color: "rgb(65 161 166) ",
                 fontWeight: "900",
                 textWrap: "nowrap",
                 letterSpacing: "2px",
-                animation: `hashtag-move 10s linear infinite`,
+                animation: "hashtag-move 10s linear infinite",
               }}
             >
               &nbsp;INSPIRE THROUGH WORDS
@@ -118,17 +118,16 @@ const Hero = () => {
 
             <Typography
               variant="h1"
-              
               fontWeight={900}
               textAlign={"center"}
-              color={"#D8E9A8"}
+              color={" rgb(65 161 166)"}
               sx={{ letterSpacing: "4px" }}
               className="sit"
               data-aos="zoom-in"
               
             >
-              <span style={{ color: "#4E9F3D" }} className="sit">
-                SABDA
+              <span style={{ color: "#a8e1e9"}} className="sit">
+              SABDA
               </span>
               TATTVA
             </Typography>
@@ -138,7 +137,7 @@ const Hero = () => {
               className="sit"
               fontWeight={600}
               textAlign={"center"}
-              color={"#D8E9A8"}
+              color={"rgb(65 161 166)"}
               data-aos="zoom-in"
             >
               2025
@@ -147,11 +146,11 @@ const Hero = () => {
             <Stack
               spacing={5}
               justifyContent={"end"}
-              backgroundColor="#4E9F3D"
+              backgroundColor="#031D40" 
               width={{ md: "4rem", xs: "100vw" }}
               display={{ md: "none", xs: "block" }}
               margin={"4rem 0"}
-              overflow={"hidden"}
+              // overflow={"hidden"}
             >
               <Box>
                 <Typography
@@ -159,7 +158,7 @@ const Hero = () => {
                   textTransform={"capitalize"}
                   fontSize={{ md: "42px", xs: "24px" }}
                   sx={{
-                    color: "#1E5128",
+                    color: "rgb(65 161 166) ",
                     fontWeight: "900",
                     textWrap: "nowrap",
                     letterSpacing: "2px",
@@ -231,7 +230,7 @@ export const SideBar = () => {
       fontFamily={"comfortaa,cursive"}
       sx={{ display: { md: "flex", sm: "none", xs: "none" } }}
     >
-      <NavLink to={"/"}>
+      <NavLink to={"/sabdatattva"}>
         <Typography
           variant="h6"
           fontFamily={"comfortaa,cursive"}
@@ -241,7 +240,7 @@ export const SideBar = () => {
         </Typography>
       </NavLink>
 
-      <NavLink to={"/teams"}>
+      {/* <NavLink to={"/teams"}>
         <Typography
           variant="h6"
           fontFamily={"comfortaa,cursive"}
@@ -249,9 +248,9 @@ export const SideBar = () => {
         >
           Teams
         </Typography>
-      </NavLink>
+      </NavLink> */}
 
-      <NavLink to={"/committee"}>
+      <NavLink to={"/sabdatattva/events"}>
         <Typography
           variant="h6"
           fontFamily={"comfortaa,cursive"}
