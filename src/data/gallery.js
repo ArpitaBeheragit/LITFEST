@@ -1,63 +1,27 @@
 export const galleryData = [
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/SIT_1058.webp?updatedAt=1707584111985"
-    },
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/SIT_1039.webp?updatedAt=1707584111280"
-    },
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/SIT_1047.webp?updatedAt=1707584111846"
-    },
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/DSC_3307.webp?updatedAt=1707584108706"
-    },
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/_MG_0664.webp?updatedAt=1707584106023"
-    },
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/DSC_0235-1.webp?updatedAt=1707584105602"
-    },
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/DSC_0003.webp?updatedAt=1707584106508"
-    },{
-        url: "https://ik.imagekit.io/0oohdkbtxa/DSC_0032.webp?updatedAt=1707584106413"
-    },
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/WhatsApp%20Image%202024-02-01%20at%2022.52.16.webp?updatedAt=1707584112039"
-    },
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/DSC_0178.webp?updatedAt=1707584106016"
-    },{
-        url: "https://ik.imagekit.io/0oohdkbtxa/WhatsApp%20Image%202024-02-01%20at%2023.10.05.webp?updatedAt=1707584112572"
-    },
-    {url:"https://ik.imagekit.io/0oohdkbtxa/WhatsApp%20Image%202024-02-01%20at%2023.18.37.webp?updatedAt=1707584111849"},
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/_MG_8638.webp?updatedAt=1707584105600"
-    },{
-        url: "https://ik.imagekit.io/0oohdkbtxa/DSC_3166.webp?updatedAt=1707584106504"
-    },
-    {
-        url: "https://ik.imagekit.io/0oohdkbtxa/_DSC0913.webp?updatedAt=1707584106307"
-    },
     
-    {url:"https://ik.imagekit.io/0oohdkbtxa/img_y1Wm5VbGvx.webp?updatedAt=1707584109650" },
-        {url:"https://ik.imagekit.io/0oohdkbtxa/DSC_2960.webp?updatedAt=1707584105307"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/DSC_3497.webp?updatedAt=1707584109027"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/DSC_3440.webp?updatedAt=1707584109153"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/DSC_3473.webp?updatedAt=1707584109349"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/DSC_0167.webp?updatedAt=1707584105951"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/IMG_9026.webp?updatedAt=1707584109464"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/DSC_3277.webp?updatedAt=1707584108820"},
-    
-        {url:"https://ik.imagekit.io/0oohdkbtxa/IMG_7220.webp?updatedAt=1707584109583"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/DSC_3276.webp?updatedAt=1707584107900"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/DSC_3363.webp?updatedAt=1707584108563"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/IMG_7422.webp?updatedAt=1707584112471"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/IMG_7159.webp?updatedAt=1707584112363"},
-        {url:"https://ik.imagekit.io/0oohdkbtxa/IMG_8535.webp?updatedAt=1707584112461"},
-       
-        {url:"https://ik.imagekit.io/0oohdkbtxa/IMG_8443.webp?updatedAt=1707584112734"},
-        
-        
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/20240328060245_IMG_2955_5_IMGCentury.webp?updatedAt=1738601379709"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/20240328074930_IMG_2981_6_IMGCentury.webp?updatedAt=1738601376488"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/DSC_0251_4_IMGCentury.webp?updatedAt=1738601373973"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/20240330044735_IMG_3121_1_IMGCentury.webp?updatedAt=1738601370697"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/DSC_0253_5_IMGCentury.webp?updatedAt=1738601365445"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/DSC_0236_2_IMGCentury.webp?updatedAt=1738601357182"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/IMG_3450_14_IMGCentury.webp?updatedAt=1738601342920"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/IMG_3456_15_IMGCentury.webp?updatedAt=1738601339463"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/RMS_5007_4_IMGCentury.webp?updatedAt=1738601325439"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/RMS_4700_20_IMGCentury.webp?updatedAt=1738601318460"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/RMS_5992_6_IMGCentury.webp?updatedAt=1738601314921"},
+
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/DSC_0168_8_IMGCentury.webp?updatedAt=1738601382146"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/DSC_0242_3_IMGCentury.webp?updatedAt=1738601368485"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/DSC_4103_10_IMGCentury.webp?updatedAt=1738601359921"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/DSC_4404_2_IMGCentury.webp?updatedAt=1738601353957"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/DSC_4124_1_IMGCentury.webp?updatedAt=1738601351764"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/DSC_4479_11_IMGCentury.webp?updatedAt=1738601348357"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/DSC_4847_13_IMGCentury.webp?updatedAt=1738601346293"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/IMG_3459_16_IMGCentury.webp?updatedAt=1738601335829"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/IMG_3501_18_IMGCentury.webp?updatedAt=1738601328891"},
+    {url:"https://ik.imagekit.io/rmc1sos6n/SUMUN/RMS_4654_19_IMGCentury.webp?updatedAt=1738601321915"}
+
     
 ]

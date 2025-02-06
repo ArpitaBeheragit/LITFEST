@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { heroImgs } from "../../../data/hero";
 
 //css file
-import "../../../styles/SUMUN/sideBar.css";
+import styles from "../../../styles/SUMUN/sideBar.module.css";
 
 
 const Hero = () => {
@@ -122,11 +122,11 @@ const Hero = () => {
               textAlign={"center"}
               color={" rgb(65 161 166)"}
               sx={{ letterSpacing: "4px" }}
-              className="sit"
+              className={styles.sit}
               data-aos="zoom-in"
               
             >
-              <span style={{ color: "#a8e1e9"}} className="sit">
+              <span style={{ color: "#a8e1e9"}} className={styles.sit}>
                 SU
               </span>
               MUN
@@ -134,7 +134,7 @@ const Hero = () => {
             <Typography
               variant="h1"
               // fontFamily={"comfortaa,cursive"}
-              className="sit"
+              className={styles.sit}
               fontWeight={600}
               textAlign={"center"}
               color={"rgb(65 161 166)"}
@@ -186,7 +186,7 @@ const Hero = () => {
                   fontWeight: "600",
                   fontFamily:"comfortaa,cursive"
                 }}
-                className="herbtn"
+                className={styles.herbtn}
                 href="https://docs.google.com/forms/d/e/1FAIpQLSc1RWEL-wyxqGATGtESWUhJFOZ3xCQ89nWzZLWG7Bhow337Bg/viewform"
                 target="_blank"
               >
@@ -204,7 +204,7 @@ const Hero = () => {
                     fontFamily:"comfortaa,cursive"
                   }}
                   // color="success"
-                  className="herbtn"
+                  className={styles.herbtn}
                   href="#about"
                 >
                   Know More
@@ -234,7 +234,7 @@ export const SideBar = () => {
         <Typography
           variant="h6"
           fontFamily={"comfortaa,cursive"}
-          className="navLink"
+          className={styles.navLink}
         >
           Home
         </Typography>
@@ -254,7 +254,7 @@ export const SideBar = () => {
         <Typography
           variant="h6"
           fontFamily={"comfortaa,cursive"}
-          className="navLink"
+          className={styles.navLink}
         >
           Committee
         </Typography>

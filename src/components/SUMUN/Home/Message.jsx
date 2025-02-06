@@ -3,7 +3,7 @@ import Heading from "../../shared/Heading";
 import { Grid, Box, Container, Typography, Stack } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "../../../styles/SUMUN/about.css";
+import styles from "../../../styles/SUMUN/about.module.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -28,7 +28,7 @@ const Message = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          background: "rgb(0,6,1)",
+          // background: "rgb(0,6,1)",
           background: "linear-gradient(90deg, rgba(0, 6, 0, 1) 21%, rgba(0, 6, 1, 1) 79%, rgb(1 42 46) 100%) !important",
           backdropFilter: 'blur(30px)',
           borderRadius: '2rem',

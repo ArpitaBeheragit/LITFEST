@@ -10,7 +10,7 @@
 
 import React from "react";
 import { useEffect } from "react";
-import "../../styles/SUMUN/footer.css";
+// import "../../styles/SUMUN/footer.css";
 
 const HoverFooter = () => {
   return (

@@ -142,8 +142,12 @@ const Feedback = () => {
                   <img src={item.url} alt={`Image ${id}`} />
                 </div>
                 <div className={styles.desc}>
-                  <h3>{item.auth}</h3>
-                  <p>{item.desc}</p>
+                  <Typography variant="h6" gutterBottom fontFamily={"comfortaa,cursive"}>
+                  {item.auth}
+                      </Typography>
+                      <Typography fontFamily={"comfortaa,cursive"} fontSize={"15px"}>
+                      {item.desc}
+                      </Typography>
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../../../styles/SABDATATTVA/Guideline.css"
+import styles from "../../../styles/SABDATATTVA/Guideline.module.css"
 import InfoIcon from '@mui/icons-material/Info';
 import {
   Card,
@@ -64,18 +64,18 @@ const EventGuidelines = () => {
       { category: "Non-Siliconites", amount: "₹300" }
     ],
     rules: [
-      <Card className='card-content'>"Registration fees are non-refundable"</Card>,
-      <Card className='card-content'>"Strict disqualification for unfair practices"</Card>,
-      <Card className='card-content'>"Participants must display discipline and proper conduct"</Card>,
-      <Card className='card-content'>"Participation in multiple events is allowed"</Card>,
-      <Card className='card-content'>"Lunch will be provided on event days"</Card>
+      <Card className={styles.card_content}>"Registration fees are non-refundable"</Card>,
+      <Card className={styles.card_content}>"Strict disqualification for unfair practices"</Card>,
+      <Card className={styles.card_content}>"Participants must display discipline and proper conduct"</Card>,
+      <Card className={styles.card_content}>"Participation in multiple events is allowed"</Card>,
+      <Card className={styles.card_content}>"Lunch will be provided on event days"</Card>
     ]
   };
 
   return (
     <Box sx={{ maxWidth: '80%', margin: '0px auto 50px', padding:"34px"}}>
       {/* Tabs */}
-      <Box elevation={1} className='attributes'>
+      <Box elevation={1} className={styles.attributes}>
         <Box sx={{ borderBottom: 2, borderColor: 'divider',display: "flex",
         justifyContent: "center" }}>
           <Tabs 
@@ -205,7 +205,7 @@ const EventGuidelines = () => {
         </TabPanel>
       </Box>
 
-  <Box className="Mobile-view"
+  <Box className={styles.Mobile_view}
    sx={{
      display: { xs: 'none', sm: 'none', md: 'none' }, 
      '@media (max-width: 320px)': { display: 'flex', flexDirection: 'column' }, 
@@ -216,7 +216,7 @@ const EventGuidelines = () => {
    }}>
 
       {/* Navigation Buttons (For Mobile View) */}
-      <Box className="nav-buttons"
+      <Box className={styles.nav_buttons}
   sx={{
     display: 'flex',
     justifyContent: 'center', 
@@ -228,7 +228,7 @@ const EventGuidelines = () => {
     width: '100%',
   }}
 >        <Button 
-          className="prev-button"
+          className={styles.prev_button}
           onClick={() => setValue(Math.max(0, value - 1))}
           style={{
             // background: 'rgb(144, 179, 129)',
@@ -267,7 +267,7 @@ const EventGuidelines = () => {
         >
         </Tabs>
         <Button 
-          className="next-button"
+          className={styles.next_button}
           onClick={() => setValue(Math.min(2, value + 1))}
           style={{
             // background: 'rgb(144, 179, 129)',

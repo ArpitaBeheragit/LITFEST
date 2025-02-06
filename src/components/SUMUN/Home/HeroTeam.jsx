@@ -13,7 +13,7 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import MenuItem from "@mui/material/MenuItem";
 
 //css file
-import "../../../styles/SUMUN/sideBar.css";
+import styles from "../../../styles/SUMUN/sideBar.module.css";
 
 const theme = createTheme({
   palette: {
@@ -61,7 +61,7 @@ const HeroTeam = ({ heading, order, setOrder, selectList }) => {
               textAlign={"center"}
               color={" rgb(65 161 166)"}
               sx={{ letterSpacing: "4px" }}
-              className="sit"
+              className={styles.sit}
               data-aos="zoom-in"
               
             >

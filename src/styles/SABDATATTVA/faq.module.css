@@ -7,7 +7,7 @@
 .faq h2 {
   font-size: 40px;
   font-weight: 700;
-  color: #4E9F3D;
+  color: #3d999f;
   text-align: center;
   padding: 30px 0 10px;
 }
@@ -32,12 +32,9 @@
   margin-bottom: 0;
   text-align: justify;
 }
-
-.faq .answer {
+.answer {
   background-color: #313131;
   color: #fff;
-}
-.answer {
   padding: 12px;
   margin: 8px 0;
   border-radius: 8px;
@@ -62,15 +59,15 @@
   animation-fill-mode: forwards;
   overflow: hidden;
 }
-.faq-link {
-  color: #4e9f3d !important;
+.faq_link {
+  color: #3d949f !important;
   text-decoration: none;
 }
-.faq-link:hover {
+.faq_link:hover {
   text-decoration: underline;
 }
 
-@keyframes faq-active {
+@keyframes faq_active {
   0% {
     opacity: 0;
     max-height: 0;
@@ -80,7 +77,7 @@
     max-height: 500px;
   }
 }
-@keyframes faq-inactive {
+@keyframes faq_inactive {
   0% {
     max-height: 500px;
     opacity: 1;
@@ -93,29 +90,29 @@
     padding: 0;
   }
 }
-.q-dark {
-  border: 2px solid #4E9F3D;
+.q_dark {
+  border: 2px solid #3d959f !important;
   color: #fff;
 }
-.q-dark p {
+.q_dark p {
   transition: all ease-out 0.3s;
   transform: rotate(-180deg);
 }
-.q-light {
+.q_light {
   background-color: #313131;
   border: 2px solid #313131;
   color: #fff;
 }
-.q-light p {
+.q_light p {
   transition: all ease-out 0.3s;
   transform: rotate(0deg);
 }
-.q-light-start {
+.q_light_start {
   margin-bottom: 16px;
 }
 
-.q-light-start:hover, .q-light:hover {
-  background: #105f00;
+.q_light_start:hover, .q_light:hover {
+  background: #06757f!important;
   color: #fff;
 }
 

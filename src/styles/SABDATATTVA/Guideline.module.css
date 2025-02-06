@@ -1,5 +1,5 @@
 @media (max-width: 320px){
-    .Mobile-view{
+    .Mobile_view{
       padding: 10px;
     }
   }
@@ -9,12 +9,12 @@
     border-radius: 10px;
     width: 100%;
   }
-  .card-content{
+  .card_content{
     padding: 4px 10px 5px 10px;
     font-family: "comfortaa,cursive";
     font-weight: 300;
   }
-  .nav-buttons{
+  .nav_buttons{
     padding-top:15px
   }
   html, body, #root {

@@ -9,20 +9,20 @@ import Heading from "../../shared/Heading";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../../../styles/SABDATATTVA/about.css"
+import styles from "../../../styles/SABDATATTVA/about.module.css"
 // SwiperCore.use([EffectCards, Mousewheel]);
 
 const About = () => {
   return (
     <section id="about">
       <Stack
-        className="content"
+        className={styles.content}
         flexDirection={{ md: "row", xs: "column-reverse" }}
       >
-        <Box className="info">
+        <Box className={styles.info}>
           <Heading heading={"About us"} />
           <Typography variant="body1" fontFamily="comfortaa,cursive" >
-          <span className="movie-night">Sabdattatva2.0</span>
+          <span className={styles.movie_night}>Sabdattatva2.0</span>
           {' '}under the magical theme of snow, presents 
             extraordinary events designed to inspire and engage.Immerse 
             yourself in the beauty of words carved like snowflakes, 
@@ -36,9 +36,9 @@ const About = () => {
           </Typography>
           {/* <button className="btn">Join</button> */}
         </Box>
-        <Swiper className="swiper">
-          <div className="swiper-wrapper">
-            <SwiperSlide className="swiper-slide" style={{height:"100%"}}></SwiperSlide>
+        <Swiper className={styles.swiper}>
+          <div className={styles.swiper_wrapper}>
+            <SwiperSlide className={styles.swiper_slide} style={{height:"100%"}}></SwiperSlide>
           </div>
         </Swiper>
       </Stack>

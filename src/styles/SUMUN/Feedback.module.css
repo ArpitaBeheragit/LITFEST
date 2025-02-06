@@ -63,6 +63,7 @@ body {
 .testimonial_text {
   margin-bottom: -30px;
   padding-left: 17px;
+  color: white;
 }
 
 .testimonial_text p {
@@ -98,12 +99,8 @@ body {
 }
 
 
-.desc h3 {
+.desc  {
   color: white;
-  text-align: right;
-}
-
-.desc p {
   text-align: right;
 }
 

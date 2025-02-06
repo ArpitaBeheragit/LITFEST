@@ -9,8 +9,6 @@ import Logo from "../../assets/logo.png";
 
 import { useState } from "react";
 
-import "../../styles/SUMUN/about.css";
-import "../../styles/SUMUN/footer.css";
 export default function Footer() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
@@ -214,8 +212,8 @@ export default function Footer() {
         <li></li>
         <li></li>
       </ul> */}
-      <center><hr className="hr"/></center>
-      <div className="copy" ><p>&copy; Copyright 2024 SITMUN.</p></div>
+      <center></center>
+            
     </Box>
   );
 }

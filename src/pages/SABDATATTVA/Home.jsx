@@ -9,7 +9,6 @@ import Gallery from "../../components/SABDATATTVA/Home/Gallery";
 // import Testimonials from "../../components/SABDATATTVA/Home/Testimonials";
 import Faq from "../../components/SABDATATTVA/Home/Faq";
 
-import "../../styles/SABDATATTVA/circles.css"
 import EventGuidelines from "../../components/SABDATATTVA/Home/Guideline";
 
 
