@@ -236,7 +236,7 @@ const EventGuidelines = () => {
             borderRadius: '80px',
             padding: '5px 10px',
             cursor: 'pointer',
-            color: 'white',
+            // color: 'white',
             marginRight: '0.5px',
             marginLeft: '55px',
             marginTop: '0.5px',

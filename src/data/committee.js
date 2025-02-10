@@ -3,51 +3,53 @@ export const committees = [
       name: "UNHRC",
       url: "https://ik.imagekit.io/v9pfmptul/SITMUN/UNHRC.png?updatedAt=1707763073735",
       body: "The United Nations Human Rights Council (UNHRC) is the platform which guides global actions towards a future of guaranteed human rights. The council is one of the main UN organs within the United Nations and deals primarily with the protection and promotion of human rights. A subsidiary body of the General Assembly, it was established on 15 March 2006. The Council investigates allegations of breaches of human rights in United Nations member states and addresses thematic human rights issues like freedom of association and assembly, freedom of expression, freedom of belief and religion, women's rights, LGBT rights, and the rights of racial and ethnic minorities.",
-      agenda:
-        "Combating intolerance, negative stereotyping and stigmatization of, and discrimination, incitement to violence and violence against, persons based on religion or belief.",
+      agenda:"To be revealed",
+        // "Combating intolerance, negative stereotyping and stigmatization of, and discrimination, incitement to violence and violence against, persons based on religion or belief.",
       ebs: [
         {
-          name: "Arya Senapati",
-          designation: "President",
-          profilePic:
-            "https://ik.imagekit.io/v9pfmptul/SITMUN/HRC%20CHAIR.PNG?updatedAt=1711484463376",
+          name: "To be revealed",
+          // designation: "President",
+          // profilePic:
+          //   "https://ik.imagekit.io/v9pfmptul/SITMUN/HRC%20CHAIR.PNG?updatedAt=1711484463376",
         },
-        {
-          name: "Sankalp Chauhan",
-          designation: "Vice President",
-          profilePic:
-            "https://ik.imagekit.io/v9pfmptul/SITMUN/HRC%20VICE%20CHAIR.jpg?updatedAt=1711484463990",
-        },
+        // {
+        //   name: "To be revealed",
+        //   // designation: "Vice President",
+        //   // profilePic:
+        //   //   "https://ik.imagekit.io/v9pfmptul/SITMUN/HRC%20VICE%20CHAIR.jpg?updatedAt=1711484463990",
+        // },
       ],
     },
     {
       name: "DISEC",
       url: "https://ik.imagekit.io/v9pfmptul/SITMUN/DISEC.png?updatedAt=1707763073712",
       body: "The first committee of the United Nations General Assembly deals with disarmament, global challenges and threats to peace that affect the international community and seeks out solutions to the challenges in the international security regime. It considers all disarmament and international security matters within the scope of the Charter or relating to the powers and functions of any other organ of the United Nations; the general principles of cooperation in the maintenance of international peace and security, as well as principles governing disarmament and the regulation of armaments; promotion of cooperative arrangements and measures aimed at strengthening stability through lower levels of armaments.",
-      agenda:
-        "Deliberating upon the question of Lethal Autonomous Weapon Systems (LAWS) and Cyber warfare, in light of the Law of Armed Conflict.",
+      agenda:"To be revealed",
+        // "Deliberating upon the question of Lethal Autonomous Weapon Systems (LAWS) and Cyber warfare, in light of the Law of Armed Conflict.",
       ebs: [
         {
-          name: "Srotoswini Ghatak",
-          designation: "Chairperson",
-          profilePic:
-            "https://ik.imagekit.io/v9pfmptul/SITMUN/DISEC%20CHAIR.jpg?updatedAt=1711483376798",
+          name: "To be revealed",
+          // designation: "Chairperson",
+          // profilePic:
+          //   "https://ik.imagekit.io/v9pfmptul/SITMUN/DISEC%20CHAIR.jpg?updatedAt=1711483376798",
         },
-        {
-          name: "Anik Maitra",
-          designation: "Co-Chairperson",
-          profilePic:
-            "https://ik.imagekit.io/v9pfmptul/SITMUN/DISEC%20CO-CHAIR.jpg?updatedAt=1711483376843",
-        },
+        // {
+        //   name: "Anik Maitra",
+        //   designation: "Co-Chairperson",
+        //   profilePic:
+        //     "https://ik.imagekit.io/v9pfmptul/SITMUN/DISEC%20CO-CHAIR.jpg?updatedAt=1711483376843",
+        // },
       ],
     },
     {
-      name: "SDG Summit",
+      name: "WHA",
       url: "https://ik.imagekit.io/v9pfmptul/SITMUN/SDG.png?updatedAt=1707763073701",
-      body: "The international community has come together to pursue this vision through collaboration and innovation as an outcome of which, the SDG Summit of the United Nations General Assembly is the first UN Summit since the adoption of the landmark 2030 Agenda in 2015, covering a wide range of economic, social and environmental issues, such as health, education, gender equality, climate change, biodiversity and peace--carries out a comprehensive review of the state of the 17 SDGs and 169 targets, responds to the impact of multiple and interlocking crises facing the world, and provides high-level political guidance on transformative and accelerated actions leading up to the 2030 deadline for achieving these SDGs.",
-      agenda:
-        "Progressing towards a sustainable future by addressing gender disparities through education and economic development.",
-      ebs: [],
+      body: "The World Health Assembly (WHA) is the World Health Organization's (WHO) main legislative body. Established in 1948, it comprises up to three delegates from each UN member state. The WHA determines policies, appoints the Director-General, and supervises financial policies. It discusses legislation on health issues and declares global health emergencies, such as the Ebola and COVID-19 pandemics. With 194 member states, the WHA promotes international cooperation to address public health challenges.",
+      agenda:"To be revealed",
+        // "Progressing towards a sustainable future by addressing gender disparities through education and economic development.",
+      ebs: [{
+        name: "To be revealed",
+      }],
     },
     {
       name: "IP",
@@ -56,17 +58,17 @@ export const committees = [
       agenda: "",
       ebs: [
         {
-          name: "Aditya Rath",
-          designation: "Photographer-in-Chief",
-          profilePic:
-            "https://ik.imagekit.io/v9pfmptul/SITMUN/PIC.jpg?updatedAt=1711483715996",
+          name: "To be revealed",
+          // designation: "Photographer-in-Chief",
+          // profilePic:
+          //   "https://ik.imagekit.io/v9pfmptul/SITMUN/PIC.jpg?updatedAt=1711483715996",
         },
-        {
-          name: "Sushree Subhrasweta Hota",
-          designation: "Editor-in-Chief",
-          profilePic:
-            "https://ik.imagekit.io/v9pfmptul/SITMUN/EIC%20.JPG?updatedAt=1711483752212",
-        },
+        // {
+        //   name: "Sushree Subhrasweta Hota",
+        //   designation: "Editor-in-Chief",
+        //   profilePic:
+        //     "https://ik.imagekit.io/v9pfmptul/SITMUN/EIC%20.JPG?updatedAt=1711483752212",
+        // },
       ],
     },
   ];

@@ -17,7 +17,7 @@ const Message = () => {
         alignItems: "center",
         background: "#000",
         padding: "10vh 5vw",
-        position: 'relative'
+        position: 'relative',
       }}
       
     >
@@ -45,7 +45,7 @@ const Message = () => {
             padding: "3vh 0",
           }}
         >
-          <Heading heading={"Message From Secretariat"} />
+          <Heading heading={"Message From Core Secretariat"} />
         </Grid>
           {/* <Grid
             item
@@ -63,18 +63,21 @@ const Message = () => {
           <Grid
             item
             xs={12}
-            sm={9}
+            sm={10}
             sx={{
               textAlign: "justify",
-              padding: "5vh 2vw",
+              // padding: "5vh 2vw",
               lineHeight: '1.1rem',
               fontFamily:"comfortaa,cursive"
             }}
           >
-            <Typography variant="body1" fontFamily="comfortaa,cursive">
-            "Reverberating the domain with indomitable resolutions", SITMUN has, since time immemorial believed in such similar notions and has henceforth conducted the most exciting and intriguing debating competitions of all time. Despite the pandemic in 2021 or let it be the dire market conditions in 2022, the unassailable psyche that drove us, bought the greatest of the interests and most of the minds in a conglomeration to build this event. This time in the forthcoming and exhilarating year of 2023, we bring forth the 5th edition of SITMUN. We believe that the world needs a revolution, it demands individualistic mindsets to articulate a new pathway, join us this February 2023 to build the future and clash our words for a new understanding!"
+            <Typography variant="body1" fontFamily="comfortaa,cursive" color="white">
+            We are honored to welcome you to the 7th edition of Silicon University Model United Nations (SUMUN 2025) ! As a team that has been instrumental in shaping the SUMUN experience, we are proud to lead the conference this year.
+Having been a part of SUMUN's journey, we have witnessed its growth into a premier Model UN conference. With SUMUN 2025, we aim to surpass all expectations and set new standards. Our mission remains steadfast: to provide a dynamic platform for young leaders to engage in meaningful debates, discussions, and resolutions of pressing global issues, while fostering creativity, diplomacy, and equity.
+The legacy of SUMUN is built upon the tireless efforts of our predecessors, who have established our conference as a benchmark for excellence in the circuit. This year's conference would not have been possible without the dedication and hard work of our team members.
+We are thrilled to see what SUMUN 2025 will bring, and we are excited to welcome you all to the conference. Get ready for an unforgettable experience!
             </Typography>
-            <Typography variant="body1" textAlign={"right"} paddingTop={"2vh"} color={"rgb(65 161 166)"} fontWeight={"bold"} fontFamily="comfortaa,cursive">
+            <Typography variant="h6" textAlign={"right"} paddingTop={"2vh"} color={"white"} fontFamily="comfortaa,cursive">
               - Core Secretariat
             </Typography>
             {/* <Typography variant="body1" textAlign={"right"} color={"rgb(170, 210, 210)"} fontFamily="comfortaa,cursive">

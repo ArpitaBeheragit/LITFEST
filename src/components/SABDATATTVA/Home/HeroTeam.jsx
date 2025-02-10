@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import { heroComm } from "../../../data/heroComm";
 import Heading from "../../shared/Heading";
 import styles from "../../../styles/SUMUN/Team.module.css";
-import styles1 from "../../../styles/SUMUN/sideBar.module.css";
 import { heroTeam } from "../../../data/heroTeam";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import FormControl from "@mui/material/FormControl";
@@ -12,6 +11,7 @@ import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import MenuItem from "@mui/material/MenuItem";
+import styles1 from "../../../styles/SABDATATTVA/sideBar.module.css";
 
 const theme = createTheme({
   palette: {
@@ -36,37 +36,40 @@ const HeroTeam = ({ heading, order, setOrder, selectList }) => {
     <div className={styles.head}>
       <div className={styles.head2}>
         <Box
-          sx={{
-            height: "70vh",
-            width: "100%",
-            // background: `url(${HeroImg}),linear-gradient(#4e9f3d, #4E9F3D)`,
-            backgroundImage: `linear-gradient(120deg, rgba(31, 31, 31, 0.9) 71%, rgba(25, 67, 80, 0.8) 97%),url(${heroTeam[imgUrlIdx]})`,
-
-            backgroundSize: "cover",
-            objectFit: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-
-            transition: "backgroundImage ease-in",
-          }}
-        >
-          <Typography
-              variant="h1"
-              fontWeight={900}
-              textAlign={"center"}
-              color={" rgb(65 161 166)"}
-              sx={{ letterSpacing: "4px" }}
-              className={styles1.sit}
-              data-aos="zoom-in"
-              
-            >
-              COMMITTEE
-            </Typography>
+                  sx={{
+                    height: "70vh",
+                    width: "100%",
+                    // background: `url(${HeroImg}),linear-gradient(#4e9f3d, #4E9F3D)`,
+                    backgroundImage: `linear-gradient(120deg, rgba(31, 31, 31, 0.9) 71%, rgba(25, 67, 80, 0.8) 97%),url(${heroTeam[imgUrlIdx]})`,
+        
+                    backgroundSize: "cover",
+                    objectFit: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+        
+                    transition: "backgroundImage ease-in",
+                  }}
+                >
+          <h1>
+            <Typography
+                          variant="h1"
+                          fontWeight={900}
+                          textAlign={"center"}
+                          color={" rgb(65 161 166)"}
+                          sx={{ letterSpacing: "4px" }}
+                          className={styles1.sit}
+                          data-aos="zoom-in"
+                          
+                        >
+                          Events
+                        </Typography>
+          </h1>
         </Box>
-        {selectList && <ThemeProvider theme={theme}>
+        
+        {/* {selectList && <ThemeProvider theme={theme}>
             <FormControl
               sx={{
                 m: 1,
@@ -105,7 +108,7 @@ const HeroTeam = ({ heading, order, setOrder, selectList }) => {
               </Select>
               </Box>
             </FormControl>
-          </ThemeProvider>}
+          </ThemeProvider>} */}
       </div>
     </div>
   );

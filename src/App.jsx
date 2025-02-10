@@ -5,11 +5,16 @@ import Sumun from "./pages/SUMUN/Home";
 import Sabdatattva from "./pages/SABDATATTVA/Home";
 import Committee from "./pages/SUMUN/Committee";
 import LoadingComponent from "./components/shared/Loader";
+import Sabdatattva_Event from "./pages/SABDATATTVA/Events";
 
 const router = createBrowserRouter([
   {
     path: "/sabdatattva",
     element: <Sabdatattva />,
+  },
+  {
+    path: "/sabdatattva/events",
+    element: <Sabdatattva_Event/>
   },
   {
     path: "/sumun",

@@ -1,15 +1,15 @@
 import React, { useRef, useState } from "react";
 import styles from "../../../styles/SUMUN/CommitteesSlider.module.css";
-import { committees } from "../../../data/committee";
-import CommitteeModal from "./CommitteeModal";
+import { events } from "../../../data/events";
+import EventModal from "./EventModal";
 
-const CommitteesSlider = () => {
+const EventSlider = () => {
   const [smlBlock1Style, setSmlBlock1Style] = useState("bigBlock");
   const [smlBlock2Style, setSmlBlock2Style] = useState("smlBlock");
   const [smlBlock3Style, setSmlBlock3Style] = useState("smlBlock");
   const [smlBlock4Style, setSmlBlock4Style] = useState("smlBlock");
   const [open, setOpen] = useState(false);
-  const [activeRecord,setActiveRecord] = useState(committees[0]);
+  const [activeRecord,setActiveRecord] = useState(events[0]);
 
   const isSmallDevice = window.innerWidth <= 886;
 
@@ -72,13 +72,13 @@ const CommitteesSlider = () => {
   };
 
   const handleOpen = (id) =>{
-    setActiveRecord(committees[id]);
+    setActiveRecord(events[id]);//change
     setOpen(true);
   }
 
   return (
     <div className={styles.slider}>
-        <CommitteeModal open={open} setOpen={setOpen} committee={activeRecord} />
+        <EventModal open={open} setOpen={setOpen} event={activeRecord} />
       <div className={styles.blocks}>
         {/* big block */}
         <div
@@ -110,7 +110,7 @@ const CommitteesSlider = () => {
                 fill
                 alt="P"
               /> */}
-              <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/UNHRC.png?updatedAt=1707763073735" alt="unhrc" srcset="" style={{width:"74px"}}/>
+              {/* <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/UNHRC.png?updatedAt=1707763073735" alt="unhrc" srcset="" style={{width:"74px"}}/> */}
             </div>
             <div
               className={
@@ -126,7 +126,7 @@ const CommitteesSlider = () => {
                     : styles.bigBlockTitle
                 }
               >
-                UNHRC
+                Poetic arena
               </div>
               <div
                 className={
@@ -142,8 +142,7 @@ const CommitteesSlider = () => {
                       : styles.bigBlockContains1
                   }
                 >
-                 <p>"A right delayed is a right denied." </p>
-                 <p>- Martin Luther King Jr.</p>
+                 <p>Immerse yourself in the art of words and imagination at Poetic Arena! A platform where creativity meets expression, this event challenges participants to compose a poem on-the-spot and present it with flair. Whether in English, Odia, or Hindi, let your words paint a vivid picture and captivate the audience with your narration.</p>
                 </div>
                 <div
                   className={
@@ -160,7 +159,7 @@ const CommitteesSlider = () => {
                     }
                     onClick={()=>handleOpen(0)}
                   >
-                    <p>Know More</p>
+                    <p>Rules</p>
                   </button>
                 </div>
               </div>
@@ -199,7 +198,7 @@ const CommitteesSlider = () => {
                 smlBlock2Style == "smlBlock" ? styles.smlLogo : styles.blockLogo
               }
             >
-              <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/DISEC.png?updatedAt=1707763073712" alt="disec" srcset="" style={{width:"74px"}}/>
+              {/* <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/DISEC.png?updatedAt=1707763073712" alt="disec" srcset="" style={{width:"74px"}}/> */}
             </div>
             <div
               className={
@@ -215,7 +214,7 @@ const CommitteesSlider = () => {
                     : styles.bigBlockTitle
                 }
               >
-                DISEC
+                Write a Tale
               </div>
               <div
                 className={
@@ -231,8 +230,7 @@ const CommitteesSlider = () => {
                       : styles.bigBlockContains1
                   }
                 >
-                  <p>“Nuclear disarmament and non-proliferation are not utopian ideals. They are critical to global peace and security."</p>
-                  <p>- Ban Ki-moon</p>  
+                  <p>Every great story begins with a spark of imagination, and Write a Tale is where your spark ignites. Bring your creativity to life as you craft mesmerizing narratives that captivate hearts and minds, inspired by unique on-the-spot prompts.</p>  
                 </div>
                 <div
                   className={
@@ -249,7 +247,7 @@ const CommitteesSlider = () => {
                     }
                     onClick={()=>handleOpen(1)}
                   >
-                    <p>Know More</p>
+                    <p>Rules</p>
                   </button>
                 </div>
               </div>
@@ -286,7 +284,7 @@ const CommitteesSlider = () => {
                 smlBlock3Style == "smlBlock" ? styles.smlLogo : styles.blockLogo
               }
             >
-              <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/SDG.png?updatedAt=1707763073701" alt="sdg" style={{width:"74px"}}/>
+              {/* <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/SDG.png?updatedAt=1707763073701" alt="sdg" style={{width:"74px"}}/> */}
             </div>
             <div
               className={
@@ -302,7 +300,7 @@ const CommitteesSlider = () => {
                     : styles.bigBlockTitle
                 }
               >
-                {smlBlock3Style == "smlBlock"?'WHA': 'WHA'}
+                Parachute Drop
               </div>
               <div
                 className={
@@ -318,8 +316,7 @@ const CommitteesSlider = () => {
                       : styles.bigBlockContains1
                   }
                 >
-                  <p>“The enjoyment of the highest attainable standard of health is one of the fundamental rights of every human being.”</p>
-                  <p>- Dr. Margaret Chan</p> 
+                  <p>Imagine you're caught in a dramatic scenario—there’s only one parachute, and it’s up to you to prove you deserve it! Step into the shoes of an iconic personality and bring their story to life. With wit, creativity, and persuasive flair,will you be able to fight for survival and make your case to secure the ultimate lifeline?</p> 
                 </div>
                 
                 <div
@@ -337,7 +334,7 @@ const CommitteesSlider = () => {
                     }
                     onClick={()=>handleOpen(2)}
                   >
-                    <p>Know More</p>
+                    <p>Rules</p>
                   </button>
                 </div>
               </div>
@@ -373,7 +370,7 @@ const CommitteesSlider = () => {
                 smlBlock4Style == "smlBlock" ? styles.smlLogo : styles.blockLogo
               }
             >
-             <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/IP.png?updatedAt=1707763073636" alt="ip" style={{width:"74px"}}/>
+             {/* <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/IP.png?updatedAt=1707763073636" alt="ip" style={{width:"74px"}}/> */}
               
             </div>
             <div
@@ -390,7 +387,7 @@ const CommitteesSlider = () => {
                     : styles.bigBlockTitle
                 }
               >
-                IP
+                Leadership Challenge
               </div>
               <div
                 className={
@@ -406,8 +403,7 @@ const CommitteesSlider = () => {
                       : styles.bigBlockContains1
                   }
                 >
-                  <p>"Our liberty depends on the freedom of the press, and that cannot be limited without being lost"</p>
-                  <p> ~ Thomas Jefferson</p>
+                  <p>In a world of rapid change, we believe in empowering youth to become catalysts for positive transformation. Leadership Challenge – an exciting platform to showcase your communication, analytical, and leadership skills, a platform designed to discover, nurture, and challenge emerging leaders through dynamic communication and leadership challenges.</p>
                 </div>
                 <div
                   className={
@@ -424,7 +420,7 @@ const CommitteesSlider = () => {
                     }
                     onClick={()=>handleOpen(3)}
                   >
-                    <p>Know More</p>
+                    <p>Rules</p>
                   </button>
                 </div>
               </div>
@@ -436,4 +432,5 @@ const CommitteesSlider = () => {
   );
 };
 
-export default CommitteesSlider;
+// export default CommitteesSlider;
+export default EventSlider;

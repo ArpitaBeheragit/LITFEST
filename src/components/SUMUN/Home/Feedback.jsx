@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import CloseIcon from "@mui/icons-material/Close";
 import { Button } from "@mui/material";
+import { Padding } from "@mui/icons-material";
 
 const Feedback = () => {
   const sliderRef = useRef(null);
@@ -32,12 +33,12 @@ const Feedback = () => {
     transform: "translate(-50%, -50%)",
     width: 500,
     maxWidth: { xs: 300, sm: 500, md: 500 },
-    bgcolor: "#0148006a",
+    bgcolor: "rgb(0 115 225 / 15%)",
     backdropFilter: "blur(30px)",
     border: "2px solid #000",
     boxShadow: 24,
-    p: 4,
-    maxHeight: "70vh",
+    p: "0px 34px 34px 34px",
+    // maxHeight: "70vh",
     overflowY: { sm: "hidden", xs: "scroll" },
     display: "flex",
     flexDirection: "column",
@@ -124,7 +125,7 @@ const Feedback = () => {
                               href="#"
                               onClick={() => openModal(item)}
                               style={{
-                                color: "#4E9F3D",
+                                color: "rgb(40 133 168)",
                                 textDecoration: "underline",
                               }}
                             >
@@ -142,10 +143,10 @@ const Feedback = () => {
                   <img src={item.url} alt={`Image ${id}`} />
                 </div>
                 <div className={styles.desc}>
-                  <Typography variant="h6" gutterBottom fontFamily={"comfortaa,cursive"}>
+                  <Typography variant="p" gutterBottom fontFamily={"comfortaa,cursive"} mb={0} mt={4}>
                   {item.auth}
                       </Typography>
-                      <Typography fontFamily={"comfortaa,cursive"} fontSize={"15px"}>
+                      <Typography fontFamily={"comfortaa,cursive"} variant="subtitle2">
                       {item.desc}
                       </Typography>
                 </div>
@@ -168,19 +169,22 @@ const Feedback = () => {
             <Typography
               sx={{ color: "white", overflowWrap: "break-word" }}
               variant="body1"
+              fontFamily={"comfortaa,cursive"}
             >
               {selectedFeedback && selectedFeedback.text}
             </Typography>
             <Typography
-              sx={{ overflowWrap: "break-word" }}
-              variant="subtitle2"
+            fontFamily={"comfortaa,cursive"}
+              sx={{ overflowWrap: "break-word" ,color:"white"}}
+              variant="body1"
               component="p"
               style={{ margin: "15px 0px 0px 0px", textAlign: "right" }}
             >
               {selectedFeedback && selectedFeedback.auth}
             </Typography>
             <Typography
-              sx={{ overflowWrap: "break-word" }}
+            fontFamily={"comfortaa,cursive"}
+              sx={{ overflowWrap: "break-word" ,color:"white"}}
               variant="subtitle2"
               component="p"
               style={{ margin: "0px 0px 0px 0px", textAlign: "right" }}
