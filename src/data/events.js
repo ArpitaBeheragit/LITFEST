@@ -1,7 +1,7 @@
 export const events = [
     {
       name: "Poetic arena",
-      url: "https://ik.imagekit.io/v9pfmptul/SITMUN/UNHRC.png?updatedAt=1707763073735",
+      url: "https://ik.imagekit.io/rmc1sos6n/sabda/optimized_720px_optimized_1.1MB_IMG_6380.webp?updatedAt=1738859943257",
       body: "Immerse yourself in the art of words and imagination at Poetic Arena! A platform where creativity meets expression, this event challenges participants to compose a poem on-the-spot and present it with flair. Whether in English, Odia, or Hindi, let your words paint a vivid picture and captivate the audience with your narration.",
       rules: [
         {
@@ -32,7 +32,7 @@ export const events = [
     },
     {
       name: "Write a Tale",
-      url: "https://ik.imagekit.io/v9pfmptul/SITMUN/UNHRC.png?updatedAt=1707763073735",
+      url: "https://ik.imagekit.io/rmc1sos6n/sabda/optimized_720px_optimized_1.1MB_IMG_6026.webp?updatedAt=1738859942808",
       body: "Every great story begins with a spark of imagination, and Write a Tale is where your spark ignites. Bring your creativity to life as you craft mesmerizing narratives that captivate hearts and minds, inspired by unique on-the-spot prompts.",
       rules: [
         {
@@ -50,7 +50,7 @@ export const events = [
     },
     {
       name: "Parachute Drop",
-      url: "https://ik.imagekit.io/v9pfmptul/SITMUN/UNHRC.png?updatedAt=1707763073735",
+      url: "https://ik.imagekit.io/rmc1sos6n/sabda/optimized_720px_optimized_1.1MB_Snapinst.app_404565412_354890786914050_1664157274013225452_n_1080.webp?updatedAt=1738859936952",
       body: "Imagine you're caught in a dramatic scenario—there’s only one parachute, and it’s up to you to prove you deserve it! Step into the shoes of an iconic personality and bring their story to life. With wit, creativity, and persuasive flair, will you be able to fight for survival and make your case to secure the ultimate lifeline?",
       rules: [
         {
@@ -66,7 +66,7 @@ export const events = [
     },
     {
       name: "Leadership Challenge",
-      url: "https://ik.imagekit.io/v9pfmptul/SITMUN/UNHRC.png?updatedAt=1707763073735",
+      url: "https://ik.imagekit.io/rmc1sos6n/sabda/optimized_720px_optimized_1.1MB_Snapinst.app_404276578_3468051600114529_7829987232533761171_n_1080.webp?updatedAt=1738859936851",
       body: "In a world of rapid change, we believe in empowering youth to become catalysts for positive transformation. Leadership Challenge – an exciting platform to showcase your communication, analytical, and leadership skills, a platform designed to discover, nurture, and challenge emerging leaders through dynamic communication and leadership challenges.",
       rules: [
         {
