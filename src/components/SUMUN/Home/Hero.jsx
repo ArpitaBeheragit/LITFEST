@@ -1,36 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { 
   Box, 
   VStack, 
   Text, 
-  Button, 
   ChakraProvider, 
   extendTheme 
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
-const theme = extendTheme({
-  fonts: {
-    heading: "'Montserrat', sans-serif",
-    body: "'Inter', sans-serif",
-  },
-  colors: {
-    primary: {
-      light: "#0648A4",
-      mid: "#61C7D9", 
-      dark: "#031D40"
-    },
-    secondary: {
-      cyan: "#7DEFF1",
-      pink: "#E991CB"
-    }
-  }
-});
-
-const MotionText = motion(Text);
+import { heroImgs } from "../../../data/hero"; 
 
 const Hero = ({ onScrollToNext }) => {
+  const [imgUrlIdx, setImgUrlIdx] = useState(0);
+
+  useEffect(() => {
+    const changeImgUrl = () => {
+      setImgUrlIdx((idx) => (idx === heroImgs.length - 1 ? 0 : idx + 1));
+    };
+    const interval = setInterval(changeImgUrl, 2000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  const theme = extendTheme({
+    fonts: {
+      heading: "'Tilt Prism', cursive",
+      body: "'Inter', sans-serif",
+    },
+    colors: {
+      primary: {
+        light: "#0648A4",
+        mid: "#61C7D9", 
+        dark: "#031D40"
+      },
+      secondary: {
+        cyan: "#7DEFF1",
+        pink: "#E991CB"
+      }
+    }
+  });
+
+  const MotionText = motion(Text);
+
   const navigate = useNavigate();
 
   const handleNavigation = (path) => {
@@ -52,6 +64,9 @@ const Hero = ({ onScrollToNext }) => {
         color="white" 
         position="relative"
         overflow="hidden"
+        backgroundImage={`url(${heroImgs[imgUrlIdx]})`} 
+        backgroundSize="cover" 
+        backgroundPosition="center" 
       >
         <Box
           position="absolute"
@@ -59,13 +74,7 @@ const Hero = ({ onScrollToNext }) => {
           left="0"
           right="0"
           bottom="0"
-          background={`
-            linear-gradient(
-              135deg, 
-              rgba(6, 72, 164, 0.8), 
-              rgba(97, 199, 217, 0.6)
-            )
-          `}
+          background={`linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8))`} 
         />
 
         <VStack 
@@ -78,8 +87,9 @@ const Hero = ({ onScrollToNext }) => {
         >
           <VStack spacing={4}>
             <MotionText
-              fontSize={["4xl", "6xl"]} 
-              fontWeight="bold" 
+              fontSize={["5xl", "7xl"]} 
+              fontWeight="normal" 
+              fontFamily="Tilt Prism"
               color="secondary.cyan"
               whileHover={{ 
                 y: -10,
@@ -92,16 +102,18 @@ const Hero = ({ onScrollToNext }) => {
             </MotionText>
 
             <Text 
-              fontSize={["4xl", "6xl"]} 
-              fontWeight="bold" 
+              fontSize={["5xl", "7xl"]} 
+              fontWeight="normal" 
+              fontFamily="Tilt Prism"
               color="secondary.cyan"
             >
               X
             </Text>
 
             <MotionText 
-              fontSize={["4xl", "6xl"]} 
-              fontWeight="bold" 
+              fontSize={["5xl", "7xl"]} 
+              fontWeight="normal" 
+              fontFamily="Tilt Prism"
               color="secondary.cyan"
               whileHover={{ 
                 y: -10,

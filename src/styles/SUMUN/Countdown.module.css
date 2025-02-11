@@ -1,101 +1,71 @@
-body {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.box {
-    display: flex;
-    justify-content: center;
-    background-color: #000000;
-    align-items: center;
-    flex-direction: column;
-}
-
-.head {
-    text-align: center;
-    color: #ffffff;
-    padding-bottom: 5vh;
-}
-
-.main {
-    padding: 10vh 20vw;
-    background: #000;
-}
-
-.cont {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    background: rgb(0,6,0);
-background: linear-gradient(90deg, rgba(0,6,0,1) 21%, rgba(0,6,1,1) 79%, rgba(1,46,9,1) 100%);
-    box-shadow: rgba(0, 251, 51, 0.25) 0px 20px 200px, rgba(0, 251, 51, 0.12) 0px -12px 30px, rgba(0, 251, 51, 0.12) 0px 4px 6px, rgba(0, 251, 51, 0.17) 0px 12px 13px, rgba(0, 251, 51, 0.09) 0px -3px 5px;
-    
-    text-align: center;
-    color: #ffffff;
-    justify-content: center;
-    align-items: center;
-    padding: 3vh 0;
-}
-
-.cont h5 {
-    text-transform: uppercase;
-}
-
-.day h1 {
-    font-weight: bold;
-    font-size: 5.8vw;
-}
-
-.hour {
-    padding: 0% 7% 0% 7%;
-
-    h1 {
-        font-weight: bold;
-        font-size: 5.8vw;
-    }
-}
-
-.min {
-    padding: 0% 7% 0% 0%;
-
-    h1 {
-        font-weight: bold;
-        font-size: 5.8vw;
-    }
-}
-
-.sec {
+* {
+    margin: 0;
     padding: 0;
-
-    h1 {
-        font-weight: bold;
-        font-size: 5.8vw;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .countdown-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  
+  .countdown-content {
+    text-align: center;
+  }
+  
+  .countdown-title {
+    color: #34d399;
+    font-size: 3.75rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .countdown-timer {
+    display: flex;
+    gap: 1rem;
+    color: white;
+  }
+  
+  .time-section {
+    text-align: center;
+  }
+  
+  .time-value {
+    font-size: 6rem;
+    font-weight: bold;
+  }
+  
+  .time-label {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+  }
+  
+  .time-separator {
+    font-size: 6rem;
+  }
+  
+  @media (max-width: 768px) {
+    .countdown-title {
+      font-size: 2.5rem;
     }
-}
-
-h1 {
-    font-size: 5vw;
-}
-
-p {
-    color: #ffffff;
-    /* margin: 0 0 0 0.8vw; */
-}
-
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 5vw;
+    
+    .time-value, .time-separator {
+      font-size: 4rem;
     }
-
-    p {
-        font-size: 1.7vw;
+    
+    .time-label {
+      font-size: 1rem;
     }
-}
-@media screen and (max-width:500px){
-    .cont{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        gap:2px;
+    
+    .countdown-timer {
+      gap: 0.5rem;
     }
-}
+  }

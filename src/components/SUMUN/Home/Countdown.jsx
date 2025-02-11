@@ -1,35 +1,30 @@
-import React, { useState, useEffect } from "react";
-import { 
-  Box, 
-  VStack, 
-  Text, 
-  Flex, 
-  ChakraProvider, 
-  extendTheme 
-} from "@chakra-ui/react";
+import React, { useState, useEffect } from 'react';
+import { Box, VStack, Text, Flex, ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import "../../../styles/SUMUN/Countdown.module.css";
 
 const theme = extendTheme({
-  colors: {
-    primary: {
-      light: "#0648A4",
-      mid: "#61C7D9", 
-      dark: "#031D40"
+  styles: {
+    global: {
+      body: {
+        bg: "black",
+        color: "white"
+      }
     }
   }
 });
 
 const MotionBox = motion(Box);
 
-const CalcTimeDelta = () => {
+const CountdownTimer = () => {
   const targetDate = "2025-03-27T11:59:59";
-
+  
   const calculateTimeDelta = () => {
     const now = new Date().getTime();
     const target = new Date(targetDate).getTime();
     let delta = target - now;
     if (delta < 0) delta = 0;
-
+    
     return {
       days: Math.floor(delta / (1000 * 60 * 60 * 24)),
       hours: Math.floor((delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
@@ -38,62 +33,117 @@ const CalcTimeDelta = () => {
     };
   };
 
-  const [timeDelta, setTimeDelta] = useState(calculateTimeDelta());
+  const [time, setTime] = useState(calculateTimeDelta());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeDelta(calculateTimeDelta());
+      setTime(calculateTimeDelta());
     }, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
   const TimeUnit = ({ value, label }) => (
     <MotionBox
-      bg="primary.light"
-      color="white"
-      p={4}
-      borderRadius="xl"
+      color="whiteAlpha.900"
       textAlign="center"
-      width="100px"
       whileHover={{ scale: 1.05 }}
     >
-      <Text fontSize="3xl" fontWeight="bold">
+      <Text 
+        fontSize={["5xl", "7xl", "8xl"]}
+        fontFamily="Tilt Prism"
+        fontWeight="normal"
+      >
         {value.toString().padStart(2, '0')}
       </Text>
-      <Text fontSize="sm">{label}</Text>
+      <Text 
+        fontSize={["md", "lg", "xl"]} 
+        opacity={0.8}
+      >
+        {label}
+      </Text>
     </MotionBox>
+  );
+
+  const Separator = () => (
+    <Text 
+      fontSize={["5xl", "7xl", "8xl"]} 
+      color="whiteAlpha.900" 
+      fontWeight="bold"
+    >
+      :
+    </Text>
   );
 
   return (
     <ChakraProvider theme={theme}>
       <Box 
-        bg="primary.dark" 
-        color="white" 
-        py={16} 
-        textAlign="center"
+        minH="100vh" 
+        display="flex" 
+        alignItems="center" 
+        justifyContent="center"
+        bg="black"
       >
-        <Text 
-          fontSize="4xl" 
-          mb={8} 
-          fontWeight="bold" 
-          color="primary.mid"
-        >
-          Event Countdown
-        </Text>
-        <Flex 
-          justifyContent="center" 
-          alignItems="center" 
-          gap={4}
-        >
-          <TimeUnit value={timeDelta.days} label="Days" />
-          <TimeUnit value={timeDelta.hours} label="Hours" />
-          <TimeUnit value={timeDelta.minutes} label="Minutes" />
-          <TimeUnit value={timeDelta.seconds} label="Seconds" />
-        </Flex>
+        <VStack spacing={4}>
+          <Text
+            fontSize="6xl"
+            letterSpacing="wider"
+            fontFamily="Tilt Prism"
+            color="whiteAlpha.900"
+          >
+            META
+          </Text>
+          
+          <Text
+            fontSize="xl"
+            color="whiteAlpha.900"
+          >
+            Presents
+          </Text>
+          
+          <Text
+            fontSize="7xl"
+            letterSpacing="1rem"
+            fontWeight="normal"
+            fontFamily="Tilt Prism"
+            color="whiteAlpha.900"
+          >
+            LITFEST
+          </Text>
+          
+          <Text
+            fontSize="xl"
+            mb={8}
+            color="whiteAlpha.900"
+          >
+            Premiers in
+          </Text>
+          
+          <MotionBox
+            border="1px"
+            borderColor="whiteAlpha.200"
+            bg="blackAlpha.500"
+            px={8}
+            py={4}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Flex 
+              alignItems="center"
+              gap={[2, 4, 6]}
+            >
+              <TimeUnit value={time.days} label="Days" />
+              <Separator />
+              <TimeUnit value={time.hours} label="Hours" />
+              <Separator />
+              <TimeUnit value={time.minutes} label="Minutes" />
+              <Separator />
+              <TimeUnit value={time.seconds} label="Seconds" />
+            </Flex>
+          </MotionBox>
+        </VStack>
       </Box>
     </ChakraProvider>
   );
 };
 
-export default CalcTimeDelta;
+export default CountdownTimer;

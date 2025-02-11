@@ -4,19 +4,13 @@
   box-sizing: border-box;
 }
 
-.fullpage-scroll-wrapper {
-  overflow: hidden;
-  position: relative;
-}
 
-.section {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  will-change: transform;
+.tilt-prism-prism {
+  font-family: "Tilt Prism", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
 }

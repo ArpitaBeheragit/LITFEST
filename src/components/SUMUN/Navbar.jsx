@@ -19,7 +19,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/SUMUN_logo.png";
 
 import { Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
@@ -121,7 +121,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
             }}
           >
             <Link to="/">
-              <img src={Logo} alt="" width={scrollPosition > 100 ? "60vw": "80px"} />
+              <img src={Logo} alt="" width={scrollPosition > 100 ? "50vw": "70px"} />
             </Link>
           </Button>
           <Stack

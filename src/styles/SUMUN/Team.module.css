@@ -15,8 +15,8 @@
 }
 
 .head2 img{
-    height: 100vh;
-    width:100%;
+    height: 50vh;
+    width: 50%;
     object-fit: cover;
     /* opacity: 0.5; */
 }
