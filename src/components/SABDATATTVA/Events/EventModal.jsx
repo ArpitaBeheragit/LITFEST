@@ -10,6 +10,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Button, ListItemText } from "@mui/material";
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
+import { useNavigate } from "react-router-dom";
 
 
 const style = {
@@ -22,13 +23,14 @@ const style = {
     border: "2px solid #000",
     boxShadow: 24,
     p: 4,
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
+    // display: "flex",
+    // justifyContent: "space-between",
+    // alignItems: "center",
     fontFamily: "comfortaa,cursive",
 };
 
 const EventModal = ({ open, setOpen, event }) => {
+    const navigate = useNavigate()
     return (
         <Modal
             open={open}
@@ -36,17 +38,12 @@ const EventModal = ({ open, setOpen, event }) => {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
         >
-
+                    
             {event?.rules.length > 0 &&
-                <Box
-                    // sx={{
-                    //     display: "flex",
-                    //     justifyContent: "space-between",
-                    //     alignItems: "center",
-                    // }}
-                >
                     <Box sx={style} style={{ maxHeight: "80vh", overflowY: "auto" }}>
-
+<Button onClick={() => setOpen(false)} style={{position:"absolute",right:"0px"}}>
+                        <CloseIcon sx={{ color: "white" }} />
+                    </Button>
                         {event?.rules.map(ruleCategory => (
                             <div key={ruleCategory.rule_name} className="rule-category">
                                 <Typography variant="h5" gutterBottom sx={{ fontWeight: "400", padding: 0, color: "#378fbe" }}>
@@ -61,11 +58,16 @@ const EventModal = ({ open, setOpen, event }) => {
                                 <br />
                             </div>
                         ))}
-                        <Button onClick={() => setOpen(false)}>
-                        <CloseIcon sx={{ color: "white" }} />
-                    </Button>
+                        <button style={{width: "126px",height: "42px",borderRadius: "69.44px",background: "linear-gradient(90deg, rgb(97 151 184) 0%, rgb(12 107 129) 48%, rgb(7 65 102) 95%)",fontFamily: "sans-serif",fontSize: "14px",border: "none",cursor: "pointer",fontWeight: "500",lineHeight: "19px",letterSpacing: "0em",textAlign: "center"}} onClick={() => {
+    if (event?.url?.startsWith("http")) {
+      window.open(event.url, "_blank"); // Open external links in a new tab
+    } else {
+      navigate(event?.url); // Navigate internally
+    }
+  }}>
+                                Register
+                        </button>
                     </Box>
-                </Box>
             }
 
         </Modal>

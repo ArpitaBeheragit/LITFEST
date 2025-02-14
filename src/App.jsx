@@ -6,8 +6,13 @@ import Sabdatattva from "./pages/SABDATATTVA/Home";
 import Committee from "./pages/SUMUN/Committee";
 import LoadingComponent from "./components/shared/Loader";
 import Sabdatattva_Event from "./pages/SABDATATTVA/Events";
+import LitFest from "./pages/LITFEST/Home";
 
 const router = createBrowserRouter([
+  {
+    path:"/",
+    element:<LitFest/>
+  },
   {
     path: "/sabdatattva",
     element: <Sabdatattva />,

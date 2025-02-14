@@ -2,9 +2,8 @@
 	
 .head h1{
     text-transform: uppercase;
-    background: rgb(65 161 166);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: rgb(65 161 166)!important;
+    /* color: transparent; */
     font-family: "Tilt Prism", serif;
     text-align: center;
     font-size: 65px;

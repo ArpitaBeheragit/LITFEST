@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../../styles/SABDATATTVA/faq.module.css";
+import "../../../styles/SABDATATTVA/faq.css";
 import Accordion from "../../shared/Accordion";
 import fee from '../../../assets/FEES.pdf';
 import { allFaq } from "../../../data/faq_sabdattatva";
@@ -16,9 +16,9 @@ function openBrochure() {
 const Faq = () => {
 
   return (
-    <div className={styles.faq}>
+    <div className="faq">
       <Heading heading={"HAVE  A  QUESTION?"} />
-      <div className={styles.faq_div}>
+      <div className="faq-div">
         <div>
           {allFaq.map((faq_sabdattatva) => (
             <Accordion

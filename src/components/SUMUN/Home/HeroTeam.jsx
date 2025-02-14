@@ -5,7 +5,6 @@ import { heroComm } from "../../../data/heroComm";
 import Heading from "../../shared/Heading";
 import styles from "../../../styles/SUMUN/Team.module.css";
 import styles1 from "../../../styles/SUMUN/sideBar.module.css";
-import { heroTeam } from "../../../data/heroTeam";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -37,10 +36,10 @@ const HeroTeam = ({ heading, order, setOrder, selectList }) => {
       <div className={styles.head2}>
         <Box
           sx={{
-            height: "70vh",
+            height: "80vh",
             width: "100%",
             // background: `url(${HeroImg}),linear-gradient(#4e9f3d, #4E9F3D)`,
-            backgroundImage: `linear-gradient(120deg, rgba(31, 31, 31, 0.9) 71%, rgba(25, 67, 80, 0.8) 97%),url(${heroTeam[imgUrlIdx]})`,
+            backgroundImage: `url(${heroComm[imgUrlIdx]})`,
 
             backgroundSize: "cover",
             objectFit: "cover",
@@ -53,6 +52,17 @@ const HeroTeam = ({ heading, order, setOrder, selectList }) => {
             transition: "backgroundImage ease-in",
           }}
         >
+          <Box
+                        sx={{
+                          height: "80vh",
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          background: "linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8))",
+                        }}
+                      />
           <Typography
               variant="h1"
               fontWeight={900}

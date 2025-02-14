@@ -19,7 +19,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useEffect } from "react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/SUMUN_logo.png";
 
 import { Button } from "@mui/material";
 
@@ -32,7 +32,7 @@ const pages = [
   { name: "Home", location: "/sumun" },
   // { name: "Teams", location: "/teams" },
   { name: "Committee", location: "/sumun/committee" },
-  { name: "Register", location: "https://docs.google.com/forms/d/e/1FAIpQLSc1RWEL-wyxqGATGtESWUhJFOZ3xCQ89nWzZLWG7Bhow337Bg/viewform" },
+  { name: "Register", location: "https://docs.google.com/forms/d/e/1FAIpQLSeOBgCtipfvkAjE6VS2POttfI9tQx6x8WpZ3k3HXWn3UYpeFA/viewform" },
 ];
 
 export default function Navbar({ order, setOrder, selectList = false }) {
@@ -117,7 +117,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
       <AppBar
         position="fixed"
         sx={{
-          background:scrollPosition < 100 ? "transparent" : "rgb(20, 225, 0, 0.15)",
+          background:scrollPosition < 100 ? "transparent" : "#1c548a61",
           boxShadow: "none",
           color: "black",
           backdropFilter: scrollPosition > 100 ? "blur(20px)" : "none",

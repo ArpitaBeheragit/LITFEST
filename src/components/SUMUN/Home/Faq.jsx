@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../../styles/SUMUN/faq.css";
 import Accordion from "../../shared/Accordion";
-import fee from '../../../assets/FEES.pdf';
+import fee from '../../../assets/FEES.png';
 import { allFaq } from "../../../data/faq";
 import Heading from "../../shared/Heading";
 

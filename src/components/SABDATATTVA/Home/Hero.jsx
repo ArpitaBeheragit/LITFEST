@@ -3,7 +3,7 @@ import { Box, Stack, Typography, Button } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { NavLink } from "react-router-dom";
-import { heroImgs } from "../../../data/hero";
+import { heroImgs } from "../../../data/Sabdahero";
 
 //css file
 import styles from "../../../styles/SABDATATTVA/sideBar.module.css";
@@ -28,7 +28,7 @@ const Hero = () => {
         height: "100vh",
         width: "100%",
         // background: `url(${HeroImg}),linear-gradient(#4e9f3d, #4E9F3D)`,
-        backgroundImage: `linear-gradient(120deg, rgba(31, 31, 31, 0.9) 71%, rgba(25, 67, 80, 0.8) 97%), url(${heroImgs[imgUrlIdx]})`,
+        backgroundImage: ` url(${heroImgs[imgUrlIdx]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -46,6 +46,16 @@ const Hero = () => {
         width={"100%"}
         height={"100%"}
       >
+        <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: "linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8))",
+        }}
+      />
         {/* <SideBar /> */}
         <Stack
           spacing={5}
@@ -70,6 +80,14 @@ const Hero = () => {
                 fontWeight: "900",
                 textWrap: "nowrap",
                 letterSpacing: "2px",
+                "@keyframes hashtag-move": {
+        "0%": {
+          transform: "translateX(-100%)",
+        },
+        "100%":{
+          transform: "translateX(100%)",
+        }
+      },
                 animation: "hashtag-move 10s linear infinite",
               }}
             >
@@ -162,6 +180,14 @@ const Hero = () => {
                     fontWeight: "900",
                     textWrap: "nowrap",
                     letterSpacing: "2px",
+                    "@keyframes hashtag-move": {
+        "0%": {
+          transform: "translateX(-100%)",
+        },
+        "100%":{
+          transform: "translateX(100%)",
+        }
+      },
                     animation: `hashtag-move 10s linear infinite`,
                   }}
                 >
@@ -187,7 +213,7 @@ const Hero = () => {
                   fontFamily:"comfortaa,cursive"
                 }}
                 className={styles.herbtn}
-                href="https://docs.google.com/forms/d/e/1FAIpQLSc1RWEL-wyxqGATGtESWUhJFOZ3xCQ89nWzZLWG7Bhow337Bg/viewform"
+                href="https://linktr.ee/litfest_2025"
                 target="_blank"
               >
                 Register Now
@@ -240,15 +266,7 @@ export const SideBar = () => {
         </Typography>
       </NavLink>
 
-      {/* <NavLink to={"/teams"}>
-        <Typography
-          variant="h6"
-          fontFamily={"comfortaa,cursive"}
-          className="navLink"
-        >
-          Teams
-        </Typography>
-      </NavLink> */}
+     
 
       <NavLink to={"/sabdatattva/events"}>
         <Typography
@@ -257,6 +275,16 @@ export const SideBar = () => {
           className={styles.navLink}
         >
           Events
+        </Typography>
+      </NavLink>
+
+      <NavLink to={"/https://linktr.ee/litfest_2025"}>
+        <Typography
+          variant="h6"
+          fontFamily={"comfortaa,cursive"}
+          className="navLink"
+        >
+          Register
         </Typography>
       </NavLink>
     </Stack>

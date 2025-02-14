@@ -9,7 +9,7 @@
   font-family: 'Comfortaa', cursive;
 }
 
-section {
+.section {
   position: relative;
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@ section {
   align-items: center;
   width: 75vw;
   background: rgb(0,6,0);
-background: linear-gradient(90deg, rgba(0,6,0,1) 21%, rgba(0,6,1,1) 79%, rgba(1,46,9,1) 100%);
+  background: linear-gradient(90deg, rgba(0, 6, 0, 1) 21%, rgba(0, 6, 1, 1) 79%, rgb(1 42 46) 100%);
   backdrop-filter: blur(30px);
   border-radius: 20px;
   box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset, 0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);

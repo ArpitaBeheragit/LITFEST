@@ -73,7 +73,8 @@ const EventGuidelines = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: '80%', margin: '0px auto 50px', padding:"34px"}}>
+    <div className={styles.section}>
+    <Box sx={{ width: '80%', margin: '0px auto 50px', padding:"34px"}}>
       {/* Tabs */}
       <Box elevation={1} className={styles.attributes}>
         <Box sx={{ borderBottom: 2, borderColor: 'divider',display: "flex",
@@ -285,6 +286,7 @@ const EventGuidelines = () => {
       </Box>
     </Box>
   </Box>
+  </div>
   );
 };
 

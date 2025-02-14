@@ -14,7 +14,7 @@ import styles from "../../../styles/SABDATATTVA/about.module.css"
 
 const About = () => {
   return (
-    <section id="about">
+    <div className={styles.section} id="about">
       <Stack
         className={styles.content}
         flexDirection={{ md: "row", xs: "column-reverse" }}
@@ -42,7 +42,7 @@ const About = () => {
           </div>
         </Swiper>
       </Stack>
-    </section>
+    </div>
   );
 };
 

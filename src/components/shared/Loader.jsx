@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/meta_logo.png";
 import "../../styles/SUMUN/loader.css";
 
 const Loading = () => {
@@ -11,21 +11,21 @@ const Loading = () => {
           width="30"
           height="30"
           className="loading_img"
-          alt="LIFEST logo"
+          alt="SITMUN logo"
         />
         <img
           src={logo}
           width="30"
           height="30"
           className="loading_img"
-          alt="LIFEST logo"
+          alt="SITMUN logo"
         />
         <img
           src={logo}
           width="30"
           height="30"
           className="loading_img"
-          alt="LIFEST logo"
+          alt="SITMUN logo"
         />
       </div>
     </div>

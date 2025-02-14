@@ -19,7 +19,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useEffect } from "react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/SABDATATTVA.png";
 
 import { Button } from "@mui/material";
 
@@ -30,7 +30,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 const pages = [
   { name: "Home", location: "/sabdatattva" },
   { name: "Events", location: "/sabdatattva/events" },
-  { name: "Register", location: "https://docs.google.com/forms/d/e/1FAIpQLSc1RWEL-wyxqGATGtESWUhJFOZ3xCQ89nWzZLWG7Bhow337Bg/viewform" },
+  { name: "Register", location: "https://linktr.ee/litfest_2025" },
 ];
 
 export default function Navbar({ order, setOrder, selectList = false }) {
@@ -115,7 +115,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
       <AppBar
         position="fixed"
         sx={{
-          background:scrollPosition < 100 ? "transparent" : "rgb(20, 225, 0, 0.15)",
+          background:scrollPosition < 100 ? "transparent" : "#1c548a61",
           boxShadow: "none",
           color: "black",
           backdropFilter: scrollPosition > 100 ? "blur(20px)" : "none",

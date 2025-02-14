@@ -3,7 +3,7 @@ import React from 'react'
 const EventsSlider = React.lazy(() => import('../../components/SABDATATTVA/Events/EventSlider'))
 const Navbar = React.lazy(() => import("../../components/SABDATATTVA/Navbar"));
 const HeroTeam = React.lazy(() => import ("../../components/SABDATATTVA/Home/HeroTeam"));
-const Footer = React.lazy(()=> import("../../components/SUMUN/Footer"));
+const Footer = React.lazy(()=> import("../../components/shared/Footer"));
 
 const Sabdatattva_Event = () => {
   return (

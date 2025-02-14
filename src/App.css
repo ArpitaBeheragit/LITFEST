@@ -1,8 +1,16 @@
 @keyframes hashtag-move {
   0% {
-    transform: translate(-100%);
+    transform: translateY(-100%);
   }
   100% {
-    transform: translate(100%);
+    transform: translateY(100%);
   }
+}
+
+.hashtag-move {
+  animation: hashtag-move 10s linear infinite;
+}
+html, body {
+  overflow: auto;
+  height: auto;
 }
