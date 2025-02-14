@@ -2,9 +2,12 @@ body {
   /* background: #166d3b; */
   /* background: linear-gradient(147deg, #166d3b 0%, #000000 74%); */
 }
-
+.feedback_wrapper{
+  background-color: #000;
+}
 .main {
-  background: #000;
+  width: 90vw;
+  margin: auto;
 }
 
 .slider {
@@ -17,7 +20,7 @@ body {
   position: relative;
   /* z-index: -1; */
   /* border: 2px solid green; */
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .testimonial {
@@ -27,7 +30,7 @@ body {
 .testimonial_bubble {
   position: relative;
   background: rgb(0,6,0);
-background: linear-gradient(90deg, rgba(0,6,0,1) 21%, rgba(0,6,1,1) 79%, rgba(6,44,13,1) 100%);
+  background: linear-gradient(90deg, rgba(0, 6, 0, 1) 21%, rgba(0, 6, 1, 1) 79%, rgb(1 42 46) 100%) !important;
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 0 10px 0 #555;
@@ -42,12 +45,12 @@ background: linear-gradient(90deg, rgba(0,6,0,1) 21%, rgba(0,6,1,1) 79%, rgba(6,
   /* top:1142px; */
   justify-content: flex-end;
   /* float: right; */
-  margin:-88px 0px 0px 264px;
+  margin:-88px 0px 0px 198px;
   /* background: rgb(0, 225, 25); */
 }
 
 .testimonial_bubble:before {
-  content: "";
+  /* content: ""; */
   position: absolute;
   /* bottom: -20px; */
   /* left: 50%; */
@@ -60,6 +63,7 @@ background: linear-gradient(90deg, rgba(0,6,0,1) 21%, rgba(0,6,1,1) 79%, rgba(6,
 .testimonial_text {
   margin-bottom: -30px;
   padding-left: 17px;
+  color: white;
 }
 
 .testimonial_text p {
@@ -95,12 +99,8 @@ background: linear-gradient(90deg, rgba(0,6,0,1) 21%, rgba(0,6,1,1) 79%, rgba(6,
 }
 
 
-.desc h3 {
+.desc  {
   color: white;
-  text-align: right;
-}
-
-.desc p {
   text-align: right;
 }
 
@@ -110,10 +110,10 @@ background: linear-gradient(90deg, rgba(0,6,0,1) 21%, rgba(0,6,1,1) 79%, rgba(6,
 }
 
 .slider {
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .testimonial_bubble {
@@ -131,7 +131,7 @@ background: linear-gradient(90deg, rgba(0,6,0,1) 21%, rgba(0,6,1,1) 79%, rgba(6,
   height: 8vw;
 }
 .desc{
-  margin-top: 8%;
+  margin-top: 12%;
   font-size: 16px;
 }
 .desc h3 {
@@ -190,6 +190,10 @@ background: linear-gradient(90deg, rgba(0,6,0,1) 21%, rgba(0,6,1,1) 79%, rgba(6,
   
 }
 @media screen and (max-width: 500px) {
+  .main {
+    width: 100%;
+    margin: auto;
+  }  
   .testimonial_bubble {
     padding: 3vw 3vw 5vw 8vw;
     margin: 12vw;

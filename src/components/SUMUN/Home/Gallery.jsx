@@ -85,8 +85,7 @@ const Gallery = () => {
       },
     ],
   };
-  console.log(galleryData);
-
+  
   // useEffect(() => {
   //   const fetchData = async () => {
   //     try {
@@ -104,8 +103,9 @@ const Gallery = () => {
   // }, []);
 
   return (
+    <div className={styles.section}>
     <div className={styles.main}>
-      <Heading heading={"Gallery"}/>
+      <Heading heading={"Gallery"} styles={{color:"rgb(65 161 166)"}}/>
       <div>
         <Slider {...settings} className={styles.slider} ref={sliderRef1}>
           {galleryData?.map((item, id) => {
@@ -142,6 +142,7 @@ const Gallery = () => {
           })}
         </Slider>
       </div>
+    </div>
     </div>
   );
 };

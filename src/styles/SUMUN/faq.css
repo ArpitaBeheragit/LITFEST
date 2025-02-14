@@ -7,7 +7,7 @@
 .faq h2 {
   font-size: 40px;
   font-weight: 700;
-  color: #4E9F3D;
+  color: #3d999f;
   text-align: center;
   padding: 30px 0 10px;
 }
@@ -60,7 +60,7 @@
   overflow: hidden;
 }
 .faq-link {
-  color: #4e9f3d !important;
+  color: #3d949f !important;
   text-decoration: none;
 }
 .faq-link:hover {
@@ -91,7 +91,7 @@
   }
 }
 .q-dark {
-  border: 2px solid #4E9F3D;
+  border: 2px solid #3d959f !important;
   color: #fff;
 }
 .q-dark p {
@@ -112,7 +112,7 @@
 }
 
 .q-light-start:hover, .q-light:hover {
-  background: #105f00;
+  background: #06757f!important;
   color: #fff;
 }
 

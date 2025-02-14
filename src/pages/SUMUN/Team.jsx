@@ -6,7 +6,7 @@ import { heroTeam } from "../../data/heroTeam";
 
 const Navbar = React.lazy(() => import("../../components/SUMUN/Navbar"));
 const HeroTeam = React.lazy(() => import ("../../components/SUMUN/Home/HeroTeam"));
-const Footer = React.lazy(()=> import("../../components/SUMUN/Footer"));
+const Footer = React.lazy(()=> import("../../components/shared/Footer"));
 
 import { teamdata } from "../../data/team";
 const Team = () => {

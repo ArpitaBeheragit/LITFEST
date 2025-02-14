@@ -42,7 +42,7 @@ const CommitteeModal = ({ open, setOpen, committee }) => {
           }}
         >
           <Typography
-            sx={{ color: "#4E9F3D" }}
+            sx={{ color: "#378fbe" }}
             id="modal-modal-title"
             variant="h6"
             component="h2"
@@ -64,7 +64,7 @@ const CommitteeModal = ({ open, setOpen, committee }) => {
               expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
               aria-controls="panel1-content"
               id="panel1-header"
-              sx={{ fontWeight: "600", padding: 0, color: "#4E9F3D" }}
+              sx={{ fontWeight: "600", padding: 0, color: "#378fbe" }}
             >
               AGENDA
             </AccordionSummary>
@@ -80,7 +80,7 @@ const CommitteeModal = ({ open, setOpen, committee }) => {
             expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel1-content"
             id="panel1-header"
-            sx={{ fontWeight: "600", padding: 0, color: "#4E9F3D" }}
+            sx={{ fontWeight: "600", padding: 0, color: "#378fbe" }}
           >
             EBs
           </AccordionSummary>
@@ -88,13 +88,13 @@ const CommitteeModal = ({ open, setOpen, committee }) => {
           <Stack direction="row" spacing={2}>
             {committee?.ebs.map((eb) => (
               <div style={{textAlign: 'center'}}>
-                <Avatar
+                {/* <Avatar
                   alt="Remy Sharp"
                   src={eb.profilePic}
                   sx={{ width: 108, height: 108, margin: '12px auto' }}
-                />
+                /> */}
                 <h3 style={{fontWeight: 'bold'}}>{eb.name}</h3>
-                <p>{eb.designation}</p>
+                {/* <p>{eb.designation}</p> */}
               </div>
             ))}
           </Stack>

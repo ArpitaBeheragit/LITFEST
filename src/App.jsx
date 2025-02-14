@@ -1,25 +1,40 @@
 import React, { Suspense } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Team from "./pages/SUMUN/Team";
-import Home from "./pages/SUMUN/Home";
+import Sumun from "./pages/SUMUN/Home";
+import Sabdatattva from "./pages/SABDATATTVA/Home";
 import Committee from "./pages/SUMUN/Committee";
-import "./App.css";
 import LoadingComponent from "./components/shared/Loader";
+import Sabdatattva_Event from "./pages/SABDATATTVA/Events";
+import LitFest from "./pages/LITFEST/Home";
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element:<LitFest/>
+  },
+  {
+    path: "/sabdatattva",
+    element: <Sabdatattva />,
+  },
+  {
+    path: "/sabdatattva/events",
+    element: <Sabdatattva_Event/>
+  },
+  {
+    path: "/sumun",
+    element: <Sumun />,
+  },
+  {
+    path: "/sumun/committee",
+    element: <Committee/>
+  }
+]);
+
+export default function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Suspense fallback={<LoadingComponent />}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/teams" element={<Team />} />
-            <Route path="/committee" element={<Committee />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </>
+    <Suspense fallback={<LoadingComponent />}>
+      <RouterProvider router={router} />
+    </Suspense>
   );
 }
-
-export default App;

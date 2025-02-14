@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+.active {
+    /* background: #6e9600; */
+    color: #157f9d;
+    padding: 3vh 0.5vw;
+    text-decoration: none;
+    margin-left: 2vw;
+}
+.sit{
+    font-family: "Tilt Prism", serif !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+}
+.active:hover h6 {
+    color: rgb(59, 209, 209);
+}
+.active h6 {
+    color: rgb(47, 241, 255);
+}
+.herbtn{
+    background: rgb(17,19,17);
+    background: linear-gradient(90deg, rgb(97 151 184) 0%, rgb(12 107 129) 48%, rgb(7 65 102) 95%)
+}
+/* a {
+    text-decoration: none;
+} */
+
+.navLink {
+    transform: rotate(270deg);
+    text-transform: uppercase;
+    padding: 1vw 1vh;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}

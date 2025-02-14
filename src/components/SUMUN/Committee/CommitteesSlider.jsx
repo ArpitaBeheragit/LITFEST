@@ -110,7 +110,7 @@ const CommitteesSlider = () => {
                 fill
                 alt="P"
               /> */}
-              <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/UNHRC.png?updatedAt=1707763073735" alt="unhrc" srcset="" style={{width:"74px"}}/>
+              <img src="https://ik.imagekit.io/Litfest2025/Group%20807.png?updatedAt=1738925003010" alt="unhrc" srcset="" style={{width:"74px"}}/>
             </div>
             <div
               className={
@@ -199,7 +199,7 @@ const CommitteesSlider = () => {
                 smlBlock2Style == "smlBlock" ? styles.smlLogo : styles.blockLogo
               }
             >
-              <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/DISEC.png?updatedAt=1707763073712" alt="disec" srcset="" style={{width:"74px"}}/>
+              <img src="https://ik.imagekit.io/Litfest2025/Mask%20group%20(1).png?updatedAt=1738925002787" alt="disec" srcset="" style={{width:"74px"}}/>
             </div>
             <div
               className={
@@ -286,7 +286,7 @@ const CommitteesSlider = () => {
                 smlBlock3Style == "smlBlock" ? styles.smlLogo : styles.blockLogo
               }
             >
-              <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/SDG.png?updatedAt=1707763073701" alt="sdg" style={{width:"74px"}}/>
+              <img src="https://ik.imagekit.io/Litfest2025/Mask%20group%20(1).png?updatedAt=1738925002787" alt="sdg" style={{width:"74px"}}/>
             </div>
             <div
               className={
@@ -302,7 +302,7 @@ const CommitteesSlider = () => {
                     : styles.bigBlockTitle
                 }
               >
-                {smlBlock3Style == "smlBlock"?'SDG': 'SDG Summit'}
+                {smlBlock3Style == "smlBlock"?'WHA': 'WHA'}
               </div>
               <div
                 className={
@@ -318,8 +318,8 @@ const CommitteesSlider = () => {
                       : styles.bigBlockContains1
                   }
                 >
-                  <p>“The future is not something we enter. The future is something we create.”</p>
-                  <p>- Leonard I. Sweet</p> 
+                  <p>“The enjoyment of the highest attainable standard of health is one of the fundamental rights of every human being.”</p>
+                  <p>- Dr. Margaret Chan</p> 
                 </div>
                 
                 <div
@@ -373,7 +373,7 @@ const CommitteesSlider = () => {
                 smlBlock4Style == "smlBlock" ? styles.smlLogo : styles.blockLogo
               }
             >
-             <img src="https://ik.imagekit.io/v9pfmptul/SITMUN/IP.png?updatedAt=1707763073636" alt="ip" style={{width:"74px"}}/>
+             <img src="https://ik.imagekit.io/Litfest2025/Mask%20group%20(2).png?updatedAt=1738925003164" alt="ip" style={{width:"74px"}}/>
               
             </div>
             <div

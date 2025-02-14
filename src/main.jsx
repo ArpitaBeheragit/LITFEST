@@ -8,17 +8,14 @@ import {
   createTheme,
 } from "@mui/material/styles";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import 'aos/dist/aos.css'; 
 AOS.init();
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>
-  </React.StrictMode>
 );

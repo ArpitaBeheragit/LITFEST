@@ -3,10 +3,10 @@ import { Box, Stack, Typography, Button } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { NavLink } from "react-router-dom";
-import { heroImgs } from "../../../data/hero";
+import { heroImgs } from "../../../data/Sabdahero";
 
 //css file
-import "../../../styles/SUMUN/sideBar.css";
+import styles from "../../../styles/SUMUN/sideBar.module.css";
 
 
 const Hero = () => {
@@ -28,7 +28,7 @@ const Hero = () => {
         height: "100vh",
         width: "100%",
         // background: `url(${HeroImg}),linear-gradient(#4e9f3d, #4E9F3D)`,
-        backgroundImage: `linear-gradient(120deg, rgba(25,26,25,0.9) 71%, rgba(30,81,40,0.8) 97%), url(${heroImgs[imgUrlIdx]})`,
+        backgroundImage: ` url(${heroImgs[imgUrlIdx]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -40,6 +40,16 @@ const Hero = () => {
         transition: "backgroundImage ease-in",
       }}
     >
+      <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: "linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8))",
+              }}
+            />
       <Stack
         direction={"row"}
         justifyContent={"space-between"}
@@ -50,10 +60,10 @@ const Hero = () => {
         <Stack
           spacing={5}
           justifyContent={"end"}
-          backgroundColor="#4d9f3d78"
+          backgroundColor="#031D40 "
           width={{ md: "4rem", xs: "2rem" }}
           display={{ md: "flex", xs: "none" }}
-          overflow={"hidden"}
+          // overflow={"hidden"}
           sx={{
             backdropFilter: 'blur(30px)',
             color: '#fafafa'
@@ -66,11 +76,19 @@ const Hero = () => {
               fontSize={{ md: "42px", xs: "24px" }}
               sx={{
                 width: "100vh",
-                color: "#37be52",
+                color: "rgb(65 161 166) ",
                 fontWeight: "900",
                 textWrap: "nowrap",
                 letterSpacing: "2px",
-                animation: `hashtag-move 10s linear infinite`,
+                "@keyframes hashtag-move": {
+        "0%": {
+          transform: "translateX(-100%)",
+        },
+        "100%":{
+          transform: "translateX(100%)",
+        }
+      },
+      animation: "hashtag-move 10s linear infinite"
               }}
             >
               &nbsp;REVOLUTION THROUGH RESOLUTION
@@ -118,40 +136,40 @@ const Hero = () => {
 
             <Typography
               variant="h1"
-              
               fontWeight={900}
               textAlign={"center"}
-              color={"#D8E9A8"}
+              color={" rgb(65 161 166)"}
               sx={{ letterSpacing: "4px" }}
-              className="sit"
+              className={styles.sit}
               data-aos="zoom-in"
-              
+              style={{fontSize:"100px"}}
             >
-              <span style={{ color: "#4E9F3D" }} className="sit">
-                SIT
+              <span style={{ color: "#a8e1e9"}} className={styles.sit}>
+                SU
               </span>
               MUN
             </Typography>
             <Typography
               variant="h1"
-              // fontFamily={"comfortaa,cursive"}
-              className="sit"
+              fontFamily={"comfortaa,cursive"}
+              className={styles.sit}
               fontWeight={600}
               textAlign={"center"}
-              color={"#D8E9A8"}
+              color={"rgb(65 161 166)"}
               data-aos="zoom-in"
+              sx={{fontSize:"100px"}}
             >
-              2024
+              2025
             </Typography>
 
             <Stack
               spacing={5}
               justifyContent={"end"}
-              backgroundColor="#4E9F3D"
+              backgroundColor="#031D40" 
               width={{ md: "4rem", xs: "100vw" }}
               display={{ md: "none", xs: "block" }}
               margin={"4rem 0"}
-              overflow={"hidden"}
+              // overflow={"hidden"}
             >
               <Box>
                 <Typography
@@ -159,10 +177,18 @@ const Hero = () => {
                   textTransform={"capitalize"}
                   fontSize={{ md: "42px", xs: "24px" }}
                   sx={{
-                    color: "#1E5128",
+                    color: "rgb(65 161 166) ",
                     fontWeight: "900",
                     textWrap: "nowrap",
                     letterSpacing: "2px",
+                    "@keyframes hashtag-move": {
+        "0%": {
+          transform: "translateX(-100%)",
+        },
+        "100%":{
+          transform: "translateX(100%)",
+        }
+      },
                     animation: `hashtag-move 10s linear infinite`,
                   }}
                 >
@@ -187,8 +213,8 @@ const Hero = () => {
                   fontWeight: "600",
                   fontFamily:"comfortaa,cursive"
                 }}
-                className="herbtn"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSc1RWEL-wyxqGATGtESWUhJFOZ3xCQ89nWzZLWG7Bhow337Bg/viewform"
+                className={styles.herbtn}
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeOBgCtipfvkAjE6VS2POttfI9tQx6x8WpZ3k3HXWn3UYpeFA/viewform"
                 target="_blank"
               >
                 Register Now
@@ -205,7 +231,7 @@ const Hero = () => {
                     fontFamily:"comfortaa,cursive"
                   }}
                   // color="success"
-                  className="herbtn"
+                  className={styles.herbtn}
                   href="#about"
                 >
                   Know More
@@ -231,33 +257,34 @@ export const SideBar = () => {
       fontFamily={"comfortaa,cursive"}
       sx={{ display: { md: "flex", sm: "none", xs: "none" } }}
     >
-      <NavLink to={"/"}>
+      <NavLink to={"/sumun"}>
         <Typography
           variant="h6"
           fontFamily={"comfortaa,cursive"}
-          className="navLink"
+          className={styles.navLink}
         >
           Home
         </Typography>
       </NavLink>
 
-      <NavLink to={"/teams"}>
-        <Typography
-          variant="h6"
-          fontFamily={"comfortaa,cursive"}
-          className="navLink"
-        >
-          Teams
-        </Typography>
-      </NavLink>
+      
 
-      <NavLink to={"/committee"}>
+      <NavLink to={"/sumun/committee"}>
         <Typography
           variant="h6"
           fontFamily={"comfortaa,cursive"}
-          className="navLink"
+          className={styles.navLink}
         >
           Committee
+        </Typography>
+      </NavLink>
+      <NavLink to={"https://docs.google.com/forms/d/e/1FAIpQLSeOBgCtipfvkAjE6VS2POttfI9tQx6x8WpZ3k3HXWn3UYpeFA/viewform"}>
+        <Typography
+          variant="h6"
+          fontFamily={"comfortaa,cursive"}
+          className="navLink"
+        >
+          Register
         </Typography>
       </NavLink>
     </Stack>
