@@ -25,7 +25,6 @@ import { Button } from "@mui/material";
 
 //useNavigate
 import { Link, useNavigate } from "react-router-dom";
-import { position } from "@chakra-ui/react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const pages = [
