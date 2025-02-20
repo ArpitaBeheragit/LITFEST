@@ -133,42 +133,46 @@ const Hero = () => {
                 </Typography>
               </Box>
             </Stack> */}
-
             <Typography
               variant="h1"
               fontWeight={900}
-              textAlign={"center"}
-              color={" rgb(65 161 166)"}
-              sx={{ letterSpacing: "4px" }}
+              textAlign="center"
+              color="rgb(65 161 166)"
+              sx={{ 
+                    letterSpacing: "4px",
+                    fontSize: { xs: "34px", sm: "48px", md: "64px" } // Responsive font sizes
+                  }}
               className={styles.sit}
               data-aos="zoom-in"
-              
             >
-              <span style={{ color: "#a8e1e9"}} className={styles.sit}>
-              SABDA
-              </span>
+            <span style={{ color: "#a8e1e9" }} className={styles.sit}>
+                SABDA
+            </span>
               TATTVA
             </Typography>
+
             <Typography
-              variant="h1"
-              // fontFamily={"comfortaa,cursive"}
-              className={styles.sit}
-              fontWeight={600}
-              textAlign={"center"}
-              color={"rgb(65 161 166)"}
-              data-aos="zoom-in"
+                variant="h1"
+                fontWeight={600}
+                textAlign="center"
+                color="rgb(65 161 166)"
+                data-aos="zoom-in"
+                sx={{
+                fontSize: { xs: "30px", sm: "40px", md: "56px" } 
+                  }}
+            className={styles.sit}
             >
               2025
             </Typography>
-
             <Stack
               spacing={5}
               justifyContent={"end"}
               backgroundColor="#031D40" 
-              width={{ md: "4rem", xs: "100vw" }}
+              width={{ xs: "100%", md: "4rem" }} 
+              maxWidth={{ xs: "150vw", md: "8rem" }} 
               display={{ md: "none", xs: "block" }}
               margin={"4rem 0"}
-              // overflow={"hidden"}
+              overflow={"hidden"}
             >
               <Box>
                 <Typography
@@ -181,13 +185,13 @@ const Hero = () => {
                     textWrap: "nowrap",
                     letterSpacing: "2px",
                     "@keyframes hashtag-move": {
-        "0%": {
-          transform: "translateX(-100%)",
-        },
-        "100%":{
-          transform: "translateX(100%)",
-        }
-      },
+                       "0%": {
+                              transform: "translateX(-100%)",
+                             },
+                        "100%":{
+                              transform: "translateX(100%)",
+                             }
+                      },
                     animation: `hashtag-move 10s linear infinite`,
                   }}
                 >
@@ -202,8 +206,9 @@ const Hero = () => {
               justifyContent={"space-around"}
               // maxWidth={{ md: "100%", sm: "450px", xs: "280px" }}
               margin={"auto"}
+              width={"80%"}
             >
-              <Button
+              {/* <Button
                 variant="contained"
                 sx={{
                   padding: "12px 18px",
@@ -217,15 +222,51 @@ const Hero = () => {
                 target="_blank"
               >
                 Register Now
-              </Button>
-              
+              </Button> */}
+
+            <Button
+  variant="contained"
+  sx={{
+    padding: { xs: "16px 5px 14px 3px", sm: "12px 18px" }, // Adjust padding for mobile
+    borderRadius: "28px",
+    fontSize: { xs: "13px", sm: "16px" }, // Responsive font size
+    fontWeight: "600",
+    fontFamily: "comfortaa, cursive",
+    width: { xs: "50%", sm: "auto" }, // Make buttons fit in mobile view
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    maxWidth: "300px", // Prevent excessive stretching
+    margin: "0 auto",
+
+    // Keyframes animation (inline)
+    "@keyframes bounceEffect": {
+      "0%": { transform: "scale(1)" },
+      "50%": { transform: "scale(1.05)" },
+      "100%": { transform: "scale(1)" }
+    },
+    "&:hover": {
+      backgroundColor: "#4a90e2",
+      animation: "bounceEffect 0.4s ease-in-out"
+    }
+  }}
+  className={styles.herbtn}
+
+  href="https://linktr.ee/litfest_2025"
+  target="_blank"
+>
+  Register Now
+</Button>
+
                 <Button
                   variant="contained"
-                 
                   sx={{
-                    padding: "12px 18px",
+                    // padding: "12px 18px",
+                    padding: { xs: "16px 5px 14px 3px", sm: "12px 18px" }, // Smaller padding on mobile
+                    // padding: { xs: "3px 5px 0px 3px", sm: "12px 18px" }, // Adjust padding for mobile
+                    width: { xs: "50%", sm: "auto" },
                     borderRadius: "28px",
-                    fontSize: 16,
+                    fontSize: { xs: "14px", sm: "16px" },
                     fontWeight: "600",
                     fontFamily:"comfortaa,cursive"
                   }}

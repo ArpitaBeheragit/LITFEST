@@ -37,7 +37,14 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ py: 3 }} style={{padding:"13px 13px 37px 35px"}}>
+        <Box
+  sx={{
+    py: { xs: 0, sm: 3 }, // No padding on mobile, py: 3 for larger screens
+    px: { xs: 0, sm: '13px' }, // No padding on mobile, '13px' for larger screens
+  }}
+  style={value===0?{padding:"13px 13px 37px 35px"}:null}
+>
+
           {children}
         </Box>
       )}
@@ -54,9 +61,9 @@ const EventGuidelines = () => {
 
   const guidelines = {
     overview: [
-      { icon: <CalendarToday />, title: "Event Dates", content: "13-15 February 2025" },
+      { icon: <CalendarToday />, title: "Event Dates", content: "20-21-22 February 2025" },
       { icon: <LocationOn />, title: "Venue", content: "Silicon University, Bhubaneswar" },
-      { icon: <People />, title: "Eligibility", content: "Std. VIII - XII, UG & PG students" }
+      { icon: <People />, title: "Eligibility", content: "Std. VIII - XII, UG students" }
     ],
     fees: [
       { category: "Meta Academics Members", amount: "₹200" },
@@ -74,15 +81,15 @@ const EventGuidelines = () => {
 
   return (
     <div className={styles.section}>
-    <Box sx={{ width: '80%', margin: '0px auto 50px', padding:"34px"}}>
+    <Box sx={{ width: { xs: '115%', sm: '130%', md: '90%' },height:"200%", margin: '0px auto 50px', padding:"34px"}}>
       {/* Tabs */}
       <Box elevation={1} className={styles.attributes}>
         <Box sx={{ borderBottom: 2, borderColor: 'divider',display: "flex",
-        justifyContent: "center" }}>
-          <Tabs 
+        justifyContent: "center" ,width: '100%', maxWidth: '1200px'}} className={styles.scrollable_heading}>
+          <Tabs
             value={value} 
             onChange={handleChange} 
-            variant="standard" 
+            variant="scrollable" 
             scrollButtons="auto"
             allowScrollButtonsMobile
             sx={{
@@ -110,19 +117,19 @@ const EventGuidelines = () => {
         <Divider style={{color:"white"}}/>
         {/* Overview Tab */}
         <TabPanel value={value} index={0}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 ,}}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             {guidelines.overview.map((item, index) => (
               <Card key={index} style={{width:"98%"}}>
-                <CardContent >
+                <CardContent>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                    <Box sx={{ p: 2, bgcolor: 'rgb(147, 175, 181)', borderRadius: 1 }}>
+                    <Box sx={{ padding:'10px 9px 10px 14px', bgcolor: 'rgb(147, 175, 181)', borderRadius: 1 }}>
                       {item.icon}
                     </Box>
                     <Box>
                       <Typography variant="h6" gutterBottom fontFamily={"comfortaa,cursive"} fontSize={"14px"}>
                         {item.title}
                       </Typography>
-                      <Typography color="text.secondary" fontFamily={"comfortaa,cursive"} fontSize={"15px"}>
+                      <Typography color="text.secondary" fontFamily={"comfortaa,cursive"} fontSize={"15px"} >
                         {item.content}
                       </Typography>
                     </Box>
@@ -133,9 +140,9 @@ const EventGuidelines = () => {
           </Box>
         </TabPanel>
 
-        {/* Fees Tab */}
+        {/* Registration Fees Tab */}
         <TabPanel value={value} index={1}>
-          <Card style={{width:"98%",backgroundColor:"black"}}>
+          <Card style={{width:"100%",backgroundColor:"black",padding:"0px"}}>
             <CardContent>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.4 }}>
                 {guidelines.fees.map((fee, index) => (
@@ -160,7 +167,7 @@ const EventGuidelines = () => {
                 ))}
                 <Alert 
                   severity="info"
-                  icon={<InfoIcon style={{ color: 'white' }} />}
+                  icon={<InfoIcon style={{ color: 'white',height:"80px" }} />}
                   sx={{
                     color: 'white',
                     backgroundColor: 'rgba(6, 82, 81, 0.1)',
@@ -179,7 +186,7 @@ const EventGuidelines = () => {
             <CardContent>
               <List>
                 {guidelines.rules.map((rule, index) => (
-                  <ListItem key={index}>
+                  <ListItem key={index} >
                     <ListItemIcon>
                       <Box 
                         sx={{ 
@@ -191,13 +198,13 @@ const EventGuidelines = () => {
                           alignItems: 'center',
                           justifyContent: 'center',
                           fontSize: '0.875rem',
-                          fontWeight: 'medium'
+                          fontWeight: 'medium',
                         }}
                       >
                         {index + 1}
                       </Box>
                     </ListItemIcon>
-                    <ListItemText primary={rule} />
+                    <ListItemText primary={rule}/>
                   </ListItem>
                 ))}
               </List>
@@ -228,7 +235,8 @@ const EventGuidelines = () => {
     transform: 'translate(-50%, -50%)', 
     width: '100%',
   }}
->        <Button 
+> 
+       {/* <Button 
           className={styles.prev_button}
           onClick={() => setValue(Math.max(0, value - 1))}
           style={{
@@ -245,9 +253,9 @@ const EventGuidelines = () => {
 
           }}
         >
-          {/* ⬅ */} &larr;
-        </Button>
-        <Tabs 
+           ⬅  &larr;
+        </Button> */}
+        {/* <Tabs 
           value={value} 
           onChange={handleChange} 
           variant="scrollable" 
@@ -266,8 +274,8 @@ const EventGuidelines = () => {
               '& .MuiTabs-indicator': { backgroundColor: 'rgb(6, 82, 80)' },
             }}
         >
-        </Tabs>
-        <Button 
+        </Tabs> */}
+        {/* <Button 
           className={styles.next_button}
           onClick={() => setValue(Math.min(2, value + 1))}
           style={{
@@ -281,8 +289,8 @@ const EventGuidelines = () => {
             // paddingRight:'0px'
           }}
         >
-          {/* ➡ */}&rarr;
-        </Button>
+           ➡ &rarr;
+        </Button> */}
       </Box>
     </Box>
   </Box>
