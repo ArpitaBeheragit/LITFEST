@@ -71,13 +71,13 @@ const Message = () => {
               fontFamily:"comfortaa,cursive"
             }}
           >
-            <Typography variant="body1" fontFamily="comfortaa, cursive" color="white" sx={{ fontSize: "0.8rem", lineHeight: "1.4", paddingX: "5vw"}}>
+            <Typography variant="body1" fontFamily="comfortaa, cursive" color="white" sx={{ fontSize: {xs:"0.8rem",sm:"15px",md:"17px"}, lineHeight: "1.4", paddingX: "5vw"}}>
             We are honored to welcome you to the 7th edition of Silicon University Model United Nations (SUMUN 2025) ! As a team that has been instrumental in shaping the SUMUN experience, we are proud to lead the conference this year.
 Having been a part of SUMUN's journey, we have witnessed its growth into a premier Model UN conference. With SUMUN 2025, we aim to surpass all expectations and set new standards. Our mission remains steadfast: to provide a dynamic platform for young leaders to engage in meaningful debates, discussions, and resolutions of pressing global issues, while fostering creativity, diplomacy, and equity.
 The legacy of SUMUN is built upon the tireless efforts of our predecessors, who have established our conference as a benchmark for excellence in the circuit. This year's conference would not have been possible without the dedication and hard work of our team members.
 We are thrilled to see what SUMUN 2025 will bring, and we are excited to welcome you all to the conference. Get ready for an unforgettable experience!
             </Typography>
-            <Typography variant="h6" textAlign={"right"} color={"white"} fontFamily="comfortaa,cursive" sx={{ fontSize: "0.75rem" ,paddingX: "5vw"}}>
+            <Typography variant="h6" textAlign={"right"} color={"white"} fontFamily="comfortaa,cursive" sx={{ fontSize: {xs:"0.9rem",sm:"16px",md:"18px"} ,paddingX: "5vw"}}>
               - Core Secretariat
             </Typography>
             {/* <Typography variant="body1" textAlign={"right"} color={"rgb(170, 210, 210)"} fontFamily="comfortaa,cursive">
