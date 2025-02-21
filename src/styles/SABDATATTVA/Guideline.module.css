@@ -1,29 +1,66 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important; /* Prevent horizontal scrolling */
+  width: 100%;
+}
+
+/* Restrict scrolling to the heading */
+.scrollable_heading {
+  white-space: nowrap; /* Prevent text from wrapping */
+  width: 10%;
+  /* overflow-x: auto; Allow horizontal scrolling */
+  display: flex;
+  align-items: center;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.scrollable-heading::-webkit-scrollbar {
+  display: none;
+}
+
+.section{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto;
+    /* outline: 1px solid red;   */
+}
+/* Prevent body overflow on mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 @media (max-width: 320px){
     .Mobile_view{
       padding: 10px;
     }
   }
   .attributes{
-    border: 2px solid rgb(246, 243, 243);
-    height: 415px;
+    border: 2px solid rgb(251, 249, 249);
+    /* height: 425px; */
     border-radius: 10px;
     width: 100%;
   }
   .card_content{
-    padding: 4px 10px 5px 10px;
+    padding: px 10px 5px 10px;
     font-family: "comfortaa,cursive";
     font-weight: 300;
   }
-  .nav_buttons{
+  /* .nav_buttons{
     padding-top:15px
-  }
+  } */
   html, body, #root {
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
   }
   .MuiTabPanel-root {
     max-height: calc(100vh - 150px); /* Adjust to fit within the screen */
-    overflow-y: auto; /* Scroll only inside the tab panel */
+    overflow-y: hidden; /* Scroll only inside the tab panel */
   }
   .section {
     position: relative;
@@ -32,5 +69,5 @@
     align-items: center;
     background: #000;
     overflow: hidden;
-    padding: 10vh 5vw;
+    padding: 5vh 5vw;
   }

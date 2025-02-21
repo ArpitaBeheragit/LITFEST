@@ -21,7 +21,7 @@ const About = () => {
       >
         <Box className={styles.info}>
           <Heading heading={"About us"} />
-          <Typography variant="body1" fontFamily="comfortaa,cursive" >
+          <Typography variant="body1" fontFamily="comfortaa,cursive" fontSize={{xs:"15px",sm:"1rem",md:"1rem"}}>
           <span className={styles.movie_night}>Sabdattatva2.0</span>
           {' '}under the magical theme of snow, presents 
             extraordinary events designed to inspire and engage.Immerse 

@@ -23,7 +23,7 @@ const About = () => {
       >
         <Box className={styles.info}>
           <Heading heading={"About us"} />
-          <Typography variant="body1" fontFamily="comfortaa,cursive" >
+          <Typography variant="body1" fontFamily="comfortaa,cursive" fontSize={{xs:"15px",sm:"1rem",md:"1rem"}}>
           <span className={styles.movie_night}>Model United Nations</span> is a dynamic simulation of the United Nations, designed to find solutions to real-world problems through academic discussions that mirror UN procedures. It revolves around negotiation, discussion, and vibrant debates, fostering a deep understanding of current events, international relations, diplomacy, and the United Nations agenda. Participants develop essential skills such as public speaking, presentation, persuasion, research, situation analysis, and critical thinking. SUMUN 2025 is an inter-collegiate conference held annually, attracting students from Silicon University and other institutes across Odisha who participate as delegates in various committees, with the best speakers recognized and awarded. SUMUN invites you on an unparalleled journey into the world of diplomacy, debate, and global change. Whether you're a seasoned delegate or a first-time participant, SUMUN offers the perfect stage to explore negotiation, leadership, and collaboration.
           </Typography>
           {/* <button className="btn">Join</button> */}

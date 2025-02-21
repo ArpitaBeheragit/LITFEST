@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box, Typography, Container } from "@mui/material";
 import { motion } from "framer-motion";
 import bgImage from "../../assets/bg.png"; // Add a space-themed background image
-
+import styles from "../../styles/LITFEST/countdown.module.css"
 const MotionBox = motion(Box);
 
 const CountdownTimer = () => {
@@ -31,13 +31,15 @@ const CountdownTimer = () => {
 
   return (
     <Box
+    className={styles["countdown-wrapper"]}
       sx={{
         backgroundColor: "#191a19",
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "25%",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        height: "100vh",
+        minHeight: {xs:"75vh",sm:"80vh", md:"100vh"},
+        padding:{xs:"10px 0", sm:"20px 0" },
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -60,13 +62,15 @@ const CountdownTimer = () => {
         </Typography>
 
         <MotionBox
+        className={styles["countdown-container"]}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
           sx={{
             display: "flex",
             justifyContent: "center",
-            gap: 12,
+            flexDirection:{xs:"row",sm:"row"},
+            gap:{xs:2,sm: 12, md:12},
             mt: 3,
             p: 3,
             border: "2px solid rgba(255, 255, 255, 0.5)",
@@ -75,11 +79,11 @@ const CountdownTimer = () => {
           }}
         >
           {["days", "hours", "minutes", "seconds"].map((unit, index) => (
-            <Box key={index} sx={{ textAlign: "center" }}>
-              <Typography variant="h2" fontFamily="comfortaa,cursive">
+            <Box key={index} className={styles["countdown-box"]} sx={{ textAlign: "center" }}>
+              <Typography variant="h2" fontFamily="comfortaa,cursive" className={styles["countdown-value"]}>
                 {String(timeLeft[unit]).padStart(2, "0")}
               </Typography>
-              <Typography variant="subtitle1" fontFamily="comfortaa,cursive">{unit.toUpperCase()}</Typography>
+              <Typography variant="subtitle1" fontFamily="comfortaa,cursive" className={styles["countdown-label"]}>{unit.toUpperCase()}</Typography>
             </Box>
           ))}
         </MotionBox>

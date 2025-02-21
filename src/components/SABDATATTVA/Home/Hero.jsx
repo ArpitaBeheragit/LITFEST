@@ -28,7 +28,7 @@ const Hero = () => {
         height: "100vh",
         width: "100%",
         // background: `url(${HeroImg}),linear-gradient(#4e9f3d, #4E9F3D)`,
-        backgroundImage: ` url(${heroImgs[imgUrlIdx]})`,
+        backgroundImage: ` linear-gradient(120deg, rgba(25, 26, 25, 0.9) 71%, rgb(30 66 81 / 80%) 97%),url(${heroImgs[imgUrlIdx]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -46,16 +46,7 @@ const Hero = () => {
         width={"100%"}
         height={"100%"}
       >
-        <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: "linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8))",
-        }}
-      />
+        
         {/* <SideBar /> */}
         <Stack
           spacing={5}
@@ -81,13 +72,13 @@ const Hero = () => {
                 textWrap: "nowrap",
                 letterSpacing: "2px",
                 "@keyframes hashtag-move": {
-        "0%": {
-          transform: "translateX(-100%)",
-        },
-        "100%":{
-          transform: "translateX(100%)",
-        }
-      },
+                  "0%": {
+                    transform: "translateX(-100%)",
+                  },
+                  "100%": {
+                    transform: "translateX(100%)",
+                  }
+                },
                 animation: "hashtag-move 10s linear infinite",
               }}
             >
@@ -105,7 +96,7 @@ const Hero = () => {
             justifyContent: "center",
           }}
         >
-          <Stack justifyContent={"center"}>
+          <Stack justifyContent={"center"} width={"100%"}>
             {/* <Stack
               spacing={5}
               justifyContent={"end"}
@@ -133,42 +124,46 @@ const Hero = () => {
                 </Typography>
               </Box>
             </Stack> */}
-
             <Typography
               variant="h1"
               fontWeight={900}
-              textAlign={"center"}
-              color={" rgb(65 161 166)"}
-              sx={{ letterSpacing: "4px" }}
+              textAlign="center"
+              color="rgb(65 161 166)"
+              sx={{
+                letterSpacing: "4px",
+                fontSize: { xs: "37px", sm: "55px", md: "100px" } // Responsive font sizes
+              }}
               className={styles.sit}
               data-aos="zoom-in"
-              
             >
-              <span style={{ color: "#a8e1e9"}} className={styles.sit}>
-              SABDA
+              <span style={{ color: "#a8e1e9" }} className={styles.sit}>
+                SABDA
               </span>
               TATTVA
             </Typography>
+
             <Typography
               variant="h1"
-              // fontFamily={"comfortaa,cursive"}
-              className={styles.sit}
               fontWeight={600}
-              textAlign={"center"}
-              color={"rgb(65 161 166)"}
+              textAlign="center"
+              color="rgb(65 161 166)"
               data-aos="zoom-in"
+              sx={{
+                fontSize: { xs: "37px", sm: "55px", md: "100px" }
+              }}
+              className={styles.sit}
             >
               2025
             </Typography>
-
             <Stack
               spacing={5}
               justifyContent={"end"}
-              backgroundColor="#031D40" 
-              width={{ md: "4rem", xs: "100vw" }}
+              backgroundColor="#031D40"
+              width={{ xs: "100%", md: "4rem", sm: "100%" }}
+              maxWidth={{ xs: "150vw", md: "8rem" }}
               display={{ md: "none", xs: "block" }}
               margin={"4rem 0"}
-              // overflow={"hidden"}
+              overflow={"hidden"}
             >
               <Box>
                 <Typography
@@ -181,13 +176,13 @@ const Hero = () => {
                     textWrap: "nowrap",
                     letterSpacing: "2px",
                     "@keyframes hashtag-move": {
-        "0%": {
-          transform: "translateX(-100%)",
-        },
-        "100%":{
-          transform: "translateX(100%)",
-        }
-      },
+                      "0%": {
+                        transform: "translateX(-100%)",
+                      },
+                      "100%": {
+                        transform: "translateX(100%)",
+                      }
+                    },
                     animation: `hashtag-move 10s linear infinite`,
                   }}
                 >
@@ -196,14 +191,15 @@ const Hero = () => {
               </Box>
             </Stack>
             <Stack
-              marginTop={{xs:4, md: 6}}
+              marginTop={{ xs: 4, md: 6 }}
               direction={"row"}
               spacing={4}
               justifyContent={"space-around"}
+              width={{sm:"60%",md:"80%",xs:"80%"}}
               // maxWidth={{ md: "100%", sm: "450px", xs: "280px" }}
               margin={"auto"}
             >
-              <Button
+              {/* <Button
                 variant="contained"
                 sx={{
                   padding: "12px 18px",
@@ -217,25 +213,62 @@ const Hero = () => {
                 target="_blank"
               >
                 Register Now
+              </Button> */}
+
+              <Button
+                variant="contained"
+                sx={{
+                  padding: { xs: "10px 10px", md: "12px 18px", sm: "10px" }, // Adjust padding for mobile
+                  borderRadius: "28px",
+                  fontSize: { xs: "11px", sm: "15px", md: "16px" }, // Responsive font size
+                  fontWeight: "600",
+                  fontFamily: "comfortaa, cursive",
+                  width: { xs: "50%", sm: "50%", md: "fit-content" }, // Make buttons fit in mobile view
+                  "@keyframes bounceEffect": {
+                    "0%": { transform: "scale(1)" },
+                    "50%": { transform: "scale(1.05)" },
+                    "100%": { transform: "scale(1)" }
+                  },
+                  "&:hover": {
+                    backgroundColor: "#4a90e2",
+                    animation: "bounceEffect 0.4s ease-in-out"
+                  }
+                }}
+                className={styles.herbtn}
+
+                href="https://linktr.ee/litfest_2025"
+                target="_blank"
+              >
+                Register Now
               </Button>
-              
-                <Button
-                  variant="contained"
-                 
-                  sx={{
-                    padding: "12px 18px",
-                    borderRadius: "28px",
-                    fontSize: 16,
-                    fontWeight: "600",
-                    fontFamily:"comfortaa,cursive"
-                  }}
-                  // color="success"
-                  className={styles.herbtn}
-                  href="#about"
-                >
-                  Know More
-                </Button>
-              
+
+              <Button
+                variant="contained"
+                sx={{
+                  // padding: "12px 18px",
+                  padding: { xs: "10px 10px", md: "12px 18px", sm: "10px" }, // Smaller padding on mobile
+                  width: { xs: "50%", sm: "50%", md: "fit-content" },
+                  borderRadius: "28px",
+                  fontSize: { xs: "11px", sm: "15px", md: "16px" },
+                  fontWeight: "600",
+                  fontFamily: "comfortaa,cursive",
+                  "@keyframes bounceEffect": {
+                    "0%": { transform: "scale(1)" },
+                    "50%": { transform: "scale(1.05)" },
+                    "100%": { transform: "scale(1)" }
+                  },
+                  "&:hover": {
+                    backgroundColor: "#4a90e2",
+                    animation: "bounceEffect 0.4s ease-in-out"
+                  }
+                }}
+                // color="success"
+                className={styles.herbtn}
+                href="#about"
+              >
+                Know More
+              </Button>
+
             </Stack>
           </Stack>
         </Box>
@@ -266,7 +299,7 @@ export const SideBar = () => {
         </Typography>
       </NavLink>
 
-     
+
 
       <NavLink to={"/sabdatattva/events"}>
         <Typography
