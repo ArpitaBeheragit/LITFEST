@@ -3,7 +3,7 @@ import { Box, Stack, Typography, Button } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { NavLink } from "react-router-dom";
-import { heroImgs } from "../../../data/Sabdahero";
+import { heroImgs } from "../../../data/sumunHero";
 
 //css file
 import styles from "../../../styles/SUMUN/sideBar.module.css";

@@ -76,6 +76,13 @@ const EventSlider = () => {
     setOpen(true);
   }
 
+  const eventUrl =[
+    'https://docs.google.com/forms/d/e/1FAIpQLSdcmH3fSFeTGdf2ciBPB0dIKUmycZsSa7uoi7rmp3XN6TDFlQ/viewform',
+    'https://docs.google.com/forms/d/e/1FAIpQLSc6VpNVIgYzuA-CA06T2P9qF9HwqJ4hXInL9dS5-43XWwmGAA/viewform',
+    'https://docs.google.com/forms/d/e/1FAIpQLSfHRS4qZCUH8Bhip_j5I2ewt0XvqMqYZOYLK_yGTozSRBTofg/viewform',
+    'https://docs.google.com/forms/d/e/1FAIpQLSc98vGrWK_UAXd0DbcGXry7r3ghY1fd-lXOPH8BIVvLptB97A/viewform'
+  ]
+
   return (
     <div className={styles.slider}>
         <EventModal open={open} setOpen={setOpen} event={activeRecord} />
@@ -160,6 +167,16 @@ const EventSlider = () => {
                     onClick={()=>handleOpen(0)}
                   >
                     <p>Rules</p>
+                  </button>
+                  <button
+                    className={
+                      smlBlock1Style == "smlBlock"
+                        ? styles.smlBlockButton
+                        : styles.bigBlockButton
+                    }
+                    onClick={() => window.open(eventUrl[0], '_blank')}
+                  >
+                    <p>Register</p>
                   </button>
                 </div>
               </div>
@@ -249,6 +266,16 @@ const EventSlider = () => {
                   >
                     <p>Rules</p>
                   </button>
+                  <button
+                    className={
+                      smlBlock2Style == "smlBlock"
+                        ? styles.smlBlockButton
+                        : styles.bigBlockButton
+                    }
+                    onClick={() => window.open(eventUrl[1], '_blank')}
+                  >
+                    <p>Register</p>
+                  </button>
                 </div>
               </div>
             </div>
@@ -336,6 +363,16 @@ const EventSlider = () => {
                   >
                     <p>Rules</p>
                   </button>
+                  <button
+                    className={
+                      smlBlock3Style == "smlBlock"
+                        ? styles.smlBlockButton
+                        : styles.bigBlockButton
+                    }
+                    onClick={() => window.open(eventUrl[2], '_blank')}
+                  >
+                    <p>Register</p>
+                  </button>
                 </div>
               </div>
             </div>
@@ -421,6 +458,16 @@ const EventSlider = () => {
                     onClick={()=>handleOpen(3)}
                   >
                     <p>Rules</p>
+                  </button>
+                  <button
+                    className={
+                      smlBlock4Style == "smlBlock"
+                        ? styles.smlBlockButton
+                        : styles.bigBlockButton
+                    }
+                    onClick={() => window.open(eventUrl[2], '_blank')}
+                  >
+                    <p>Register</p>
                   </button>
                 </div>
               </div>
