@@ -166,15 +166,21 @@ const EventGuidelines = () => {
                   </Paper>
                 ))}
                 <Alert 
-                  severity="info"
-                  icon={<InfoIcon style={{ color: 'white',height:"80px" }} />}
-                  sx={{
-                    color: 'white',
-                    backgroundColor: 'rgba(6, 82, 81, 0.1)',
-                  }}
-                >
+                severity="info"
+                icon={<InfoIcon style={{ color: 'white', height: "20px", width: "20px" }} />} // Adjust icon size
+                sx={{
+                  color: 'white',
+                  backgroundColor: 'rgba(6, 82, 81, 0.1)',
+                  display: 'flex',
+                  alignItems: 'center', // Align icon and text vertically
+                  // justifyContent: 'space-between', // Ensure proper spacing between icon and text
+                }}
+              >
+                <Typography variant="body2" > {/* Margin for spacing between icon and text */}
                   Registration fees are non-refundable. Multiple event participation is allowed.
-                </Alert>
+                </Typography>
+              </Alert>
+              
               </Box>
             </CardContent>
           </Card>
