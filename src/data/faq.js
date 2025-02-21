@@ -33,7 +33,7 @@ export const allFaq = [
       id: 6,
       question: "What is the fees structure of SITMUN?",
       answer:
-        "Regarding the fees structure, don't worry we got you covered, <a class='faq-link' href='https://ik.imagekit.io/0oohdkbtxa/SITMUN%202024%20registration%20fees%20.pdf?updatedAt=1707845617770' target='_blank'>click here</a> to know about fees structure"
+        "Regarding the fees structure, don't worry we got you covered, <a class='faq-link' href='https://ik.imagekit.io/Litfest2025/1000250655.webp?updatedAt=1739601477645' target='_blank'>click here</a> to know about fees structure"
         //  and also go through the <a class='faq-link' href='https://ik.imagekit.io/72bccx2bu/GUIDELINES.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1671606076861' target='_blank'>Registration Guidelines</a>",
     }
     

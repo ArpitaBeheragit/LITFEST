@@ -89,7 +89,7 @@ export default function Footer() {
               >
                 <Link to="/sumun">SUMUN</Link>
                 <Link to="/sabdatattva">Sabdatattva</Link>
-                <a href="https://registration-link-for-litfest25" target="_blank">Register</a>
+                <a href="https://linktr.ee/litfest_2025" target="_blank">Register</a>
               </Stack>
             </Stack>
             <Stack spacing={1}>
@@ -102,7 +102,7 @@ export default function Footer() {
                 alignItems={"center"}
                 justifyContent={"center"}
               >
-                <a href="https://www.instagram.com/litfest25" target="_blank">
+                <a href="https://www.instagram.com/meta_academics" target="_blank">
                   <Instagram style={{color: "#00b2df"}} />
                 </a>
                 <a href="https://wa.me/+918328939633" target="_blank">
