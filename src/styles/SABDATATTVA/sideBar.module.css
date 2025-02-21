@@ -12,6 +12,12 @@
     font-weight: 500 !important;
     font-style: normal !important;
 }
+@media (max-width: 320px) {
+    .sit {
+        font-size: 33px; /* Smaller size on mobile for better fit */
+    }
+}
+
 .active:hover h6 {
     color: rgb(59, 209, 209);
 }
