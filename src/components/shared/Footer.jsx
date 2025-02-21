@@ -33,7 +33,8 @@ export default function Footer() {
       sx={{
         background: "#000000",
         backgroundImage: "linear-gradient(90deg, rgba(0, 6, 1, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 68%, rgb(5 31 37) 100%)",
-        p: 6,
+        py: 6,
+        px:4,
         boxShadow:
           "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset",
         color: "white",
@@ -68,7 +69,7 @@ export default function Footer() {
             direction={{sm: "row", xs: 'column'}}
             spacing={3}
           >
-            <Stack spacing={1} justifyContent={"center"} alignItems={"center"} display={{xs: 'none', sm: 'flex'}}>
+            <Stack spacing={1} justifyContent={"center"} alignItems={"center"} display={{xs: 'flex', sm: 'flex'}}>
               <Typography variant="h5" fontWeight={"bold"} fontFamily="comfortaa,cursive" color="white">
                 Links
               </Typography>

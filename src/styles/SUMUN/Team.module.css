@@ -24,7 +24,7 @@
     /* opacity: 0.5; */
 }
 .meet{
-    font-size: 65px;
+    /* font-size: 65px; */
     font-weight: 800;
     text-align: center;
     /* color:#FFFFFF; */
@@ -40,7 +40,7 @@
   /* font-family: ; */
 }
 .card{
-  flex-basis: 0 0 calc(33.33% - 118px);
+  flex-basis: 0 0 calc(33.33% - 40px);
     border-radius: 24px;
     height: 305px;
     object-fit: cover;
@@ -101,31 +101,34 @@
 .card {
   position: relative;
   backface-visibility: hidden;
-
   .Name {
     position: absolute;
-    top: 86%;
-    left: -100%;
+    top: 83%;
+    right: -100%; /* Start from the right */
     text-transform: capitalize;
     color: #fff;
-    font-size: 20px;
+    font-size: 17px; /* Decreased font size */
     z-index: 8;
     transition: all 0.6s ease;
   }
   .desig{
     position: absolute;
     top: 92%;
-    left: -100%;
+    right: -100%; /* Start from the right */
     text-transform: capitalize;
     color: #cbcbcb;
-    font-size: 15px;
+    font-size: 14px; /* Adjust font size */
     z-index: 8;
     transition: all 0.6s ease;
   }
 
   &:hover {
-    p {
-      left: 5%;
+    .Name {
+      right: 5%; /* Move from right to 5% on hover */
+    }
+
+    .desig {
+      right: 5%; /* Same transition for designation */
     }
 
     img {
@@ -134,7 +137,6 @@
 
     .cardbody .__rect {
       top: 75%;
-
       &:before {
         transform: translateY(15px);
       }
@@ -146,17 +148,16 @@
   }
 
   .cardbody .__rect {
-    width: 696px;
-    height: 200px;
-    /* background: #fff; */
-    display: block;
-    position: absolute;
-    top: 179%;
-    left: -78%;
-    transform: rotate(-12deg);
-    z-index: 5;
-    opacity: 0.9;
-    transition: all 0.3s ease-in-out;
+    width: 582px;
+        height: 1024px;
+        display: block;
+        position: absolute;
+        top: 179%;
+        left: -78%;
+        transform: rotate(-15deg);
+        z-index: 5;
+        opacity: 0.9;
+        transition: all 0.3sease-in-out;
 
     &:before {
       content: '';
@@ -164,26 +165,38 @@
       width: 100%;
       position: relative;
       height: 100%;
-      background: rgba(0, 191, 225, 0.15); 
-      transform: translateY(200px);
+      background: rgb(0, 8, 11); 
+      transform: translateY(250px); /* Increased Y translation */
       z-index: 2;
       transition: all 0.3s ease-in-out;
       transition-delay: 0.1s;
     }
   }
 }
+
 .row {
-  flex: 0 0 calc(33.33% - 126px); 
+  flex: 0 0 calc(33.33% - 40px); 
   box-sizing: border-box;
   /* margin: 20px;  */
 }
 
-@media (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
+  .cardrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 94px;
+  }
   .row {
-    flex: 0 0 calc(50% - 40px); 
+    flex: 0 0 calc(50% - 20px); 
   }
 }
 @media (max-width:425px){
+  .cardrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .meet{
     font-size: 65px;
     font-weight: 800;
@@ -196,7 +209,7 @@
   .card{
     height: 279px;
     width: 235px;
-  }
+}
   .card {
     position: relative;
     backface-visibility: hidden;
@@ -263,7 +276,7 @@
         width: 100%;
         position: relative;
         height: 100%;
-        background: rgba(0, 157, 225, 0.15); 
+        background: rgb(0, 8, 11); 
         transform: translateY(200px);
         z-index: 2;
         transition: all 0.3s ease-in-out;
@@ -273,6 +286,12 @@
   }
 }
 @media screen and (max-width:500px) {
+  .cardrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 47px;
+  }
   .meet{
     font-size: 65px;
     font-weight: 800;

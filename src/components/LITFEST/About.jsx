@@ -10,7 +10,7 @@ const MotionPaper = motion(Paper);
 const About = () => {
   const navigate = useNavigate();
   return (
-    <Box sx={{ bgcolor: "black", py: 8, px: 4 }}>
+    <Box sx={{ bgcolor: "black", py: 8, px: {xs:2,md:4,sm:4} }}>
       <Container maxWidth="lg">
         {/* <Typography
           variant="h2"
@@ -25,6 +25,7 @@ const About = () => {
       <Heading heading={"Silicon University Invites You"}/>
         <Typography
           variant="h6"
+          fontSize={{xs:"15px"}}
           align="center"
           color="white"
           sx={{ maxWidth: "800px", mx: "auto", mt: 2, fontFamily: "Comfortaa, cursive", textAlign: "justify" }}
@@ -44,7 +45,7 @@ const About = () => {
               onClick={() => navigate("/sabdatattva")}
             >
               <Heading heading={"Sabdatattva"}/>
-              <Typography color="white" sx={{ fontFamily: "Comfortaa, cursive", textAlign: "justify" }}>
+              <Typography color="white" sx={{ fontFamily: "Comfortaa, cursive", textAlign: "justify" }} fontSize={{xs:"15px"}}>
                 Immerse yourself in the beauty of words carved like snowflakes, unique and timeless.
                 Sabda Tattva, our literary fest, embraces the theme of winter as a metaphor for reflection,
                 storytelling, and introspection. Let the chill of the season ignite your creativity as
@@ -62,7 +63,7 @@ const About = () => {
               onClick={() => navigate("/sumun")}
             >
                <Heading heading={"SUMUN"} />
-              <Typography color="white" sx={{ fontFamily: "Comfortaa, cursive", textAlign: "justify" }}>
+              <Typography color="white" sx={{ fontFamily: "Comfortaa, cursive", textAlign: "justify" }} fontSize={{xs:"15px"}}>
                 Amidst the icy backdrop of this season, diplomacy burns bright.
                 SUMUN brings together thinkers, leaders, and diplomats to tackle pressing global issues.
                 Through enriching workshops and engaging simulations, participants will step into the shoes

@@ -7,17 +7,17 @@ export const committees = [
         // "Combating intolerance, negative stereotyping and stigmatization of, and discrimination, incitement to violence and violence against, persons based on religion or belief.",
       ebs: [
         {
-          name: "To be revealed",
-          // designation: "President",
-          // profilePic:
-          //   "https://ik.imagekit.io/v9pfmptul/SITMUN/HRC%20CHAIR.PNG?updatedAt=1711484463376",
+          name: "Arya Senapati",
+          designation: "Chairperson",
+          profilePic:
+            "https://ik.imagekit.io/Satya07/Litfest/EB/6.JPEG?updatedAt=1740158168176",
         },
-        // {
-        //   name: "To be revealed",
-        //   // designation: "Vice President",
-        //   // profilePic:
-        //   //   "https://ik.imagekit.io/v9pfmptul/SITMUN/HRC%20VICE%20CHAIR.jpg?updatedAt=1711484463990",
-        // },
+        {
+          name: "Diptesh Banerjee",
+          designation: "Co-Chairperson",
+          profilePic:
+            "https://ik.imagekit.io/Satya07/Litfest/EB/5.jpg?updatedAt=1740158166564",
+        },
       ],
     },
     {
@@ -28,17 +28,17 @@ export const committees = [
         // "Deliberating upon the question of Lethal Autonomous Weapon Systems (LAWS) and Cyber warfare, in light of the Law of Armed Conflict.",
       ebs: [
         {
-          name: "To be revealed",
-          // designation: "Chairperson",
-          // profilePic:
-          //   "https://ik.imagekit.io/v9pfmptul/SITMUN/DISEC%20CHAIR.jpg?updatedAt=1711483376798",
+          name: "Srotoswini Ghatak",
+          designation: "Chairperson",
+          profilePic:
+            "https://ik.imagekit.io/Satya07/Litfest/EB/2.jpg?updatedAt=1740158093442",
         },
-        // {
-        //   name: "Anik Maitra",
-        //   designation: "Co-Chairperson",
-        //   profilePic:
-        //     "https://ik.imagekit.io/v9pfmptul/SITMUN/DISEC%20CO-CHAIR.jpg?updatedAt=1711483376843",
-        // },
+        {
+          name: "Devayush Dash",
+          designation: "Vice Chairperson",
+          profilePic:
+            "https://ik.imagekit.io/Satya07/Litfest/EB/3.jpg?updatedAt=1740158122736",
+        },
       ],
     },
     {
@@ -48,8 +48,18 @@ export const committees = [
       agenda:"To be revealed",
         // "Progressing towards a sustainable future by addressing gender disparities through education and economic development.",
       ebs: [{
-        name: "To be revealed",
-      }],
+        name: "Nishant Dash",
+        designation: "Chairperson",
+          profilePic:
+            "https://ik.imagekit.io/Satya07/Litfest/EB/4.JPG?updatedAt=1740158166831",
+      },
+        {
+        name: "Amlan Dash",
+        designation: "Vice Chairperson",
+          profilePic:
+            "https://ik.imagekit.io/Satya07/Litfest/EB/1.jpg?updatedAt=1740158075421",
+      }
+    ],
     },
     {
       name: "IP",
@@ -62,12 +72,13 @@ export const committees = [
           // designation: "Photographer-in-Chief",
           // profilePic:
           //   "https://ik.imagekit.io/v9pfmptul/SITMUN/PIC.jpg?updatedAt=1711483715996",
-        },
+        }
+        // ,
         // {
-        //   name: "Sushree Subhrasweta Hota",
-        //   designation: "Editor-in-Chief",
-        //   profilePic:
-        //     "https://ik.imagekit.io/v9pfmptul/SITMUN/EIC%20.JPG?updatedAt=1711483752212",
+        //   name: "To be revealed",
+          // designation: "Editor-in-Chief",
+          // profilePic:
+          //   "https://ik.imagekit.io/v9pfmptul/SITMUN/EIC%20.JPG?updatedAt=1711483752212",
         // },
       ],
     },

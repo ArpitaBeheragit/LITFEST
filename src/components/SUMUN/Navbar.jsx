@@ -37,7 +37,7 @@ const pages = [
 export default function Navbar({ order, setOrder, selectList = false }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const navigate = useNavigate();
   const handleMenuClick = (location) => {
     if (location.startsWith("http")) {
@@ -55,6 +55,9 @@ export default function Navbar({ order, setOrder, selectList = false }) {
   };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
+    setIsMenuOpen(true);
+    document.body.style.overflow="hidden";
+    document.documentElement.style.overflow="hidden";
   };
 
   const handleCloseNavMenu = () => {
@@ -63,6 +66,9 @@ export default function Navbar({ order, setOrder, selectList = false }) {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+    setIsMenuOpen(true);
+    document.body.style.overflow="auto";
+    document.documentElement.style.overflow="auto";
   };
 
   const [open, setOpen] = React.useState(false);
@@ -129,8 +135,8 @@ export default function Navbar({ order, setOrder, selectList = false }) {
               paddingLeft: "3vw",
             }}
           >
-            <Link to="/">
-              <img src={Logo} alt="" width={scrollPosition > 100 ? "60vw": "80px"} />
+            <Link to="/sumun">
+              <img src={Logo} alt=""width={scrollPosition > 100 ? "60vw": "65px"} />
             </Link>
           </Button>
           <Stack
@@ -147,7 +153,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
               onClick={handleOpenUserMenu}
               sx={{ marginLeft: "auto", color: "white" }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{fontSize:"2rem"}}/>
             </IconButton>
           </Stack>
         </Toolbar>
@@ -205,7 +211,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
               {pages.map((setting, i) => (
                 <MenuItem
                   key={i}
-                  onClick={() => handleMenuClick(setting.location)}
+                  onClick={() => {handleMenuClick(setting.location),handleCloseUserMenu()}}
                 >
                   <Typography
                     variant="subtitle1"

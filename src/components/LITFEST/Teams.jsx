@@ -1,23 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, FormControl, Select, MenuItem, OutlinedInput } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; 
 import styles from "../../styles/SUMUN/Team.module.css";
 import { teamdata } from "../../data/team";
 import Heading from "../shared/Heading";
+import { useMediaQuery } from "@mui/material"; // Import useMediaQuery to handle responsive behavior
 
 const Team = () => {
+  const isMobileOrTablet = useMediaQuery("(max-width:768px)");
   const [order, setorder] = useState("Core Secretariat");
-
+  const [isMenuOpen,setIsMenuOpen] = useState(false);
+  useEffect(()=>{
+    if(isMenuOpen){
+      const handleScroll=()=>{
+        setIsMenuOpen(false);
+      };
+      window.addEventListener('scroll',handleScroll,true);
+      return () => window.removeEventListener('scroll',handleScroll,true)
+    }
+  },[isMenuOpen])
   return (
     <div className={styles.container}>
       {/* Header with heading centered and filter dropdown at the top-right */}
       <Box sx={{ position: "relative", textAlign: "center", mb: 2 }}>
-        <Heading heading={order} style={{ fontSize: "70px", margin: "40px 0px 14px 0px" }} />
+        <Heading heading={order} style={{  margin: "40px 0px 14px 0px" }} />
 
         {/* Dropdown positioned in the top-right corner */}
         <FormControl
           sx={{
-            position: "absolute",
+            position: {xs:"static",md:"absolute"},
             top: "50%", 
             right: 40,
             backgroundColor: "black",
@@ -29,18 +40,35 @@ const Team = () => {
         >
           <Select
             value={order}
+            open={isMenuOpen}
+            onOpen={()=>setIsMenuOpen(true)}
+            onClose={()=>setIsMenuOpen(false)}
             onChange={(e) => setorder(e.target.value)}
             input={<OutlinedInput sx={{ color: "white", border: "1px solid white" }} />}
-            IconComponent={ExpandMoreIcon}
+            IconComponent={(props) => (
+              <ExpandMoreIcon 
+                {...props}
+                sx={{
+                  right:isMobileOrTablet?"-50px":"7px",
+                  color: "white",
+                  fontSize: isMobileOrTablet ? 15:15, // Adjust size based on screen size
+                  transform: isMenuOpen ? "rotate(180deg)" : "rotate(0deg)", // Rotate on open
+                  transition: "transform 0.3s ease-in-out", // Smooth transition
+                }} 
+              />
+            )}
             sx={{
               color: "white",
               "& .MuiSvgIcon-root": { color: "white" },
+              fontSize: isMobileOrTablet ? 15 : 15,
+              width:{sx:"30px"}
             }}
             MenuProps={{
               PaperProps: {
                 sx: {
                   backgroundColor: "black", // Dropdown background color
                   color: "white", // Text color
+                  mt:"0.5"
                 },
               },
               anchorOrigin: {
@@ -51,6 +79,8 @@ const Team = () => {
                 vertical: "top",
                 horizontal: "left",
               },
+              disablePortal:true,
+              disableScrollLock:true
             }}
           >
             {[

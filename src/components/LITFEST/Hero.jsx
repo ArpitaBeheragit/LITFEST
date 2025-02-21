@@ -56,13 +56,13 @@ const Hero = ({ onScrollToNext }) => {
         color: "white",
         position: "relative",
         overflow: "hidden",
-        backgroundImage: `url(${heroImgs[imgUrlIdx]})`,
+        backgroundImage: `linear-gradient(120deg, rgba(25, 26, 25, 0.9) 71%, rgb(30 66 81 / 80%) 97%), url(${heroImgs[imgUrlIdx]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Dark Overlay */}
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           top: 0,
@@ -71,7 +71,7 @@ const Hero = ({ onScrollToNext }) => {
           bottom: 0,
           background: "linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8))",
         }}
-      />
+      /> */}
 
       {/* Main Content */}
       <Container
@@ -90,7 +90,7 @@ const Hero = ({ onScrollToNext }) => {
         <Typography
         //   variant="h2"
           sx={{
-            fontSize:"100px",
+            fontSize:{xs:"40px",md:"80px",sm:"55px"},
             fontFamily: "'Tilt Prism', cursive",
             color: "#7DEFF1",
             cursor: "pointer",
@@ -104,7 +104,7 @@ const Hero = ({ onScrollToNext }) => {
         <Typography
         //   variant="h2"
           sx={{
-            fontSize:"100px",
+            fontSize:{xs:"40px",md:"80px",sm:"55px"},
             fontFamily: "'Tilt Prism', cursive",
             color: "#7DEFF1",
             mt: 1,
@@ -116,7 +116,7 @@ const Hero = ({ onScrollToNext }) => {
         <Typography
         //   variant="h2"
           sx={{
-            fontSize:"100px",
+            fontSize:{xs:"40px",md:"80px",sm:"55px"},
             fontFamily: "'Tilt Prism', cursive",
             color: "#7DEFF1",
             cursor: "pointer",
@@ -172,35 +172,43 @@ const Hero = ({ onScrollToNext }) => {
     </Typography>
   </Box>
 </Stack>
-
-
-
-      {/* Scroll Down Arrow */}
-      {/* <Box
-        sx={{
-          position: "absolute",
-          bottom: 16,
-          left: "50%",
-          transform: "translateX(-50%)",
-          cursor: "pointer",
-          fontSize: "2rem",
-          color: "#7DEFF1",
-          width: "70px",
-          height: "70px",
-          borderRadius: "50%",
-          backgroundColor: "transparent", // Light blue transparent
-          backdropFilter: "blur(10px)", // Blur effect inside
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        //   border: "2px solid #7DEFF1",
-          cursor: "pointer", 
-        }}
-        onClick={onScrollToNext}
-      >
-        <div className={styles.arrow}>↓</div>
-      
-      </Box> */}
+<Stack
+  sx={{
+    display:{xs:"flex", md:"none"},
+    position:"absolute",
+    bottom:"20%",
+    width:"100%",
+    height:"40px",
+    overflow:"hidden",
+    zIndex:20,
+    backgroundColor:"#031D40",
+    alignItems:"center",
+  }}
+>
+  <Box
+  sx={{
+    width:"100%",
+    animation:"hashtag-move 10s linear infinite",
+    display:"flex",
+    alignItems:"center",
+    height:"100%"
+  }}
+  >
+  <Typography
+      fontFamily="Anton"
+      textTransform="capitalize"
+      sx={{
+       fontSize:"24px",
+       fontWeight: "900",
+        color: "rgb(65 161 166)",
+        whiteSpace:"nowrap",
+        display:"inline-block"
+      }}
+    >
+      &nbsp;LITFEST - THE LITERARY CARNIVAL
+    </Typography>
+  </Box>
+</Stack>
     </Box>
   );
 };

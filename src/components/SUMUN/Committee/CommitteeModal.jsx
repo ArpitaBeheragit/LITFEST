@@ -17,7 +17,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  minWidth: 350,
+  minWidth: {xs:267,sm:350,md:350},
   bgcolor: "#313131",
   border: "2px solid #000",
   boxShadow: 24,
@@ -88,13 +88,13 @@ const CommitteeModal = ({ open, setOpen, committee }) => {
           <Stack direction="row" spacing={2}>
             {committee?.ebs.map((eb) => (
               <div style={{textAlign: 'center'}}>
-                {/* <Avatar
+                <Avatar
                   alt="Remy Sharp"
                   src={eb.profilePic}
                   sx={{ width: 108, height: 108, margin: '12px auto' }}
-                /> */}
+                />
                 <h3 style={{fontWeight: 'bold'}}>{eb.name}</h3>
-                {/* <p>{eb.designation}</p> */}
+                <p style={{paddingTop:"6px"}}>{eb.designation}</p>
               </div>
             ))}
           </Stack>

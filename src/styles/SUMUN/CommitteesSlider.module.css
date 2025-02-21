@@ -283,6 +283,7 @@
     .smlBlockTitle {
         height: 11vh;
         width: 50vw;
+        font-size: 27px;
     }
     .bigBlockContains1{
         width: 90%;

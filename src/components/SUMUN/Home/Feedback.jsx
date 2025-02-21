@@ -33,13 +33,14 @@ const Feedback = () => {
     transform: "translate(-50%, -50%)",
     width: 500,
     maxWidth: { xs: 300, sm: 500, md: 500 },
+    maxHeight: "80vh",
     bgcolor: "rgb(0 115 225 / 15%)",
     backdropFilter: "blur(30px)",
     border: "2px solid #000",
     boxShadow: 24,
     p: "0px 34px 34px 34px",
     // maxHeight: "70vh",
-    overflowY: { sm: "hidden", xs: "scroll" },
+    overflowY: "auto",
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-end",
@@ -163,11 +164,11 @@ const Feedback = () => {
         >
           <Box sx={style}>
             {/* <img style={{width:"100%", maxHeight: "200px", objectFit: "cover"}} src={selectedFeedback && selectedFeedback.url} alt={`Image`} /> */}
-            <Button onClick={closeModal} sx={{ margin: "1rem 0" }}>
-              <CloseIcon sx={{ color: "white" }} />
+            <Button onClick={closeModal} sx={{ alignSelf: "flex-end", mr: "-1rem", mt: "0.5rem" }}>
+              <CloseIcon sx={{ color: "white",fontSize: "1.8rem" }} />
             </Button>
             <Typography
-              sx={{ color: "white", overflowWrap: "break-word" }}
+              sx={{ color: "white", overflowWrap: "break-word" ,fontSize: "0.9rem"}}
               variant="body1"
               fontFamily={"comfortaa,cursive"}
             >
@@ -175,7 +176,7 @@ const Feedback = () => {
             </Typography>
             <Typography
             fontFamily={"comfortaa,cursive"}
-              sx={{ overflowWrap: "break-word" ,color:"white"}}
+              sx={{ overflowWrap: "break-word" ,color:"white", fontSize: "0.8rem"}}
               variant="body1"
               component="p"
               style={{ margin: "15px 0px 0px 0px", textAlign: "right" }}
@@ -184,7 +185,7 @@ const Feedback = () => {
             </Typography>
             <Typography
             fontFamily={"comfortaa,cursive"}
-              sx={{ overflowWrap: "break-word" ,color:"white"}}
+              sx={{ overflowWrap: "break-word" ,color:"white",fontSize: "0.75rem" }}
               variant="subtitle2"
               component="p"
               style={{ margin: "0px 0px 0px 0px", textAlign: "right" }}
