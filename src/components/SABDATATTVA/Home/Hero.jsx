@@ -47,15 +47,15 @@ const Hero = () => {
         height={"100%"}
       >
         <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: "linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8))",
-        }}
-      />
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8))",
+          }}
+        />
         {/* <SideBar /> */}
         <Stack
           spacing={5}
@@ -81,13 +81,13 @@ const Hero = () => {
                 textWrap: "nowrap",
                 letterSpacing: "2px",
                 "@keyframes hashtag-move": {
-        "0%": {
-          transform: "translateX(-100%)",
-        },
-        "100%":{
-          transform: "translateX(100%)",
-        }
-      },
+                  "0%": {
+                    transform: "translateX(-100%)",
+                  },
+                  "100%": {
+                    transform: "translateX(100%)",
+                  }
+                },
                 animation: "hashtag-move 10s linear infinite",
               }}
             >
@@ -138,38 +138,38 @@ const Hero = () => {
               fontWeight={900}
               textAlign="center"
               color="rgb(65 161 166)"
-              sx={{ 
-                    letterSpacing: "4px",
-                    fontSize: { xs: "34px", sm: "48px", md: "64px" } // Responsive font sizes
-                  }}
+              sx={{
+                letterSpacing: "4px",
+                fontSize: { xs: "37px", sm: "48px", md: "100px" } // Responsive font sizes
+              }}
               className={styles.sit}
               data-aos="zoom-in"
             >
-            <span style={{ color: "#a8e1e9" }} className={styles.sit}>
+              <span style={{ color: "#a8e1e9" }} className={styles.sit}>
                 SABDA
-            </span>
+              </span>
               TATTVA
             </Typography>
 
             <Typography
-                variant="h1"
-                fontWeight={600}
-                textAlign="center"
-                color="rgb(65 161 166)"
-                data-aos="zoom-in"
-                sx={{
-                fontSize: { xs: "30px", sm: "40px", md: "56px" } 
-                  }}
-            className={styles.sit}
+              variant="h1"
+              fontWeight={600}
+              textAlign="center"
+              color="rgb(65 161 166)"
+              data-aos="zoom-in"
+              sx={{
+                fontSize: { xs: "37px", sm: "40px", md: "100px" }
+              }}
+              className={styles.sit}
             >
               2025
             </Typography>
             <Stack
               spacing={5}
               justifyContent={"end"}
-              backgroundColor="#031D40" 
-              width={{ xs: "100%", md: "4rem" }} 
-              maxWidth={{ xs: "150vw", md: "8rem" }} 
+              backgroundColor="#031D40"
+              width={{ xs: "100%", md: "4rem", sm: "100%" }}
+              maxWidth={{ xs: "150vw", md: "8rem" }}
               display={{ md: "none", xs: "block" }}
               margin={"4rem 0"}
               overflow={"hidden"}
@@ -185,13 +185,13 @@ const Hero = () => {
                     textWrap: "nowrap",
                     letterSpacing: "2px",
                     "@keyframes hashtag-move": {
-                       "0%": {
-                              transform: "translateX(-100%)",
-                             },
-                        "100%":{
-                              transform: "translateX(100%)",
-                             }
+                      "0%": {
+                        transform: "translateX(-100%)",
                       },
+                      "100%": {
+                        transform: "translateX(100%)",
+                      }
+                    },
                     animation: `hashtag-move 10s linear infinite`,
                   }}
                 >
@@ -200,13 +200,13 @@ const Hero = () => {
               </Box>
             </Stack>
             <Stack
-              marginTop={{xs:4, md: 6}}
+              marginTop={{ xs: 4, md: 6 }}
               direction={"row"}
               spacing={4}
               justifyContent={"space-around"}
+              width={"80%"}
               // maxWidth={{ md: "100%", sm: "450px", xs: "280px" }}
               margin={"auto"}
-              width={"80%"}
             >
               {/* <Button
                 variant="contained"
@@ -224,59 +224,60 @@ const Hero = () => {
                 Register Now
               </Button> */}
 
-            <Button
-  variant="contained"
-  sx={{
-    padding: { xs: "16px 5px 14px 3px", sm: "12px 18px" }, // Adjust padding for mobile
-    borderRadius: "28px",
-    fontSize: { xs: "13px", sm: "16px" }, // Responsive font size
-    fontWeight: "600",
-    fontFamily: "comfortaa, cursive",
-    width: { xs: "50%", sm: "auto" }, // Make buttons fit in mobile view
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    maxWidth: "300px", // Prevent excessive stretching
-    margin: "0 auto",
+              <Button
+                variant="contained"
+                sx={{
+                  padding: { xs: "10px 10px", md: "12px 18px", sm: "10px" }, // Adjust padding for mobile
+                  borderRadius: "28px",
+                  fontSize: { xs: "10px", sm: "13px", md: "16px" }, // Responsive font size
+                  fontWeight: "600",
+                  fontFamily: "comfortaa, cursive",
+                  width: { xs: "50%", sm: "50%", md: "fit-content" }, // Make buttons fit in mobile view
+                  "@keyframes bounceEffect": {
+                    "0%": { transform: "scale(1)" },
+                    "50%": { transform: "scale(1.05)" },
+                    "100%": { transform: "scale(1)" }
+                  },
+                  "&:hover": {
+                    backgroundColor: "#4a90e2",
+                    animation: "bounceEffect 0.4s ease-in-out"
+                  }
+                }}
+                className={styles.herbtn}
 
-    // Keyframes animation (inline)
-    "@keyframes bounceEffect": {
-      "0%": { transform: "scale(1)" },
-      "50%": { transform: "scale(1.05)" },
-      "100%": { transform: "scale(1)" }
-    },
-    "&:hover": {
-      backgroundColor: "#4a90e2",
-      animation: "bounceEffect 0.4s ease-in-out"
-    }
-  }}
-  className={styles.herbtn}
+                href="https://linktr.ee/litfest_2025"
+                target="_blank"
+              >
+                Register Now
+              </Button>
 
-  href="https://linktr.ee/litfest_2025"
-  target="_blank"
->
-  Register Now
-</Button>
+              <Button
+                variant="contained"
+                sx={{
+                  // padding: "12px 18px",
+                  padding: { xs: "10px 10px", md: "12px 18px", sm: "10px" }, // Smaller padding on mobile
+                  width: { xs: "50%", sm: "50%", md: "fit-content" },
+                  borderRadius: "28px",
+                  fontSize: { xs: "10px", sm: "13px", md: "16px" },
+                  fontWeight: "600",
+                  fontFamily: "comfortaa,cursive",
+                  "@keyframes bounceEffect": {
+                    "0%": { transform: "scale(1)" },
+                    "50%": { transform: "scale(1.05)" },
+                    "100%": { transform: "scale(1)" }
+                  },
+                  "&:hover": {
+                    backgroundColor: "#4a90e2",
+                    animation: "bounceEffect 0.4s ease-in-out"
+                  }
+                }}
+                // color="success"
+                className={styles.herbtn}
+                href="#about"
+              >
+                Know More
+              </Button>
 
-                <Button
-                  variant="contained"
-                  sx={{
-                    // padding: "12px 18px",
-                    padding: { xs: "16px 5px 14px 3px", sm: "12px 18px" }, // Smaller padding on mobile
-                    // padding: { xs: "3px 5px 0px 3px", sm: "12px 18px" }, // Adjust padding for mobile
-                    width: { xs: "50%", sm: "auto" },
-                    borderRadius: "28px",
-                    fontSize: { xs: "14px", sm: "16px" },
-                    fontWeight: "600",
-                    fontFamily:"comfortaa,cursive"
-                  }}
-                  // color="success"
-                  className={styles.herbtn}
-                  href="#about"
-                >
-                  Know More
-                </Button>
-              
             </Stack>
           </Stack>
         </Box>
@@ -307,7 +308,7 @@ export const SideBar = () => {
         </Typography>
       </NavLink>
 
-     
+
 
       <NavLink to={"/sabdatattva/events"}>
         <Typography
