@@ -179,6 +179,87 @@
   box-sizing: border-box;
   /* margin: 20px;  */
 }
+@media (max-width:376px){
+  .card {
+    position: relative;
+    backface-visibility: hidden;
+  
+    .Name {
+      position: absolute;
+      top: 83%;
+      left: 50%;
+      transform: translateX(-100%); /* Start off-screen */
+      text-transform: capitalize;
+      color: #fff;
+      font-size: 17px;
+      z-index: 8;
+      transition: all 0.6s ease;
+    }
+
+    .desig {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translateX(-100%); /* Start off-screen */
+      text-transform: capitalize;
+      color: #fff;
+      font-size: 17px;
+      z-index: 8;
+      transition: all 0.6s ease;
+    }
+
+    &:hover {
+      .Name {
+        transform: translateX(0); /* Move to visible position */
+      }
+
+      .desig {
+        transform: translateX(0); /* Move to visible position */
+      }
+
+      img {
+        transform: translateY(-15px);
+      }
+
+      .cardbody .__rect {
+        top: 75%;
+        &:before {
+          transform: translateY(15px);
+        }
+      }
+    }
+
+    img {
+      transition: all 0.2s ease;
+    }
+
+    .cardbody .__rect {
+      width: 500px;
+      height: 200px;
+      display: block;
+      position: absolute;
+      top: 179%;
+      left: -78%;
+      transform: rotate(-12deg);
+      z-index: 5;
+      opacity: 0.9;
+      transition: all 0.3s ease-in-out;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        position: relative;
+        height: 100%;
+        background: rgb(0, 8, 11); 
+        transform: translateY(200px);
+        z-index: 2;
+        transition: all 0.3s ease-in-out;
+        transition-delay: 0.1s;
+      }
+    }
+  }
+}
 
 @media (min-width: 426px) and (max-width: 768px) {
   .cardrow{
@@ -189,6 +270,22 @@
   }
   .row {
     flex: 0 0 calc(50% - 20px); 
+  }
+  .card{
+    .cardbody ._rect{
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        position: relative;
+        height: 100%;
+        background: rgb(0, 8, 11); 
+        transform: translateY(200px);
+        z-index: 2;
+        transition: all 0.3s ease-in-out;
+        transition-delay: 0.1s;
+      }
+    }
   }
 }
 @media (max-width:425px){
@@ -300,4 +397,5 @@
     margin:-200px 0px 207px 0px;
     
 }
+
 }
