@@ -34,10 +34,10 @@ const CountdownTimer = () => {
     className={styles["countdown-wrapper"]}
       sx={{
         backgroundColor: "#191a19",
-        backgroundImage: `url(${bgImage})`,
+        // backgroundImage: `url(${bgImage})`,
         backgroundSize: "25%",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
+        // backgroundPosition: "center",
         minHeight: {xs:"75vh",sm:"80vh", md:"100vh"},
         padding:{xs:"10px 0", sm:"20px 0" },
         display: "flex",
