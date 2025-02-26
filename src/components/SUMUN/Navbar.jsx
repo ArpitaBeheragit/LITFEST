@@ -45,7 +45,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
       window.open(location, "_blank");
     } else {
       // Internal link
-      console.log(location);
+      // console.log(location);
       
       navigate(location);
     }
@@ -93,7 +93,7 @@ export default function Navbar({ order, setOrder, selectList = false }) {
     const handleScroll = () => {
       const position = document.documentElement.scrollTop || window.scrollY;
       setScrollPosition(position);
-      console.log("Scroll Position:", position); // Debug log
+      // console.log("Scroll Position:", position); // Debug log
     };
 
     window.addEventListener("scroll", handleScroll);
