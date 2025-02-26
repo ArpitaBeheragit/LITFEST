@@ -236,7 +236,7 @@ const Hero = () => {
                     }}
                     className={styles.herbtn}
     
-                    href="https://linktr.ee/litfest_2025"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeOBgCtipfvkAjE6VS2POttfI9tQx6x8WpZ3k3HXWn3UYpeFA/viewform"
                     target="_blank"
                   >
                     Register Now
