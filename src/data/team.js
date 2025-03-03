@@ -333,6 +333,14 @@ export const teamdata = [
   },
   {
     Timestamp: "2024/01/22 9:11:39 pm GMT+5:30",
+    name: "Yuvraj",
+    Year: "3rd",
+    desig: "",
+    dept: "Web Development",
+    url: "https://ik.imagekit.io/Satya07/Litfest/OC/OC/Yuvraj.png?updatedAt=1740077747724",
+  },
+  {
+    Timestamp: "2024/01/22 9:11:39 pm GMT+5:30",
     name: "Nishit Ram",
     Year: "2nd",
     desig: "",
