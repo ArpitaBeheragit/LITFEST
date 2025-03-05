@@ -61,7 +61,7 @@ const EventGuidelines = () => {
 
   const guidelines = {
     overview: [
-      { icon: <CalendarToday />, title: "Event Dates", content: "20-21-22 February 2025" },
+      { icon: <CalendarToday />, title: "Event Dates", content: "20-21-22 March 2025" },
       { icon: <LocationOn />, title: "Venue", content: "Silicon University, Bhubaneswar" },
       { icon: <People />, title: "Eligibility", content: "Std. VIII - XII, UG students" }
     ],
