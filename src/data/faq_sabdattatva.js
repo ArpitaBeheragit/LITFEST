@@ -7,7 +7,7 @@ export const allFaq = [
     {
       id: 2,
       question: "What are the event dates for SabdaTattva?",
-      answer: "The event will be held on the 13th, 14th, and 15th of February, 2025.",
+      answer: "The event will be held on the 20th, 21st, and 22nd of March, 2025.",
     },
     {
       id: 3,
@@ -17,7 +17,7 @@ export const allFaq = [
     {
       id: 4,
       question: "Who can participate in SabdaTattva?",
-      answer:  "Students from the two categories are eligible to participate:- School(Std. VIII - Std. XII) and College/University(Undergraduate or Postgraduate students)        ",
+      answer:  "Students from the two categories are eligible to participate:- School(Std. VIII - Std. XII) and College/University(Undergraduate students)        ",
     },
     {
       id: 5,
