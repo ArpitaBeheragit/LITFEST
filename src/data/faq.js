@@ -27,7 +27,7 @@ export const allFaq = [
       id: 5,
       question: "What committees are being simulated?      ",
       answer:
-        "  Our conference presents a variety of committees namely United Nations Human Rights Council(UNHRC), United Nations General Assembly -Disarmament and Security Council(DISEC), SDG SUMMIT and International Press.          ",
+        "  Our conference presents a variety of committees namely United Nations Human Rights Council(UNHRC), United Nations General Assembly -Disarmament and Security Council(DISEC), World Health Assembly(WHA) and International Press.          ",
     },
     {
       id: 6,
