@@ -6,7 +6,7 @@ import styles from "../../styles/LITFEST/countdown.module.css"
 const MotionBox = motion(Box);
 
 const CountdownTimer = () => {
-  const targetDate = new Date("2025-03-19T11:59:59").getTime();
+  const targetDate = new Date("2025-03-19T23:59:59").getTime();
 
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
