@@ -1,7 +1,7 @@
 export const allFaq = [
     {
       id: 1,
-      question: "What is Sabda Tattva?",
+      question: "What is SabdaTattva?",
       answer: "Sabda Tattva is our literary fest, embracing the theme of winter as a metaphor for reflection, storytelling, and introspection. It celebrates the art of writing, reading, and expression, encouraging creativity and imagination. Be ready to walk through a frosted trail of retro literature, where every story glows like the warmth of a winter fire.",
     },
     {
@@ -26,7 +26,7 @@ export const allFaq = [
     },
     {
       id: 6,
-      question: "What is the fees structure of Sabdattatva?",
+      question: "What is the fee structure of Sabdattatva?",
       answer:
         "Regarding the fees structure, don't worry we got you covered, <a class='faq-link' href='https://ik.imagekit.io/Litfest2025/IMG-20250214-WA0018.webp?updatedAt=1739555599145' target='_blank'>click here</a> to know about fees structure"
         //  and also go through the <a class='faq-link' href='https://ik.imagekit.io/72bccx2bu/GUIDELINES.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1671606076861' target='_blank'>Registration Guidelines</a>",
