@@ -68,18 +68,18 @@ export const committees = [
       agenda: "",
       ebs: [
         {
-          name: "To be revealed",
-          // designation: "Photographer-in-Chief",
-          // profilePic:
-          //   "https://ik.imagekit.io/v9pfmptul/SITMUN/PIC.jpg?updatedAt=1711483715996",
+          name: "Kunal Naik",
+          designation: "Photographer-in-Chief",
+           profilePic:
+          "https://ik.imagekit.io/Satya07/Litfest/EB/Kunal.jpg?updatedAt=1741807264971",
         }
-        // ,
-        // {
-        //   name: "To be revealed",
-          // designation: "Editor-in-Chief",
-          // profilePic:
-          //   "https://ik.imagekit.io/v9pfmptul/SITMUN/EIC%20.JPG?updatedAt=1711483752212",
-        // },
+        ,
+        {
+          name: "AD Prabhu Pritam",
+          designation: "Editor-in-Chief",
+           profilePic:
+             "https://ik.imagekit.io/Satya07/Litfest/EB/Prabhu.jpg?updatedAt=1741807245940",
+        },
       ],
     },
   ];
