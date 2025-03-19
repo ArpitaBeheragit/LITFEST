@@ -11,13 +11,7 @@ export const committees = [
           designation: "Chairperson",
           profilePic:
             "https://ik.imagekit.io/Satya07/Litfest/EB/6.JPEG?updatedAt=1740158168176",
-        },
-        {
-          name: "Diptesh Banerjee",
-          designation: "Co-Chairperson",
-          profilePic:
-            "https://ik.imagekit.io/Satya07/Litfest/EB/5.jpg?updatedAt=1740158166564",
-        },
+        }
       ],
     },
     {
@@ -34,10 +28,10 @@ export const committees = [
             "https://ik.imagekit.io/Satya07/Litfest/EB/2.jpg?updatedAt=1740158093442",
         },
         {
-          name: "Devayush Dash",
+          name: "Amlan Dash",
           designation: "Vice Chairperson",
           profilePic:
-            "https://ik.imagekit.io/Satya07/Litfest/EB/3.jpg?updatedAt=1740158122736",
+            "https://ik.imagekit.io/Satya07/Litfest/EB/1.jpg?updatedAt=1740158075421",
         },
       ],
     },
@@ -54,10 +48,10 @@ export const committees = [
             "https://ik.imagekit.io/Satya07/Litfest/EB/4.JPG?updatedAt=1740158166831",
       },
         {
-        name: "Amlan Dash",
+        name: "Shreyas Puri",
         designation: "Vice Chairperson",
           profilePic:
-            "https://ik.imagekit.io/Satya07/Litfest/EB/1.jpg?updatedAt=1740158075421",
+            "https://ik.imagekit.io/Litfest2025/1000264792-min.jpg?updatedAt=1742383818093",
       }
     ],
     },
